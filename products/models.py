@@ -62,7 +62,7 @@ class Product(models.Model):
         (PASSENGER_SIDE_FRONT, 'Passenger side front'),
     ]
 
-    # Choices to pick color of car that part came from
+    # Choices to pick color of the part
     WHITE = 'WHITE'
     BLACK = 'BLACK'
     GRAY = 'GRAY'
@@ -110,11 +110,24 @@ class Product(models.Model):
         (HYBRID, 'Hybrid'),
     ]
 
+    # Choices to pick Grade of the part
+    A = 'A'
+    B = 'B'
+    C = 'C'
+    D = 'D'
+
+    GRADE_CHOICES = [
+        (A, 'A (Perfect)'),
+        (B, 'B (Great)'),
+        (C, 'C (Good)'),
+        (D, 'D (Fair)'),
+    ]
+
     model = models.ForeignKey('Model', on_delete=models.PROTECT)
     part = models.ForeignKey('Part', on_delete=models.PROTECT)
     description = models.TextField(max_length=254, null=True, blank=True)
-    grade = models.CharField(max_length=1)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    grade = models.CharField(max_length=1, choices=GRADE_CHOICES)
     color = models.BooleanField(max_length=6, null=True, blank=True, choices=COLOR_CHOICES, default=None)
     fuel = models.DecimalField(max_length=8, null=True, blank=True, choices=FUEL_CHOICES, default=None)
     side = models.CharField(max_length=3, null=True, blank=True, choices=SIDE_CHOICES, default=None)
