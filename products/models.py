@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from decimal import Decimal
 
 
 class Make(models.Model):
@@ -12,7 +13,7 @@ class Make(models.Model):
 class Model(models.Model):
     make = models.ForeignKey('Make', on_delete=models.PROTECT)
     car_model = models.CharField(max_length=50, null=True, blank=True)
-    year = model.DateField()
+    year = models.DateField()
     vehicle_category = models.CharField(max_length=50)
 
     def __str__(self):
@@ -128,8 +129,8 @@ class Product(models.Model):
     description = models.TextField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     grade = models.CharField(max_length=1, choices=GRADE_CHOICES)
-    color = models.BooleanField(max_length=6, null=True, blank=True, choices=COLOR_CHOICES, default=None)
-    fuel = models.DecimalField(max_length=8, null=True, blank=True, choices=FUEL_CHOICES, default=None)
+    color = models.CharField(max_length=6, null=True, blank=True, choices=COLOR_CHOICES, default=None)
+    fuel = models.CharField(max_length=8, null=True, blank=True, choices=FUEL_CHOICES, default=None)
     side = models.CharField(max_length=3, null=True, blank=True, choices=SIDE_CHOICES, default=None)
     on_sale = models.BooleanField(default=False)
     sale_percentage = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0), validators=PERCENTAGE_VALIDATOR)
