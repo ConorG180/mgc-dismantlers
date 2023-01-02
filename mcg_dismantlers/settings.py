@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # Created apps
     'products',
     'profiles',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -156,3 +157,13 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Standard costs of the company, for delivery etc.
+# Considering changing these later. Possibly add in a model
+# in parts field for weight and calculate delivery accordingly etc.
+# Another way might be to add in a cost based on different categories
+# e.g. put in categories like light, medium, heavy etc and base delivery
+# from that field.
+STANDARD_DELIVERY_COST = 15
+FREE_DELIVERY_THRESHOLD = 100
