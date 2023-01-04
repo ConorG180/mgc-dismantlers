@@ -13,7 +13,7 @@ class Make(models.Model):
 class Model(models.Model):
     make = models.ForeignKey('Make', on_delete=models.PROTECT)
     car_model = models.CharField(max_length=50, null=True, blank=True)
-    year = models.DateField()
+    year = models.IntegerField()
     vehicle_category = models.CharField(max_length=50)
 
     def __str__(self):
