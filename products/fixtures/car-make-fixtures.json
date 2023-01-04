@@ -1,0 +1,322 @@
+[
+  {
+    "model": "cars.make",
+    "pk": "1",
+    "fields": { "name": "Audi" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "2",
+    "fields": { "name": "Chevrolet" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "3",
+    "fields": { "name": "Cadillac" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "4",
+    "fields": { "name": "Acura" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "5",
+    "fields": { "name": "BMW" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "6",
+    "fields": { "name": "Chrysler" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "7",
+    "fields": { "name": "Ford" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "8",
+    "fields": { "name": "Buick" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "9",
+    "fields": { "name": "INFINITI" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "10",
+    "fields": { "name": "GMC" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "11",
+    "fields": { "name": "Honda" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "12",
+    "fields": { "name": "Hyundai" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "13",
+    "fields": { "name": "Jeep" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "14",
+    "fields": { "name": "Genesis" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "15",
+    "fields": { "name": "Dodge" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "16",
+    "fields": { "name": "Jaguar" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "17",
+    "fields": { "name": "Kia" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "18",
+    "fields": { "name": "Land Rover" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "19",
+    "fields": { "name": "Lexus" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "20",
+    "fields": { "name": "Mercedes-Benz" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "21",
+    "fields": { "name": "Mitsubishi" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "22",
+    "fields": { "name": "Lincoln" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "23",
+    "fields": { "name": "MAZDA" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "24",
+    "fields": { "name": "Nissan" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "25",
+    "fields": { "name": "MINI" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "26",
+    "fields": { "name": "Porsche" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "27",
+    "fields": { "name": "Ram" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "28",
+    "fields": { "name": "Subaru" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "29",
+    "fields": { "name": "Toyota" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "30",
+    "fields": { "name": "Volkswagen" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "31",
+    "fields": { "name": "Volvo" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "32",
+    "fields": { "name": "Alfa Romeo" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "33",
+    "fields": { "name": "FIAT" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "34",
+    "fields": { "name": "Freightliner" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "35",
+    "fields": { "name": "Maserati" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "36",
+    "fields": { "name": "Tesla" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "37",
+    "fields": { "name": "Aston Martin" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "38",
+    "fields": { "name": "Bentley" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "39",
+    "fields": { "name": "Ferrari" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "40",
+    "fields": { "name": "Lamborghini" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "41",
+    "fields": { "name": "Lotus" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "42",
+    "fields": { "name": "McLaren" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "43",
+    "fields": { "name": "Rolls-Royce" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "44",
+    "fields": { "name": "smart" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "45",
+    "fields": { "name": "Scion" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "46",
+    "fields": { "name": "SRT" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "47",
+    "fields": { "name": "Suzuki" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "48",
+    "fields": { "name": "Fisker" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "49",
+    "fields": { "name": "Maybach" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "50",
+    "fields": { "name": "Mercury" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "51",
+    "fields": { "name": "Saab" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "52",
+    "fields": { "name": "HUMMER" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "53",
+    "fields": { "name": "Pontiac" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "54",
+    "fields": { "name": "Saturn" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "55",
+    "fields": { "name": "Isuzu" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "56",
+    "fields": { "name": "Panoz" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "57",
+    "fields": { "name": "Oldsmobile" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "58",
+    "fields": { "name": "Daewoo" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "59",
+    "fields": { "name": "Plymouth" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "60",
+    "fields": { "name": "Eagle" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "61",
+    "fields": { "name": "Geo" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "62",
+    "fields": { "name": "Daihatsu" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "63",
+    "fields": { "name": "Polestar" }
+  },
+  {
+    "model": "cars.make",
+    "pk": "64",
+    "fields": { "name": "Rivian" }
+  }
+]

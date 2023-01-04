@@ -1,0 +1,57 @@
+[
+  {
+    "model": "products.category",
+    "pk": "1",
+    "fields": { "category": "Engine/Intake/Exhaust" }
+  },
+  {
+    "model": "products.category",
+    "pk": "2",
+    "fields": { "category": "Transmission system and accessories" }
+  },
+  {
+    "model": "products.category",
+    "pk": "3",
+    "fields": { "category": "Brake system and accessories" }
+  },
+  {
+    "model": "products.category",
+    "pk": "4",
+    "fields": { "category": "Steering system and accessories" }
+  },
+  {
+    "model": "products.category",
+    "pk": "5",
+    "fields": { "category": "Cooling system" }
+  },
+  {
+    "model": "products.category",
+    "pk": "6",
+    "fields": { "category": "Ignition/Electric/Electronic" }
+  },
+  {
+    "model": "products.category",
+    "pk": "7",
+    "fields": { "category": "Lamps/Lighting" }
+  },
+  {
+    "model": "products.category",
+    "pk": "8",
+    "fields": { "category": "Interior parts" }
+  },
+  {
+    "model": "products.category",
+    "pk": "9",
+    "fields": { "category": "Exterior parts" }
+  },
+  {
+    "model": "products.category",
+    "pk": "10",
+    "fields": { "category": "Security Accessories" }
+  },
+  {
+    "model": "products.category",
+    "pk": "11",
+    "fields": { "category": "Miscellaneous" }
+  }
+]
