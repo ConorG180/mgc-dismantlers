@@ -124,7 +124,7 @@ class Product(models.Model):
         (D, 'D (Fair)'),
     ]
 
-    model = models.ForeignKey('Model', on_delete=models.PROTECT)
+    car_model = models.ForeignKey('Model', on_delete=models.PROTECT, default=1)
     part = models.ForeignKey('Part', on_delete=models.PROTECT)
     description = models.TextField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -134,7 +134,6 @@ class Product(models.Model):
     side = models.CharField(max_length=3, null=True, blank=True, choices=SIDE_CHOICES, default=None)
     on_sale = models.BooleanField(default=False)
     sale_percentage = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0), validators=PERCENTAGE_VALIDATOR)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
