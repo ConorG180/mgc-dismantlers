@@ -13,7 +13,7 @@ class Make(models.Model):
 class Model(models.Model):
     make = models.ForeignKey('Make', on_delete=models.PROTECT)
     car_model = models.CharField(max_length=50, null=True, blank=True)
-    year = models.IntegerField()
+    model_year = models.IntegerField(default=1000)
     vehicle_category = models.CharField(max_length=50)
 
     def __str__(self):
@@ -134,7 +134,7 @@ class Product(models.Model):
     side = models.CharField(max_length=3, null=True, blank=True, choices=SIDE_CHOICES, default=None)
     on_sale = models.BooleanField(default=False)
     sale_percentage = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0), validators=PERCENTAGE_VALIDATOR)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, max_length=1024)
 
     def __str__(self):
         return f"{self.part}"

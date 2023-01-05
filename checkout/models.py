@@ -90,5 +90,5 @@ class OrderLineItem(models.Model):
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
-    def __str__(self):
-        return f'part: {self.product.model.make.name} {self.product.model.car_model} {self.product.model.year} {self.product.part.name}  on order {self.order.order_number}'
+    # def __str__(self):
+    #     return f'part: {self.product.model.make.name} {self.product.model.car_model} {self.product.model.year} {self.product.part.name}  on order {self.order.order_number}'
