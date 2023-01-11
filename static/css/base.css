@@ -1,0 +1,47 @@
+
+nav .img-fluid{
+    height: 75px;
+    object-fit: cover;
+    /* border-radius: 100%; */
+}
+/* need !important here to overwrite bootstrap, as boostrap also uses it */
+.bg-dark{
+    background-color: #161214 !important;
+}
+/* Navbar highlight colors */
+#navbar-links a{
+    font-size: 24px;
+}
+.navbar h4{
+    font-family: 'Fugaz One', cursive;
+    font-size: 30px;
+    background-image: linear-gradient(90deg, #8A642F, #F3EA98, #805F32);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+#navbar-links a:hover > .fa-user{
+    color: #f0ad4e;
+    transition: 100ms;
+}
+#navbar-links a:hover > .fa-right-from-bracket{
+    color: #d9534f;
+    transition: 100ms;
+}
+#navbar-links a:hover > .fa-envelope{
+    color: #0275d8;
+    transition: 100ms;
+}
+#navbar-links a:hover > .fa-toolbox{
+    color: #6610f2;
+    transition: 100ms;
+}
+#navbar-links a:hover > .fa-house{
+    color: #d63384;
+    /* color: #f0ad4e; */
+    transition: 100ms;
+}
+#navbar-links a:hover > .fa-cart-shopping{
+    color: #5cb85c;
+    transition: 100ms;
+}
