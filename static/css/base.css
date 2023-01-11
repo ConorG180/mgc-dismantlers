@@ -1,4 +1,3 @@
-
 nav .img-fluid{
     height: 75px;
     object-fit: cover;
@@ -43,5 +42,17 @@ nav .img-fluid{
 }
 #navbar-links a:hover > .fa-cart-shopping{
     color: #5cb85c;
+    transition: 100ms;
+}
+/* Category nav bar */
+#category-nav-bar {
+    background-color: #Cc8c27;
+}
+#category-nav-bar a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
+}
+#category-nav-bar a:hover {
+    background-color: #8A642F!important;
     transition: 100ms;
 }
