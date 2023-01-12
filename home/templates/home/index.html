@@ -2,5 +2,43 @@
 {% load static %}
 
 {% block content %}
-
+<!-- Grid layout -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      <!-- Carousel wrapper -->
+<div id="carouselExampleIndicators" class="carousel slide mt-2" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" id="slide-holder-1">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item" id="slide-holder-2">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-2.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item" id="slide-holder-3">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-3.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item" id="slide-holder-4">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-4.jpg" alt="Fourth slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <i class="fa-solid fa-circle-arrow-left fa-2xl"></i>
+  </a>
+  <a class="carousel-control-next carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <i class="fa-solid fa-circle-arrow-right fa-2xl"></i>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- fa-circle-arrow-right -->
+<!-- End of Carousel -->
+    </div>
+  </div>
+</div>
 {% endblock content %}

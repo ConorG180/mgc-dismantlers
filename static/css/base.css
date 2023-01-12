@@ -56,3 +56,23 @@ nav .img-fluid{
     background-color: #8A642F!important;
     transition: 100ms;
 }
+
+/* Carousel */
+.carousel-control-next, .carousel-control-prev {
+    /* background-color:rgba(124,0,0,0.3); */
+    background-color:rgba(0,0,0,0.75);
+}
+/* Control carousel image height here */
+.carousel-item img{
+    height: 50vh;
+    object-fit: cover;
+    max-height: 100%;
+}
+.carousel-controls i{
+    color: black;
+    opacity: 2;
+}
+.carousel .fa-circle-arrow-left,.carousel .fa-circle-arrow-right{
+color: #fff;
+opacity: 1;
+}
