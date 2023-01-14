@@ -64,7 +64,7 @@ nav .img-fluid{
 }
 /* Control carousel image height here */
 .carousel-item img{
-    height: 50vh;
+    height: 70vh;
     object-fit: cover;
     max-height: 100%;
 }
