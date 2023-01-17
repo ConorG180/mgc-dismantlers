@@ -17,7 +17,7 @@ class Model(models.Model):
     vehicle_category = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.car_model
+        return str(self.car_model)
 
 
 class Part(models.Model):
@@ -138,3 +138,6 @@ class Product(models.Model):
 
     def __str__(self):
         return f"{self.part}"
+    
+    def create_card_title(self):
+        return f"{self.car_model.make} {self.car_model} {self.car_model.model_year} {self.part}"

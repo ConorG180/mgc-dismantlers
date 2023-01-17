@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class=" bg-primary form-container col-xl-2 col-12">
+
+        </div>
+        <div class="col-xl-8 col-sm-12 product-card-column">
+            {% for product in products %}
+            <div class="row product-cards">
+            <div class="col-12">
+                <div class="card rounded bg-dark mb-4">
+                    
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 col-12">
+                            {% if product.image %}
+                            <a href="#">
+                            <img src="{{product.image.url}}" class="card-img-top product-image img-responsive h-100" alt="...">
+                        </a>
+                            {% endif %}
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-12 d-md-flex flex-column">
+                            <div class="card-body">
+                                <a href="#">
+                                <h5 class="card-title primary-color-text">{{product.create_card_title}}</h5>
+                                </a>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With</p>
+                                <ul class="d-flex list-unstyled">
+                                {% if product.color %}
+                                    <li><i class=" mr-2 fa-solid fa-palette"></i>{{product.color}}</li>
+                                {% endif %}
+                                {% if product.grade %}
+                                    <li><i class=" mx-2 ml-4 fa-solid fa-chart-simple"></i>{{product.grade}}</li>
+                                {% endif %}
+                                {% if product.fuel %}
+                                    <li><i class=" mx-2 ml-4 fa-solid fa-gas-pump"></i>{{product.fuel}}</li>
+                                {% endif %}
+                                </ul>
+                        </div>
+                        <!-- This row only shows on small to large devices -->
+                        <!-- Edit/delete/add to cart buttons for small to large devices -->
+                        <div class="row d-xl-none d-flex">
+                            <div class="col d-flex flex-column pl-md-4 pr-md-5">
+                                {% if request.user.is_superuser %}
+                                    <small class="h6 mt-2 mr-3 mb-md-4 ml-md-2 w-75 d-flex align-items-end ml-5 mb-4">
+                                        <a href="#">Edit</a> | 
+                                        <a class="text-danger" href="#">Delete</a>
+                                    </small>
+                                {% endif %}
+                                <a href="#" class="btn align-self-center font-weight-bold cart-btn mb-4 mr-xl-5 w-xl-100 w-75"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
+                        </div>
+                  </div>
+
+                  <!-- This column only shows on xl devices  -->
+                  <!-- Edit/delete/add to cart buttons for xl devices -->
+                </div>
+                <div class="col-xl-2 d-none d-xl-flex flex-column justify-content-end align-items-center">
+                    {% if request.user.is_superuser %}
+                    <small class="mb-auto h6 mt-2 mr-3 align-self-end">
+                        <a href="#">Edit</a> | 
+                        <a class="text-danger" href="#">Delete</a>
+                    </small>
+                {% endif %}
+                    <a href="#" class="btn font-weight-bold cart-btn mb-4 mr-5 w-100"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    {% endfor %}
+        </div>
+        
+
+    </div>
+    </div>
+    
+
+{% for product in products %}
+
+<div class="row">
+    <div class="col">
+        <h4>make</h4>{{product.car_model.make}}
+        <h4>model</h4>{{product.car_model}}
+        <h4>category</h4>{{product.part.category.name}}
+        <h4>part</h4>{{product.part}}
+        <h4>price</h4>{{product.price}}
+        {% if product.fuel %}
+        <h4>fuel</h4><i>fuel icon</i>{{product.fuel}}
+        {% endif %}
+        {% if product.color %}
+        <h4>color</h4><i>color icon</i>{{product.color}}
+        {% endif %}
+        {% if product.grade %}
+        <h4>grade</h4><i>grade icon</i>{{product.grade}}
+        {% endif %}
+        {% if product.part.category %}
+        <h4>category</h4><i>category icon</i>{{product.part.category.friendly_name}}
+        {% endif %}
+        {% if product.image %}
+        <h4>image</h4><img src="{{product.image.url}}">
+        {% endif %}
+    </div>
+    </div>
+{% endfor %}
+
+
+</div>
+{% endblock content %}
