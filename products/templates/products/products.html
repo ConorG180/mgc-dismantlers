@@ -26,7 +26,7 @@
                                 <a href="#">
                                 <h5 class="card-title primary-color-text">{{product.create_card_title}}</h5>
                                 </a>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With</p>
+                                <p class="card-text">{{product.id}} With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With</p>
                                 <ul class="d-flex list-unstyled">
                                 {% if product.color %}
                                     <li><i class=" mr-2 fa-solid fa-palette"></i>{{product.color}}</li>
@@ -46,7 +46,7 @@
                                 {% if request.user.is_superuser %}
                                     <small class="h6 mt-2 mr-3 mb-md-4 ml-md-2 w-75 d-flex align-items-end ml-5 mb-4">
                                         <a href="#">Edit</a> | 
-                                        <a class="text-danger" href="#">Delete</a>
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
                                 {% endif %}
                                 <a href="#" class="btn align-self-center font-weight-bold cart-btn mb-4 mr-xl-5 w-xl-100 w-75"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
@@ -59,8 +59,8 @@
                 <div class="col-xl-2 d-none d-xl-flex flex-column justify-content-end align-items-center">
                     {% if request.user.is_superuser %}
                     <small class="mb-auto h6 mt-2 mr-3 align-self-end">
-                        <a href="#">Edit</a> | 
-                        <a class="text-danger" href="#">Delete</a>
+                        <a href="">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                     </small>
                 {% endif %}
                     <a href="#" class="btn font-weight-bold cart-btn mb-4 mr-5 w-100"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
