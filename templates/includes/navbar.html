@@ -8,7 +8,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-            {% if user.is_authenticated %}
                 <ul class="navbar-nav ms-auto fs-1">
                     <li class="nav-item">
                         <div>
@@ -43,6 +42,7 @@
                             </a>
                         </div>
                     </li>
+            {% if user.is_authenticated %}
                     <li class="nav-item">
                         <div>
                             <a href="{% url 'account_logout' %}" class="nav-link navlink">
@@ -60,15 +60,8 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <div>
-                            <a href="#" class="nav-link navlink" data-toggle="modal" data-target="#contact-modal">
-                                <i class="fas fa-envelope ml-3 mr-2"></i>Contact
-                            </a>
-                        </div>
-                    </li>
-                </ul>
             {% endif %}
+                </ul>
         </div>
     </div>
 </nav>
