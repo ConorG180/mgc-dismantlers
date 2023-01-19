@@ -12,6 +12,13 @@ urlpatterns = [
         "edit-product/<product_id>/",
         views.edit_product,
         name="edit_product"
+    ),   
+    path(
+        "add-product/",
+        views.add_product,
+        name="add_product"
     ),
+    # A
+    # Ajax path to load car_models
     path('ajax/load-models/', views.load_models, name='ajax_load_car_models'),  # AJAX
 ]
