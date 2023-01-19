@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="logo-font mb-4">Product Management</h2>
+            <h5 class="text-muted">Add a Product</h5>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" id="product-form" data-car_models-url="{% url 'ajax_load_car_models' %}" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{product_form.as_p}}
+
+                <div class="text-right">
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <!-- <input type="submit" value="Submit"> -->
+
+                    <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>            
+    </div>
+</div>
+<!-- START OF JQUERY -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("#id_make").change(function () {
+        const url = $("#product-form").attr("data-car_models-url");  // get the url of the `load_models` view
+        const make = $(this).val();  // get the selected Make ID from the HTML input
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request
+            data: {
+                'make': make       // add the make id to the GET parameters
+            },
+            success: function (data) {  // `data` is the return of the `load_models` view function
+                $("#id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
+            }
+        });
+
+    });
+</script>
+
+{% endblock content %}
