@@ -4,8 +4,17 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row mt-5">
-        <div class=" bg-primary form-container col-xl-2 col-12">
-
+        <div class="col-xl-2 col-12">
+            <div class="bg-primary form-container">
+                <h1>From container</h1>
+            </div> 
+            {% if request.user.is_superuser %}
+            <div class="row">
+                <div class="col-xl-12 col-sm-4 col-md-3 col-8 offset-2 offset-sm-0 d-flex justify-content-center">
+                    <a class="btn-lg add-product-btn text-center mb-4" href="{% url 'add_product' %}">Add Product</a>
+                </div>
+            </div>
+            {% endif %}
         </div>
         <div class="col-xl-8 col-sm-12 product-card-column">
             {% for product in products %}
