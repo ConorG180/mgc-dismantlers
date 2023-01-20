@@ -6,7 +6,18 @@
     <div class="row mt-5">
         <div class="col-xl-2 col-12">
             <div class="bg-primary form-container">
-                <h1>From container</h1>
+                <form method="GET" action="{% url 'search_product' %}">
+                    <div class="input-group w-100">
+                        <input required class="form-control border border-black rounded-0" type="text" name="user_search_query" placeholder="Search a part">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div> 
             {% if request.user.is_superuser %}
             <div class="row">
