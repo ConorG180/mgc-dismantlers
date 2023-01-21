@@ -1,22 +1,19 @@
  <!-- Start of Categories bar -->
  <div class="container-fluid px-0">
     <div class="row px-0" id="category-nav-bar">
-      <!-- <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 "> -->
-        <div class="col d-flex justify-content-between">
-            <!-- <ul class="d-flex justify-content-between list-unstyled"> -->
         {% for category in categories %}
-        <!-- <li class="border-right border-bottom border-dark pr-1"> -->
-            <a class="list-group-item-action border-right border-bottom border-white d-flex align-items-center justify-content-center py-2 text-white">
-                {{category.friendly_name}}
-            </a>
-        <!-- </li> -->
-        {% endfor %}
-        <!-- <li> -->
-        <a class="list-group-item-action border-right border-bottom border-white d-flex align-items-center justify-content-center py-2 text-white">
-            On Sale
+        <div class="col-lg-1 col-md-2 col-3 px-0">
+          <a href="{% url 'categorize_products' category.friendly_name %}" class="list-group-item-action border-right border-bottom border-white d-flex align-items-center justify-content-center py-2 text-white">
+            {{category.friendly_name}}
         </a>
-    <!-- </li> -->
-    <!-- </ul> -->
+        </div>
+
+        {% endfor %}
+        <div class="col-lg-1 col-md-2 col-3 px-0">
+        <a class="list-group-item-action border-right border-bottom border-white d-flex align-items-center justify-content-center py-2 text-white">
+          On Sale
+        </a>
+      </div>
       </div>
     </div>
   </div>
