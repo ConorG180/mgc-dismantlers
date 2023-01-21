@@ -18,7 +18,26 @@
                         </div>
                     </div>
                 </form>
-            </div> 
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="{% url 'products' %}">
+                        <button type="button" class="btn btn-dark all-products-btn my-3 w-100">All products</button>
+                        </a>
+                </div>
+                    {% for category in categories %}
+                    <div class="col-md-2 col-sm-3 col-4 col-xl-6 pr-0 pl-1">
+                    <a href="{% url 'categorize_products' category.friendly_name %}">
+                    <button type="button" class="btn btn-danger category-btn h6 w-100 mb-1 btn-secondary">{{category.friendly_name}}</button>
+                    </a>
+                </div>
+                    {% endfor %}
+                    <div class="col-md-2 col-sm-3 col-4 col-xl-6 pr-0 pl-1">
+                        <a href="{% url 'products' %}">
+                        <button type="button" class="btn btn-danger category-btn w-100 mb-1 btn-secondary">On sale</button>
+                        </a>
+                    </div>
+            </div>
             {% if request.user.is_superuser %}
             <div class="row">
                 <div class="col-xl-12 col-sm-4 col-md-3 col-8 offset-2 offset-sm-0 d-flex justify-content-center">
