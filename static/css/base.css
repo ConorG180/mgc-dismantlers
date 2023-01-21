@@ -252,6 +252,16 @@ footer .submit-button:hover {
   min-width: 260px;
 }
 
+/* Product page search and category form */
+.all-products-btn{
+  font-size: 20px;
+  border-radius: 20px;
+}
+.category-btn{
+  font-size: 15px;
+  border-radius: 20px;
+}
+
   /* Media queries for cards on homepage */
   @media (max-width: 768px) {
     .card {
