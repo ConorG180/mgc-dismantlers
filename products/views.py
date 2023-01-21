@@ -76,6 +76,20 @@ def search_product(request):
     return render(request, 'products/search.html', {})
 
 
+def categorize_products(request, cat):
+    categorized_products = Product.objects.filter(part__category__friendly_name=cat)
+    # category = Category.objects.get(friendly_name=)
+    # print("variable")
+    print(categorized_products)
+    # print("category object")
+    # print(category)
+    context = {
+        "category": cat,
+        "products": categorized_products
+    }
+    return render(request, "products/products.html", context)
+
+
 def load_models(request):
     make = request.GET.get('make')
     make_id = Make.objects.get(name=make).id

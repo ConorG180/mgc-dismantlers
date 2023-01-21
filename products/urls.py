@@ -23,7 +23,16 @@ urlpatterns = [
         views.search_product,
         name="search_product"
     ),
-    # A
+    path(
+        "categorize-products/<cat>/",
+        views.categorize_products,
+        name="categorize_products"
+    ),
+    # Acategorize_product
     # Ajax path to load car_models
-    path('ajax/load-models/', views.load_models, name='ajax_load_car_models'),  # AJAX
+    path(
+        "ajax/load-models/",
+        views.load_models,
+        name="ajax_load_car_models"
+    )
 ]
