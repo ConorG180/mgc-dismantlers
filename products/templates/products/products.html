@@ -38,6 +38,22 @@
                         </a>
                     </div>
             </div>
+            <!-- Sorting functionality -->
+            <div class="row">
+                <div class="col">
+                    <form method="GET" action="{% url 'products' %}" class="mt-5" id="filter-form">
+                        {{ product_filter.form.as_p }}
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit"> Filter
+                                </button>
+                    </form>
+                    <!-- <div class="form">
+
+                    </div> -->
+                    <!-- ADD another form here which is just a dropdown box and which has an icon appended to it for a button (Or some type of button) When clicked, calls product view. in products view, write: if request.GET["sortkey"]: products.order_by(sortkey)
+                    
+                    The dropdown will be a select element with options, specifically make, model, price and year. So, first 2 are alphabetical, next 2 are numeral. With the numberal ones, do (asc) and (desc) also. The select element should have a name of sortkey-->
+                </div>
+            </div>
             {% if request.user.is_superuser %}
             <div class="row">
                 <div class="col-xl-12 col-sm-4 col-md-3 col-8 offset-2 offset-sm-0 d-flex justify-content-center">
@@ -77,6 +93,9 @@
                                     <li><i class=" mx-2 ml-4 fa-solid fa-gas-pump"></i>{{product.fuel}}</li>
                                 {% endif %}
                                 </ul>
+                                <div class="h-25 d-flex flex-column">
+                                    <p class="card-text h5 mt-5">€{{product.price}}</p>
+                                </div>
                         </div>
                         <!-- This row only shows on small to large devices -->
                         <!-- Edit/delete/add to cart buttons for small to large devices -->
@@ -88,7 +107,7 @@
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </small>
                                 {% endif %}
-                                <a href="#" class="btn align-self-center font-weight-bold cart-btn mb-4 mr-xl-5 w-xl-100 w-75"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                <a href="{% url 'add_to_cart' product.id %}" data-product-id={{product.id}} class="btn align-self-center font-weight-bold cart-btn mb-4 mr-xl-5 w-xl-100 w-75"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
                         </div>
                   </div>
 
@@ -102,7 +121,7 @@
                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                     </small>
                 {% endif %}
-                    <a href="#" class="btn font-weight-bold cart-btn mb-4 mr-5 w-100"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
+                    <a href="{% url 'add_to_cart' product.id %}" data-product-id={{product.id}} class="btn font-weight-bold cart-btn mb-4 mr-5 w-100"><i class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
                 </div>
                 </div>
               </div>
@@ -146,4 +165,53 @@
 
 
 </div>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<!-- <script>
+    // Reorder form so make is on top
+    let carMakeSection = $("#id_car_model__make").parent()
+    let filterForm = $("#filter-form")
+    carMakeSection.prependTo(filterForm)
+    // Change id of car make select option to work with ajax
+    carMakes = $("#id_car_model__make").children()
+    console.log("CARMAKES ", carMakes)
+    console.log("SEPARATOR")
+    carMakes.each(function(index, make) {
+        // make.attr("value", make.html())
+        // console.log(index)
+        // console.log(make)
+        // console.log(make.value)
+        // console.log(make.textContent)
+        // make.value = make.textContent
+        // console.log(make)
+    });
+    if($(".errorlist")){
+            $(".errorlist").remove()
+        }
+    // $("#id_car_model__make").attr("name", "make")
+//     $("#id_car_model__make").each(function(index, value) {
+// });
+    // .attr("value", carMake.val()))
+</script> -->
+
+<!-- <script>
+        $("#id_car_model__make").change(function () {
+        const url = $("#filter-form").attr("data-car_models-url");  // get the url of the `load_models` view
+        const makeId = $(this).val();
+        console.log("Change function working")  // get the selected Make ID from the HTML input
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request
+            data: {
+                'makeId': makeId       // add the make id to the GET parameters
+            },
+            success: function (data) {
+                  // `data` is the return of the `load_models` view function
+                  console.log("data from ajax")
+                  console.log(data)
+                $("#id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
+            }
+        });
+
+    }); -->
+</script>
+</script>
 {% endblock content %}
