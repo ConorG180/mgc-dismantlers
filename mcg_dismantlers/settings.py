@@ -49,11 +49,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # Django storage / AWS
     'storages',
+    # Django filter
+    'django_filters',
     # Created apps
     'products',
     'profiles',
     'checkout',
-    'bag',
+    # 'cart',
     'home',
     'wishlist',
 ]
