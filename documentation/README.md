@@ -67,3 +67,9 @@ A user will be able to access a products page to access all products which the c
 A user will be able to search throught the company's array of products in order to try and find a product which they wish to purchase. This will be enabled through a search bar. The search bar is programmed to enable searches of colors, years, part names, makes and models of car parts.
 #### **Images**  
 <!-- ![Product searching](static/images/product-search.png "Product searching") -->
+
+### Product categorisation
+A user will also be able to categorize the company's array of products to try and find a product which they wish to purchase. To do this, a user can simply click on a category button in the products page or on a button in the category navbar, which will display a list of products to the user which are linked to that category. 
+#### **Images**  
+<!-- ![Product categorisation navbar](static/images/product-categorisation-navbar.png "Product categorisation navbar") -->
+<!-- ![Product categorisation](static/images/product-categorisation-products-page.png "Product categorisation") -->
