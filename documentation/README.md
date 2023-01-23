@@ -29,3 +29,12 @@ Before starting development on MyRosterManagement, diagrams.net/draw.io was used
 
 ![MGC Dismantlers ERD](erd-diagrams/mgc-dismantlers-erd.jpg "MyRosterManagement ERD")
 
+# Features
+## Existing features
+
+### Navigation
+The programme offers a very simple and easy to use navigation system to navigate around the website. This is not only in the form of moving to different pages, but also for features such as a contact modal and product-category buttons attached to the navbar to allow the user to easily navigate to their category of required car parts. It should be noted that the navbar will 
+#### **Images**  
+##### **Navbar**
+<!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
+
