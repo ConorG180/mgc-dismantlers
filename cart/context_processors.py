@@ -13,7 +13,7 @@ def cart_context_processor(request):
         product = Product.objects.get(id=item_id)
         total += product.price * quantity
         product_count += quantity
-        cart.append({"item_id": item_id, "quantity": quantity, "product": product})
+        cart.append({"product": product, "quantity": quantity})
 
     context = {
         "cart": cart,
