@@ -4,6 +4,7 @@ from products.models import Product
 def cart_context_processor(request):
     cart = []
     total = 0
+    delivery = 10
     product_count = 0
     test = "TESTING, IS IT WORKING?"
 
@@ -17,9 +18,11 @@ def cart_context_processor(request):
 
     context = {
         "cart": cart,
+        "delivery": delivery,
         "total": total,
         "product_count": product_count,
-        "test": test
+        "test": test,
+        "grand_total": total + delivery
     }
 
     return context

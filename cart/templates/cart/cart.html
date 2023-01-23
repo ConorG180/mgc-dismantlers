@@ -21,6 +21,42 @@
                         <p class="h6">Price</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xl-3 col-12 d-md-none">
+                        <div class="border mb-4">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h5>Order Summary</h5>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-8">
+                                <div class="d-flex flex-column align-items-start ml-2">
+                                    <p>products ({{product_count}}):</p>
+                                    <p>Delivery:</p>
+                                    <p>Total:</p>
+                                </div>
+                                </div>
+        
+                            <div class="col-4">
+                                <div class="d-flex mr-2 flex-column align-items-end">
+                                    <p>{{total}}</p>
+                                    <p>{{delivery}}</p>
+                                    <p>{{ grand_total }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button class=" w-100 btn btn-lg text-white bg-primary">
+                                    Checkout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
                 {% for product in cart %}
                 <div class="row bg-dark d-flex justify-content-start border-bottom">
 <!-- hre -->      <div class="col-xl-2 col-md-2 col-12 pl-0">
@@ -64,12 +100,42 @@
     </div>
     {% endfor %}
             </div>
-            <div class="col-xl-3 col-12">
-                <div class="checkout bg-danger p-5">
-                    <h2 class="text-white">CART {{cart}} TOTAL {{total}} COUNT {{product_count}} TEST {{test}}</h2>
+            <!-- Checkout details and link. This section only shows for medium size devices and up -->
+            <div class="col-xl-3 col-12 d-none d-md-block">
+                <div class="border">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h5>Order Summary</h5>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="d-flex flex-column align-items-start ml-2">
+                            <p>products ({{product_count}}):</p>
+                            <p>Delivery:</p>
+                            <p>Total:</p>
+                        </div>
+                        </div>
+
+                    <div class="col-4">
+                        <div class="d-flex mr-2 flex-column align-items-end">
+                            <p>{{total}}</p>
+                            <p>{{delivery}}</p>
+                            <p>{{ grand_total }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button class=" w-100 btn btn-lg text-white bg-primary">
+                            Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
             </div>
           </div>
   <!-- End of container div -->
+</div>
 </div>
 {% endblock content %}
