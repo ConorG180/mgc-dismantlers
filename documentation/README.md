@@ -78,3 +78,11 @@ A user will also be able to categorize the company's array of products to try an
 A user will have access to their own "cart" once signing up to the website, which will allow them to manage a potential order. This saves the user time as it allows them to buy multiple products in a single order, as opposed to buying and purchasing each item individually.
 #### **Images**  
 <!-- ![cart](static/images/cart.png "cart") -->
+
+### Add/Remove products to/from cart
+A user will be able to add and remove products from their cart as they wish to allow them to manage a potential order.
+#### **Images**  
+<!-- ![Add product to cart](static/images/cart-add-product.png "Add product to cart") -->
+<!-- ![Remove product from cart](static/images/cart-remove-product.png "Remove product from cart") -->
+
+## Future features
