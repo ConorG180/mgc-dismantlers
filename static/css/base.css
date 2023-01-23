@@ -1,9 +1,14 @@
+/* Custom utility classes */
 .primary-color-bg{
     background-color: #Cc8c27;
 }
 .primary-color-text{
   color: #Cc8c27;
 }
+.border-bottom{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
 
 nav .img-fluid{ /*Company logo navbar */
     height: 75px;

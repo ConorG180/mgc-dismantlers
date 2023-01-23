@@ -7,20 +7,67 @@
 <h1>Cart!!!!!</h1>
 
 <div class="row mt-5">
-    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12">
+    <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-1 col-12">
         <div class="row mt-3">
-            <div class="col-md-9 col">
-                <div class="bag bg-primary p-5">
-
+            <div class="col-xl-9 col-12">
+                <div class="row text-primary">
+                    <div class="col-xl-2 col-md-6 col-12">
+                        <p class="h6"></p>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-12 d-md-flex flex-column">
+                        <p class="h6">Item</p>
+                    </div>
+                    <div class="col-xl-1 d-flex flex-column justify-content-center">
+                        <p class="h6">Price</p>
+                    </div>
                 </div>
+                {% for product in cart %}
+                <div class="row bg-dark d-flex justify-content-start border-bottom">
+<!-- hre -->      <div class="col-xl-2 col-md-2 col-12 pl-0">
+    {% if product.product.image %}
+    <a href="#">
+    <img src="{{product.product.image.url}}" class="card-img-top cart-image img-responsive h-100" alt="...">
+</a>
+    {% endif %}
+</div>
+<div class="col-xl-6 col-md-6 col-12 d-md-flex flex-column">
+    <div class="pt-2">
+        <a href="#">
+        <h5 class="primary-color-text">{{product.product.create_card_title}}</h5>
+        </a>
+        <ul class="d-flex text-white list-unstyled">
+        {% if product.product.color %}
+            <li><i class=" mr-2 fa-solid fa-palette"></i>{{product.product.color}}</li>
+        {% endif %}
+        {% if product.product.grade %}
+            <li><i class=" mx-2 ml-4 fa-solid fa-chart-simple"></i>{{product.product.grade}}</li>
+        {% endif %}
+        {% if product.product.fuel %}
+            <li><i class=" mx-2 ml-4 fa-solid fa-gas-pump"></i>{{product.product.fuel}}</li>
+        {% endif %}
+        </ul>
+</div>
+
+<!-- This row only shows on small to large devices -->
+<!-- Edit/delete/add to cart buttons for small to large devices -->
             </div>
-            <div class="col-md-3 col">
+            <div class="col-xl-1 col-md-1 col-6 mr-xl-4 d-flex flex-column justify-content-start">
+                <!-- <div class="h-25 d-flex flex-column"> -->
+                        <p class=" pt-xl-2 text-white">€{{product.product.price}}</p>
+                <!-- </div> -->
+            </div>
+            <div class="col-xl-2 col-md-3 col-6 d-flex flex-column justify-content-xl-center justify-content-md-end justify-content-start align-items-md-end">
+                <!-- <div class="h-25 d-flex flex-column"> -->
+                    <a href="#" class="btnfont-weight-bold text-danger cart-btn text-right"><i class="mr-3 fa-solid fa-square-minus"></i>Remove</a>
+                <!-- </div> -->
+            </div>
+    </div>
+    {% endfor %}
+            </div>
+            <div class="col-xl-3 col-12">
                 <div class="checkout bg-danger p-5">
                     <h2 class="text-white">CART {{cart}} TOTAL {{total}} COUNT {{product_count}} TEST {{test}}</h2>
                 </div>
-            </div>
-    </div>
-        
             </div>
           </div>
   <!-- End of container div -->
