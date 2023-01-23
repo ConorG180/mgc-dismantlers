@@ -57,3 +57,9 @@ Read functionality comes from the products page. This allows users (Authorised a
 <!-- ![Editing product form](static/images/crud-functionality-edit-product-form.png "Editing product form") -->
 ##### **Products page**
 <!-- ![Products page](static/images/products-page.png "Products page") -->
+
+### Products page
+A user will be able to access a products page to access all products which the company is currently selling. This will allow the user to look at all products which the company currently has in stock, and also give the user access to a host of other options, such as adding products to their cart, searching for products, and filtering products by category.
+#### **Images**  
+<!-- ![Products page](static/images/products-page.png "Products page") -->
+
