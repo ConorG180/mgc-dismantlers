@@ -73,3 +73,8 @@ A user will also be able to categorize the company's array of products to try an
 #### **Images**  
 <!-- ![Product categorisation navbar](static/images/product-categorisation-navbar.png "Product categorisation navbar") -->
 <!-- ![Product categorisation](static/images/product-categorisation-products-page.png "Product categorisation") -->
+
+### Cart
+A user will have access to their own "cart" once signing up to the website, which will allow them to manage a potential order. This saves the user time as it allows them to buy multiple products in a single order, as opposed to buying and purchasing each item individually.
+#### **Images**  
+<!-- ![cart](static/images/cart.png "cart") -->
