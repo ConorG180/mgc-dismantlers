@@ -44,3 +44,16 @@ An attractive footer is included in the programme to offer the user a simple way
 #### **Images**  
 <!-- ![footer](static/images/footer.png "footer") -->
 
+### CRUD (Create, Read, Update, Delete) functionality
+An authorised user of the website (Such as the owner/manager etc.) Will have the ability to manipulate the products database. For example, an authorized user may add a new product, delete a product which they no longer have in stock, and edit any details about a product if they wish. The authorised user also has the ability to add different makes/models of a car to the database via the django admin page.  
+Read functionality comes from the products page. This allows users (Authorised and unauthorised) to access products via the website's front-end and view their details accordingly.
+
+#### **Images**  
+##### **Deleting product form**
+<!-- ![Deleting product form](static/images/crud-functionality-delete-product.png "Deleting product form") -->
+##### **Adding product form**
+<!-- ![Adding product form](static/images/crud-functionality-add-product-form.png "Adding product form") -->
+##### **Editing product form**
+<!-- ![Editing product form](static/images/crud-functionality-edit-product-form.png "Editing product form") -->
+##### **Products page**
+<!-- ![Products page](static/images/products-page.png "Products page") -->
