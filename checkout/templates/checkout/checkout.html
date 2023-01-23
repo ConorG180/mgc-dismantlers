@@ -48,9 +48,12 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <button class=" w-100 btn btn-lg text-white bg-primary">
-                                    Checkout
-                                </button>
+                                <form class="form" action="POST">
+                                    {{order_form}}
+                                    <button type="submit" class=" w-100 btn btn-lg text-white bg-primary">
+                                        Confirm order
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -127,9 +130,10 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <a href="{% url 'checkout' %}">
-                            <button class=" w-100 btn btn-lg text-white bg-primary">
-                                Checkout
+                        <form class="form" action="POST">
+                            {{order_form}}
+                            <button type="submit" class=" w-100 btn btn-lg text-white bg-primary">
+                                Confirm order
                             </button>
                         </a>
                     </div>
