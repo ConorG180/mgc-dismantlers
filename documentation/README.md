@@ -12,3 +12,20 @@ Bootstrap is used in the programme so as to easily and efficiently style the var
 The grid feature in bootstrap was used to easily and efficiently provide a responsive layout for the website. Bootstraps grid system is based and built from the CSS flexbox feature. This layout was chosen for a number of reasons. Using the grid feature within Bootstrap, elements within the project can very easily be manipulated, hidden, unhidden, swapped, replaced or repositioned in the future if needed. This is especially handy when working on a layout for smaller devices, as certain elements which are not deemed necessary can be hidden if needed, and be prevented from taking up excess space on smaller screens. Furthermore, the very nature of Bootstraps grid is based on a mobile-first design, which easily allows the project to be built responsively and work on devices of all sizes.
 
 
+# Wireframes
+Before starting development on MGC Dismantlers, Balsamiq was used to form wireframes for each separate page within the programme. Basamiq was chosen due to it's efficiency and it's ability to reproduce relatively simplistic, yet easy to understand wireframes. This helped me to visualise ideas for each of the programmes pages and features, and organise how certain features would be laid out and implemented within the programme. Each wireframe created prior to development can be seen below:
+
+![index.html wireframe](wireframes/home.png "index.html (Home page)")
+![cart.html wireframe](wireframes/cart.png "cart.html (Cart page)")
+![checkout.html wireframe](wireframes/checkout.png "checkout.html (Checkout page)")
+![Contact modal wireframe](wireframes/contact-us-modal.png "Contact modal")
+![order-history.html wireframe](wireframes/order-history.png "order-history.html (Order history view)")
+![products.html wireframe](wireframes/products.png "products.html (Products view)")
+![product-info.html wireframe](wireframes/product-info.png "product-info.html (Product detail view)")
+![profile.html wireframe](wireframes/profile.png "profile.html (Profile view)")
+
+# Entity Relationship Diagram
+Before starting development on MyRosterManagement, diagrams.net/draw.io was used to form an Entity Relationship Diagram (ERD) for the programme. As the programme relies heavily on models and databases, an ERD helped immensely in determining how to structure the database, including aiding in aspects such as relationships between tables, primary and foreign keys, and selecting fields for various tables. The ERD can be seen below:  
+
+![MGC Dismantlers ERD](erd-diagrams/mgc-dismantlers-erd.jpg "MyRosterManagement ERD")
+
