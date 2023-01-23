@@ -38,3 +38,9 @@ The programme offers a very simple and easy to use navigation system to navigate
 ##### **Navbar**
 <!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
 
+
+### Footer
+An attractive footer is included in the programme to offer the user a simple way of easily navigating to the social media pages of the company. The wishlist feature is also included in the footer, to allow users to easily select a make and model and year of a car, and be notified when the product has come into stock.
+#### **Images**  
+<!-- ![footer](static/images/footer.png "footer") -->
+
