@@ -63,3 +63,7 @@ A user will be able to access a products page to access all products which the c
 #### **Images**  
 <!-- ![Products page](static/images/products-page.png "Products page") -->
 
+### Product searching
+A user will be able to search throught the company's array of products in order to try and find a product which they wish to purchase. This will be enabled through a search bar. The search bar is programmed to enable searches of colors, years, part names, makes and models of car parts.
+#### **Images**  
+<!-- ![Product searching](static/images/product-search.png "Product searching") -->
