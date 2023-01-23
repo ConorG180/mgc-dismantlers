@@ -11,3 +11,10 @@ def add_to_cart(request, product_id):
     cart[product_id] = 1
     request.session["cart"] = cart
     return redirect(reverse('products'))
+
+
+def remove_from_cart(request, product_id):
+    cart = request.session.get('cart', {})
+    del cart[product_id]
+    request.session["cart"] = cart
+    return redirect(reverse('cart'))
