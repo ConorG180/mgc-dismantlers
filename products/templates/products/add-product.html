@@ -33,9 +33,30 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
+    carMakes = $("#id_make").children()
+    carModels = $("#id_car_model").children()
+
+    carMakes.each(function(index, make) {
+        // make.attr("value", make.html())
+        // console.log(index)
+        // console.log(make)
+        console.log(make.value)
+        // console.log(make.textContent)
+        make.value = make.index
+        // console.log(make)
+    });
+    console.log(carModels)
+    carModels.sort()
+    // carMakes.sort()
+    // carModels.sort()
+
+// $.each(listitems, function(idx, itm) { mylist.append(itm); });
     $("#id_make").change(function () {
         const url = $("#product-form").attr("data-car_models-url");  // get the url of the `load_models` view
-        const make = $(this).val();  // get the selected Make ID from the HTML input
+        // const makeId = $(this).val();
+        const make = $(this).find('option:selected').text();
+        console.log("WATCH OUT BELOW HERE FOR NUMBER")
+        console.log(make)  // get the selected Make ID from the HTML input
         $.ajax({                       // initialize an AJAX request
             url: url,                    // set the url of the request
             data: {

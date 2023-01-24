@@ -3,8 +3,10 @@ from .models import Product, Category, Make, Model, Part
 
 
 class Product_form(forms.ModelForm):
-    list_of_makes = Make.objects.all()
-    make = forms.ModelChoiceField(queryset=list_of_makes, to_field_name="name")
+    # list_of_makes = Make.objects.all()
+    # make = forms.ModelChoiceField(queryset=list_of_makes, to_field_name="name")
+    make = forms.ModelChoiceField(Make.objects.all())
+    # make = forms.ModelChoiceField(Make.objects.order_by("name"))
 
     class Meta:
         model = Product
