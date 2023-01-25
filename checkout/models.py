@@ -56,6 +56,8 @@ class Order(models.Model):
         else:
             self.delivery_cost = settings.STANDARD_DELIVERY_COST
         
+        self.grand_total = self.order_total + self.delivery_cost
+        
         # Save the order instance
         self.save()
 
