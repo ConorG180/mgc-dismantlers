@@ -4,14 +4,22 @@ from django.contrib import messages
 from .models import Product, Category, Make, Model, Part
 from .forms import Product_form
 from django.db.models import Q
+from .filters import ProductFilter
 
 
 def render_products(request):
     products = Product.objects.all()
-    print(products)
-    context = {
-        "products": products
-    }
+    # print(f"FIRST RENDERING {products}")
+    if request.method == "GET":
+        print(f"Here is the get request {request.GET}")
+        product_filter = ProductFilter(request.GET, queryset=products)
+        # print(f"Here is the filter{dir(product_filter)}")
+        products = product_filter.qs
+        context = {
+            "products": products,
+            "product_filter": product_filter
+        }
+    # print(f"SECOND RENDERING {products} ")
     return render(request, 'products/products.html', context)
 
 
@@ -40,8 +48,9 @@ def edit_product(request, product_id):
 
 
 def add_product(request):
+    product_form = Product_form(request.POST or None, request.FILES)
     if request.method == "POST":
-        product_form = Product_form(request.POST)
+        print("model ======= ", request.POST.get("car_model"))
         if product_form.is_valid():
             print("We'gre getting here 44")
             product_form.save()
@@ -49,13 +58,15 @@ def add_product(request):
             return redirect(reverse('products'))
         else:
             print(product_form.errors)
-            return redirect(reverse('add_product'))
-    else:
-        product_form = Product_form()
-        context = {
-            "product_form": product_form,
-        }
-        return render(request, "products/add-product.html", context)
+            print("form not valid!!!!!!!!")
+            # print(product_form)
+            # return redirect(reverse('add_product'))
+    # else:
+    # product_form = Product_form()
+    context = {
+        "product_form": product_form,
+    }
+    return render(request, "products/add-product.html", context)
 
 
 def search_product(request):
@@ -91,7 +102,8 @@ def categorize_products(request, cat):
 
 
 def load_models(request):
-    make = request.GET.get('make')
-    make_id = Make.objects.get(name=make).id
-    models = Model.objects.filter(make_id=make_id).all()
+    # make = request.GET.get('make')
+    make = get_object_or_404(Make, name=request.GET.get("make"))
+    print(make)
+    models = Model.objects.filter(make=make).order_by("car_model")
     return render(request, 'products/model_dropdown_list_options.html', {'models': models})
