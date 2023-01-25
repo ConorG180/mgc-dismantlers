@@ -135,35 +135,6 @@
 
     </div>
     </div>
-    
-
-{% for product in products %}
-
-<div class="row">
-    <div class="col">
-        <h4>make</h4>{{product.car_model.make}}
-        <h4>model</h4>{{product.car_model}}
-        <h4>category</h4>{{product.part.category.name}}
-        <h4>part</h4>{{product.part}}
-        <h4>price</h4>{{product.price}}
-        {% if product.fuel %}
-        <h4>fuel</h4><i>fuel icon</i>{{product.fuel}}
-        {% endif %}
-        {% if product.color %}
-        <h4>color</h4><i>color icon</i>{{product.color}}
-        {% endif %}
-        {% if product.grade %}
-        <h4>grade</h4><i>grade icon</i>{{product.grade}}
-        {% endif %}
-        {% if product.part.category %}
-        <h4>category</h4><i>category icon</i>{{product.part.category.friendly_name}}
-        {% endif %}
-        {% if product.image %}
-        <h4>image</h4><img src="{{product.image.url}}">
-        {% endif %}
-    </div>
-    </div>
-{% endfor %}
 
 
 </div>
