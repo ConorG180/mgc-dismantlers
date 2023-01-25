@@ -48,8 +48,7 @@ class Order(models.Model):
         accounting for delivery costs.
         """
         # Calculate total of products and set the order_total field
-        total = self.lineitems.aggregate(total_cost=Sum('lineitem_total'))
-        self.order_total = total.total_cost
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         # if order total > free delivery threshold, free delivery. Else apply standard delivery cost
         if self.order_total >= settings.FREE_DELIVERY_THRESHOLD:
