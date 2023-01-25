@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Grid layout -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col ">
+        <h1>CHECKOUT SUCCESS</h1>
+      <!-- Carousel wrapper -->
+<div id="carouselExampleIndicators" class="carousel slide mt-2" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" id="slide-holder-1">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item" id="slide-holder-2">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-2.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item" id="slide-holder-3">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-3.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item" id="slide-holder-4">
+      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-4.jpg" alt="Fourth slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <i class="fa-solid fa-circle-arrow-left fa-2xl"></i>
+  </a>
+  <a class="carousel-control-next carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <i class="fa-solid fa-circle-arrow-right fa-2xl"></i>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- fa-circle-arrow-right -->
+<!-- End of Carousel -->
+    </div>
+  </div>
+
+  <div class="row homepage-cards mb-5 mt-5 d-flex justify-content-center">
+    <!-- <div class="col-12 col-lg-4"> -->
+      <!-- Cards -->
+      <!--      Cards -->
+ <div class="col-sm-12 col-md-6 col-lg-3 mb-4 mx-5"><a href="#"><div class="card text-white click-col" id="products-catalogue-card" style="background-image:url('static/static-images/car-repair-card-image.jpg');"> alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+ <div class="card-img-overlay d-flex flex-column">
+  <div class="card-body pt-0 d-flex flex-column align-items-center">
+    <h2 class="card-title mt-0 mb-2 text-white">Tutorials</h2>
+    <small class="card-meta mb-2 text-center h6">Why not learn a few basics about car repair and maintenance from some of our experts?</small>
+   </div>
+ </div>
+</div></div></a>
+
+<div class="col-sm-12 col-md-6 col-lg-3 mb-4 mx-5"><a href="#"><div class="card text-white click-col" id="products-catalogue-card" style="background-image:url('static/static-images/product-catalogue-card-image.jpg');"> alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+ <div class="card-img-overlay d-flex flex-column">
+  <div class="card-body pt-0 d-flex flex-column align-items-center">
+    <h2 class="card-title mt-0 mb-2 text-white">Products Catalogue</h2>
+    <small class="card-meta mb-2 text-center h6">Take a look at our parts catalogue. New parts added every day!</small>
+   </div>
+ </div>
+</div></div></a>
+
+<div class="col-sm-12 col-md-6 col-lg-3 mb-4 mx-5"><a href="#"><div class="card text-white click-col" id="products-catalogue-card" style="background-image:url('static/static-images/scrap-car-card-image.jpg');"> alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+ <div class="card-img-overlay d-flex flex-column">
+  <div class="card-body pt-0 d-flex flex-column align-items-center">
+    <h2 class="card-title mt-0 mb-2 text-white">Scrap my car</h2>
+    <small class="card-meta mb-2 text-center h6">Have a vehicle collecting dust at home? <br> Call us now for an instant quote!</small>
+   </div>
+ </div>
+</div></div></a>
+  </div>
+
+  <!-- End of container div -->
+</div>
+{% endblock content %}
