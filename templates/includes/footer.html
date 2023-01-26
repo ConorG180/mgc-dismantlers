@@ -1,3 +1,4 @@
+{% load static %}
 <div class="container-fluid">
       <!-- Start of footer -->
   <footer class="footer bg-dark mt-5">
@@ -49,7 +50,7 @@
     </div>
     <div class="col-lg-4 py-5 d-flex h-50 flex-column align-items-center justify-content-start">
       <div class="logo-wrapper d-flex flex-column align-items-center justify-content-center">
-        <img src="static/static-images/mgc-logo.png" alt="mgc-dismantlers-footer-logo" class="footer-logo">
+        <img src="{% static 'static-images/mgc-logo.png' %}" alt="mgc-dismantlers-footer-logo" class="footer-logo">
         <h3 class="logo-header mb-0 mt-2 text-center">MCG Dismantlers</h3>
       </div>
         <ul class="d-flex justify-content-around social-media-icons-wrapper w-75 mt-2 px-3">

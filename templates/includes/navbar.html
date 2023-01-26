@@ -1,8 +1,9 @@
+{% load static %}
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-1 sticky-top">
     <div class="container-fluid pl-0">
         <a href="{% url 'homepage' %}" class="pl-3 pl-lg-0 mr-0 display-4 navbar-brand font-weight-bold logo">
-          <img src="static/static-images/mgc-logo.png" alt="MGC Dismantlers logo" class="img-fluid"></a><h4 class="mb-0">MCG Dismantlers</h4>
+          <img src="{% static 'static-images/mgc-logo.png' %}" alt="MGC Dismantlers logo" class="img-fluid"></a><h4 class="mb-0">MCG Dismantlers</h4>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
             aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
