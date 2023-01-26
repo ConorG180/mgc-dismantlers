@@ -282,12 +282,27 @@ footer .submit-button:hover {
 }
 
 
+/* Checkout success page */
+.checkout-success-tick{
+  max-width: 75%;
+}
+.order-preview-image{
+width: 100px;
+height: auto;
+padding: 0;
+}
 
-  /* Media queries for cards on homepage */
+
+  /* Media queries */
   @media (max-width: 768px) {
     .card {
       min-height: 350px;
     }
+    .order-preview-image{
+      width: 75px;
+      height: auto;
+      padding: 0;
+      }
   }
   @media (max-width: 420px) {
     .card {
