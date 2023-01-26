@@ -10,37 +10,51 @@
         <h3 class="heading-section">Wishlist</h3>
       </div>
 
-    <form class="d-flex flex-column align-items-center">
+    <form method="POST" class="d-flex flex-column align-items-center" data-car_models-url="{% url 'ajax_load_car_models' %}" action="#">
       <div class="row wishlist-choices mx-3 d-flex justify-content-around">
       <div class="col-md-6 col-4 mb-3 form-group px-3">
-        <select class="form-control" id="make">
-          <option selected>Make</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <select class="form-control" id="wishlist_id_make">
+          <option value="0" selected>Make</option>
+          {% for make in makes %}
+          <option name="make" value="{{make.id}}">{{make.name}}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="col-md-6 col-4 mb-3 form-group px-3">
-        <select class="form-control" id="model">
-          <option selected>Model</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <select name="car_model" class="form-control" id="wishlist_id_car_model">
+          <option value="0" selected>Model</option>
+          {% for car_model in car_models %}
+          <option value="{{car_model.id}}">{{car_model.car_model}}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="col-md-6 col-4 mb-3 form-group px-3">
-        <select class="form-control" id="year">
-          <option selected>1996</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <select name="part" class="form-control" id="wishlist_id_year">
+          <option value="0" selected>Part</option>
+          {% for part in parts %}
+          <option value="{{part.id}}">{{part.name}}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="col-md-6 col-12 mb-3 form-group">
-        <input type="email" class="form-control" placeholder="email" id="exampleFormControlInput1" placeholder="name@example.com">
+        <select name="model_year" class="form-control" id="wishlist_id_year">
+          <option value="0" selected>Year</option>
+          {% for year in years %}
+          <option value="{{year}}">{{year}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-12 mb-0 form-group mb-0">
+        <p class="text-white text-center h5">I want to be notified:</p>
+      </div>
+      <div class="col-md-6 col-12 form-group mb-0">
+        <input type="checkbox" id="wishlist_id_on_add" name="on_add">  
+        <label for="wishlist_id_on_add"> When part is added </label>
+
+      </div>
+      <div class="col-md-6 col-12 form-group mb-0">
+        <input type="checkbox" id="wishlist_id_on_sale" name="on_sale">  
+        <label for="wishlist_id_on_sale"> When part is on sale </label>
       </div>
     </div>
       
