@@ -51,8 +51,16 @@ def render_checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('cart'))
-            cart = {}
-            return render(request, "checkout/checkout-success.html")
+            lineitems = order.lineitems.all()
+            for lineitem in lineitems:
+                lineitem.product.is_sold = True
+                lineitem.product.save()
+            del request.session["cart"]
+            context = {
+                "order": order,
+                "lineitems": lineitems
+            }
+            return render(request, "checkout/checkout-success.html", context)
         else:
             print("SOMETHING WRONG WITH FORM. NOT VALID")
             print(order_form.errors)
