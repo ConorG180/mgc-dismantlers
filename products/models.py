@@ -136,6 +136,7 @@ class Product(models.Model):
     sale_percentage = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0), validators=PERCENTAGE_VALIDATOR)
     image = models.ImageField(null=True, blank=True, max_length=1024)
     in_a_cart = models.BooleanField(default=False)
+    is_sold = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.part}"
