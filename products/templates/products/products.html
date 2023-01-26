@@ -64,7 +64,7 @@
         </div>
         <div class="col-xl-8 col-sm-12 product-card-column">
             {% for product in products %}
-            {% if product.in_a_cart == False %}
+            {% if product.in_a_cart == False and product.is_sold == False %}
             <div class="row product-cards">
             <div class="col-12">
                 <div class="card rounded bg-dark mb-4">
