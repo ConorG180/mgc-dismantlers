@@ -4,75 +4,59 @@
 {% block content %}
 <!-- Grid layout -->
 <div class="container-fluid">
-  <div class="row">
-    <div class="col ">
-        <h1>CHECKOUT SUCCESS</h1>
-      <!-- Carousel wrapper -->
-<div id="carouselExampleIndicators" class="carousel slide mt-2" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active" id="slide-holder-1">
-      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-1.jpg" alt="First slide">
+  <div class="container-fluid">
+    <div class="container text-center">
+      <img src="{% static 'static-images/checkout-success-tick.jpg' %}" alt="" class="checkout-success-tick img-fluid">
+        <h1>Thank you {{order.full_name}}</h1>
+        <p class="lead w-lg-50 mx-auto">Your order has been placed successfully.</p>
+        <p class="w-lg-50 mx-auto">Your order number is <a href="#">{{order.order_number}}</a>. It is currently being processed and will be delivered in 3 - 5 business days.</p>
+        <p class="w-lg-50 mx-auto">We have sent an email to {{order.email}} with all order information</p>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="order-preview-image">Image</th>
+                <th scope="col">Make</th>
+                <th scope="col">Model</th>
+                <th scope="col">Product</th>
+                <th scope="col">price</th>
+                <th scope="col">quantity</th>
+                <th scope="col">total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for lineitem in lineitems %}
+              <tr>
+                <td>
+                  {% if lineitem.product.image %}
+                    <img src="{{lineitem.product.image.url}}" alt="" class="img-fluid">
+                  {% else %}
+                  No image
+                  {% endif %}
+                </td>
+                <td>{{lineitem.product.car_model.make.name}}</td>
+                <td>{{lineitem.product.car_model.car_model}}</td>
+                <td>{{lineitem.product.part.name}}</td>
+                <td>{{lineitem.product.price}}</td>
+                <td>1</td>
+                <td>{{lineitem.lineitem_total}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <h5 class="text-left">Subtotal: <span>{{order.order_total | floatformat:2 }}</span></h5>
+        <h5 class="text-left">Delivery: <span>{{order.delivery_cost | floatformat:2 }}</span></h5>
+        <h5 class="text-left">total: <span>{{order.grand_total | floatformat:2 }}</span></h5>
     </div>
-    <div class="carousel-item" id="slide-holder-2">
-      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-2.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item" id="slide-holder-3">
-      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-3.jpg" alt="Third slide">
-    </div>
-    <div class="carousel-item" id="slide-holder-4">
-      <img class="d-block w-100 img-fluid rounded" src="static/static-images/slide-4.jpg" alt="Fourth slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <i class="fa-solid fa-circle-arrow-left fa-2xl"></i>
-  </a>
-  <a class="carousel-control-next carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <i class="fa-solid fa-circle-arrow-right fa-2xl"></i>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
-<!-- fa-circle-arrow-right -->
-<!-- End of Carousel -->
-    </div>
-  </div>
-
-  <div class="row homepage-cards mb-5 mt-5 d-flex justify-content-center">
-    <!-- <div class="col-12 col-lg-4"> -->
-      <!-- Cards -->
-      <!--      Cards -->
- <div class="col-sm-12 col-md-6 col-lg-3 mb-4 mx-5"><a href="#"><div class="card text-white click-col" id="products-catalogue-card" style="background-image:url('static/static-images/car-repair-card-image.jpg');"> alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
- <div class="card-img-overlay d-flex flex-column">
-  <div class="card-body pt-0 d-flex flex-column align-items-center">
-    <h2 class="card-title mt-0 mb-2 text-white">Tutorials</h2>
-    <small class="card-meta mb-2 text-center h6">Why not learn a few basics about car repair and maintenance from some of our experts?</small>
-   </div>
- </div>
-</div></div></a>
-
-<div class="col-sm-12 col-md-6 col-lg-3 mb-4 mx-5"><a href="#"><div class="card text-white click-col" id="products-catalogue-card" style="background-image:url('static/static-images/product-catalogue-card-image.jpg');"> alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
- <div class="card-img-overlay d-flex flex-column">
-  <div class="card-body pt-0 d-flex flex-column align-items-center">
-    <h2 class="card-title mt-0 mb-2 text-white">Products Catalogue</h2>
-    <small class="card-meta mb-2 text-center h6">Take a look at our parts catalogue. New parts added every day!</small>
-   </div>
- </div>
-</div></div></a>
-
-<div class="col-sm-12 col-md-6 col-lg-3 mb-4 mx-5"><a href="#"><div class="card text-white click-col" id="products-catalogue-card" style="background-image:url('static/static-images/scrap-car-card-image.jpg');"> alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
- <div class="card-img-overlay d-flex flex-column">
-  <div class="card-body pt-0 d-flex flex-column align-items-center">
-    <h2 class="card-title mt-0 mb-2 text-white">Scrap my car</h2>
-    <small class="card-meta mb-2 text-center h6">Have a vehicle collecting dust at home? <br> Call us now for an instant quote!</small>
-   </div>
- </div>
-</div></div></a>
-  </div>
+  <!-- <div class="row">
+    <div class="col-12">
+      <img src="{% static 'static-images/checkout-success-tick.jpg' %}" alt="" class="checkout-success-tick">
+        <h1>Success! Thank you {{order.full_name}}, you have checked out successfully. Your order number is {{order.order_number}}</h1>
+        <h1>You will receive an email shortly to {{order.email}} to access your order information.</h1>
+</div>
+  </div> -->
 
   <!-- End of container div -->
 </div>
