@@ -13,7 +13,6 @@ class Make(models.Model):
 class Model(models.Model):
     make = models.ForeignKey('Make', on_delete=models.PROTECT)
     car_model = models.CharField(max_length=50, null=True, blank=True)
-    model_year = models.IntegerField(default=1000)
     vehicle_category = models.CharField(max_length=50)
 
     def __str__(self):
@@ -42,96 +41,71 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
 
+class Color(models.Model):
+    color = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.color
+
+
+class Year(models.Model):
+    year = models.IntegerField()
+
+    def __str__(self):
+        return str(self.year)
+
+
 class Product(models.Model):
 
     PERCENTAGE_VALIDATOR = [MinValueValidator(0), MaxValueValidator(100)]
 
     # Choices to pick side of car that part came from
-    DRIVER_SIDE = 'DS'
-    PASSENGER_SIDE = 'PS'
-    DRIVER_SIDE_REAR = 'DSR'
-    DRIVER_SIDE_FRONT = 'DSF'
-    PASSENGER_SIDE_FRONT = 'PSF'
-    PASSENGER_SIDE_REAR = 'PSR'
 
     SIDE_CHOICES = [
-        (DRIVER_SIDE, 'Driver side'),
-        (PASSENGER_SIDE, 'Passenger side'),
-        (DRIVER_SIDE_REAR, 'Driver side rear'),
-        (DRIVER_SIDE_FRONT, 'Driver side front'),
-        (PASSENGER_SIDE_REAR, 'Passenger side rear'),
-        (PASSENGER_SIDE_FRONT, 'Passenger side front'),
+        ('Driver side', 'DS'),
+        ('Passenger side', 'PS'),
+        ('Driver side rear', 'DSR'),
+        ('Driver side front', 'DSF'),
+        ('Passenger side rear', 'PSR'),
+        ('Passenger side front', 'PSF'),
     ]
-
-    # Choices to pick color of the part
-    WHITE = 'WHITE'
-    BLACK = 'BLACK'
-    GRAY = 'GRAY'
-    SILVER = 'SILVER'
-    BLUE = 'BLUE'
-    RED = 'RED'
-    BROWN = 'BROWN'
-    GREEN = 'GREEN'
-    ORANGE = 'ORANGE'
-    BEIGE = 'BEIGE'
-    PURPLE = 'PURPLE'
-    GOLD = 'GOLD'
-    YELLOW = 'YELLOW'
-    INDIGO = 'INDIGO'
-    VIOLET = 'VIOLET'
-
-    COLOR_CHOICES = [
-        (WHITE, 'White'),
-        (BLACK, 'Black'),
-        (GRAY, 'Gray'),
-        (SILVER, 'Silver'),
-        (BLUE, 'Blue'),
-        (RED, 'red'),
-        (BROWN, 'Brown'),
-        (GREEN, 'Green'),
-        (ORANGE, 'Orange'),
-        (BEIGE, 'Beige'),
-        (PURPLE, 'Purple'),
-        (GOLD, 'Gold'),
-        (YELLOW, 'Yellow'),
-        (INDIGO, 'Indigo'),
-        (VIOLET, 'Violet'),
-    ]
-
-    # Choices to pick fuel of car that part came from
-    PETROL = 'PETROL'
-    DIESEL = 'DIESEL'
-    ELECTRIC = 'ELECTRIC'
-    HYBRID = 'HYBRID'
 
     FUEL_CHOICES = [
-        (PETROL, 'Petrol'),
-        (DIESEL, 'Diesel'),
-        (ELECTRIC, 'Electric'),
-        (HYBRID, 'Hybrid'),
+        ('Petrol', 'PETROL'),
+        ('Diesel', 'DIESEL'),
+        ('Electric', 'ELECTRIC'),
+        ('Hybrid', 'HYBRID'),
     ]
-
-    # Choices to pick Grade of the part
-    A = 'A'
-    B = 'B'
-    C = 'C'
-    D = 'D'
 
     GRADE_CHOICES = [
-        (A, 'A (Perfect)'),
-        (B, 'B (Great)'),
-        (C, 'C (Good)'),
-        (D, 'D (Fair)'),
+        ('A (Perfect)', 'A'),
+        ('B (Great)', 'B'),
+        ('C (Good)', 'C'),
+        ('D (Fair)', 'D'),
     ]
 
-    car_model = models.ForeignKey('Model', on_delete=models.PROTECT, default=1)
+    VEHICLE_CATEGORY_CHOICES = [
+        ('Sedan', 'SEDAN'),
+        ('Hatchback', 'HATCHBACK'),
+        ('SUV', 'SUV'),
+        ('Coupe', 'COUPE'),
+        ('Pickup', 'PICKUP'),
+        ('Van/Minivan', 'VAN/MINIVAN'),
+        ('Convertible', 'CONVERTIBLE'),
+        ('Motorbike', 'MOTORBIKE'),
+    ]
+
+    make = models.ForeignKey('Make', on_delete=models.PROTECT)
+    car_model = models.ForeignKey('Model', on_delete=models.PROTECT)
     part = models.ForeignKey('Part', on_delete=models.PROTECT)
+    model_year = models.ForeignKey('Year', on_delete=models.PROTECT)
     description = models.TextField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    grade = models.CharField(max_length=1, choices=GRADE_CHOICES)
-    color = models.CharField(max_length=6, null=True, blank=True, choices=COLOR_CHOICES, default=None)
+    grade = models.CharField(max_length=12, choices=GRADE_CHOICES)
+    color = models.ForeignKey('Color', on_delete=models.PROTECT)
     fuel = models.CharField(max_length=8, null=True, blank=True, choices=FUEL_CHOICES, default=None)
-    side = models.CharField(max_length=3, null=True, blank=True, choices=SIDE_CHOICES, default=None)
+    side = models.CharField(max_length=21, null=True, blank=True, choices=SIDE_CHOICES, default=None)
+    vehicle_category = models.CharField(max_length=21, null=True, blank=True, choices=VEHICLE_CATEGORY_CHOICES)
     on_sale = models.BooleanField(default=False)
     sale_percentage = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0), validators=PERCENTAGE_VALIDATOR)
     image = models.ImageField(null=True, blank=True, max_length=1024)

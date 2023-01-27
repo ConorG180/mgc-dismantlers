@@ -1,0 +1,372 @@
+[
+  {
+    "model": "products.year",
+    "pk": 1,
+    "fields": { "year": 1950 }
+  },
+  {
+    "model": "products.year",
+    "pk": 2,
+    "fields": { "year": 1951 }
+  },
+  {
+    "model": "products.year",
+    "pk": 3,
+    "fields": { "year": 1952 }
+  },
+  {
+    "model": "products.year",
+    "pk": 4,
+    "fields": { "year": 1953 }
+  },
+  {
+    "model": "products.year",
+    "pk": 5,
+    "fields": { "year": 1954 }
+  },
+  {
+    "model": "products.year",
+    "pk": 6,
+    "fields": { "year": 1955 }
+  },
+  {
+    "model": "products.year",
+    "pk": 7,
+    "fields": { "year": 1956 }
+  },
+  {
+    "model": "products.year",
+    "pk": 8,
+    "fields": { "year": 1957 }
+  },
+  {
+    "model": "products.year",
+    "pk": 9,
+    "fields": { "year": 1958 }
+  },
+  {
+    "model": "products.year",
+    "pk": 10,
+    "fields": { "year": 1959 }
+  },
+  {
+    "model": "products.year",
+    "pk": 11,
+    "fields": { "year": 1960 }
+  },
+  {
+    "model": "products.year",
+    "pk": 12,
+    "fields": { "year": 1961 }
+  },
+  {
+    "model": "products.year",
+    "pk": 13,
+    "fields": { "year": 1962 }
+  },
+  {
+    "model": "products.year",
+    "pk": 14,
+    "fields": { "year": 1963 }
+  },
+  {
+    "model": "products.year",
+    "pk": 15,
+    "fields": { "year": 1964 }
+  },
+  {
+    "model": "products.year",
+    "pk": 16,
+    "fields": { "year": 1965 }
+  },
+  {
+    "model": "products.year",
+    "pk": 17,
+    "fields": { "year": 1966 }
+  },
+  {
+    "model": "products.year",
+    "pk": 18,
+    "fields": { "year": 1967 }
+  },
+  {
+    "model": "products.year",
+    "pk": 19,
+    "fields": { "year": 1968 }
+  },
+  {
+    "model": "products.year",
+    "pk": 20,
+    "fields": { "year": 1969 }
+  },
+  {
+    "model": "products.year",
+    "pk": 21,
+    "fields": { "year": 1970 }
+  },
+  {
+    "model": "products.year",
+    "pk": 22,
+    "fields": { "year": 1971 }
+  },
+  {
+    "model": "products.year",
+    "pk": 23,
+    "fields": { "year": 1972 }
+  },
+  {
+    "model": "products.year",
+    "pk": 24,
+    "fields": { "year": 1973 }
+  },
+  {
+    "model": "products.year",
+    "pk": 25,
+    "fields": { "year": 1974 }
+  },
+  {
+    "model": "products.year",
+    "pk": 26,
+    "fields": { "year": 1975 }
+  },
+  {
+    "model": "products.year",
+    "pk": 27,
+    "fields": { "year": 1976 }
+  },
+  {
+    "model": "products.year",
+    "pk": 28,
+    "fields": { "year": 1977 }
+  },
+  {
+    "model": "products.year",
+    "pk": 29,
+    "fields": { "year": 1978 }
+  },
+  {
+    "model": "products.year",
+    "pk": 30,
+    "fields": { "year": 1979 }
+  },
+  {
+    "model": "products.year",
+    "pk": 31,
+    "fields": { "year": 1980 }
+  },
+  {
+    "model": "products.year",
+    "pk": 32,
+    "fields": { "year": 1981 }
+  },
+  {
+    "model": "products.year",
+    "pk": 33,
+    "fields": { "year": 1982 }
+  },
+  {
+    "model": "products.year",
+    "pk": 34,
+    "fields": { "year": 1983 }
+  },
+  {
+    "model": "products.year",
+    "pk": 35,
+    "fields": { "year": 1984 }
+  },
+  {
+    "model": "products.year",
+    "pk": 36,
+    "fields": { "year": 1985 }
+  },
+  {
+    "model": "products.year",
+    "pk": 37,
+    "fields": { "year": 1986 }
+  },
+  {
+    "model": "products.year",
+    "pk": 38,
+    "fields": { "year": 1987 }
+  },
+  {
+    "model": "products.year",
+    "pk": 39,
+    "fields": { "year": 1988 }
+  },
+  {
+    "model": "products.year",
+    "pk": 40,
+    "fields": { "year": 1989 }
+  },
+  {
+    "model": "products.year",
+    "pk": 41,
+    "fields": { "year": 1990 }
+  },
+  {
+    "model": "products.year",
+    "pk": 42,
+    "fields": { "year": 1991 }
+  },
+  {
+    "model": "products.year",
+    "pk": 43,
+    "fields": { "year": 1992 }
+  },
+  {
+    "model": "products.year",
+    "pk": 44,
+    "fields": { "year": 1993 }
+  },
+  {
+    "model": "products.year",
+    "pk": 45,
+    "fields": { "year": 1994 }
+  },
+  {
+    "model": "products.year",
+    "pk": 46,
+    "fields": { "year": 1995 }
+  },
+  {
+    "model": "products.year",
+    "pk": 47,
+    "fields": { "year": 1996 }
+  },
+  {
+    "model": "products.year",
+    "pk": 48,
+    "fields": { "year": 1997 }
+  },
+  {
+    "model": "products.year",
+    "pk": 49,
+    "fields": { "year": 1998 }
+  },
+  {
+    "model": "products.year",
+    "pk": 50,
+    "fields": { "year": 1999 }
+  },
+  {
+    "model": "products.year",
+    "pk": 51,
+    "fields": { "year": 2000 }
+  },
+  {
+    "model": "products.year",
+    "pk": 52,
+    "fields": { "year": 2001 }
+  },
+  {
+    "model": "products.year",
+    "pk": 53,
+    "fields": { "year": 2002 }
+  },
+  {
+    "model": "products.year",
+    "pk": 54,
+    "fields": { "year": 2003 }
+  },
+  {
+    "model": "products.year",
+    "pk": 55,
+    "fields": { "year": 2004 }
+  },
+  {
+    "model": "products.year",
+    "pk": 56,
+    "fields": { "year": 2005 }
+  },
+  {
+    "model": "products.year",
+    "pk": 57,
+    "fields": { "year": 2006 }
+  },
+  {
+    "model": "products.year",
+    "pk": 58,
+    "fields": { "year": 2007 }
+  },
+  {
+    "model": "products.year",
+    "pk": 59,
+    "fields": { "year": 2008 }
+  },
+  {
+    "model": "products.year",
+    "pk": 60,
+    "fields": { "year": 2009 }
+  },
+  {
+    "model": "products.year",
+    "pk": 61,
+    "fields": { "year": 2010 }
+  },
+  {
+    "model": "products.year",
+    "pk": 62,
+    "fields": { "year": 2011 }
+  },
+  {
+    "model": "products.year",
+    "pk": 63,
+    "fields": { "year": 2012 }
+  },
+  {
+    "model": "products.year",
+    "pk": 64,
+    "fields": { "year": 2013 }
+  },
+  {
+    "model": "products.year",
+    "pk": 65,
+    "fields": { "year": 2014 }
+  },
+  {
+    "model": "products.year",
+    "pk": 66,
+    "fields": { "year": 2015 }
+  },
+  {
+    "model": "products.year",
+    "pk": 67,
+    "fields": { "year": 2016 }
+  },
+  {
+    "model": "products.year",
+    "pk": 68,
+    "fields": { "year": 2017 }
+  },
+  {
+    "model": "products.year",
+    "pk": 69,
+    "fields": { "year": 2018 }
+  },
+  {
+    "model": "products.year",
+    "pk": 70,
+    "fields": { "year": 2019 }
+  },
+  {
+    "model": "products.year",
+    "pk": 71,
+    "fields": { "year": 2020 }
+  },
+  {
+    "model": "products.year",
+    "pk": 72,
+    "fields": { "year": 2021 }
+  },
+  {
+    "model": "products.year",
+    "pk": 73,
+    "fields": { "year": 2022 }
+  },
+  {
+    "model": "products.year",
+    "pk": 74,
+    "fields": { "year": 2023 }
+  }
+]

@@ -18,11 +18,17 @@ class MakeAdmin(admin.ModelAdmin):
 class ModelAdmin(admin.ModelAdmin):
     list_display = [
         "car_model", "make",
-        "model_year", "vehicle_category"
+        "vehicle_category"
     ]
     list_filter = ("make",)
     search_fields = ["car_model"]
 
+
 @admin.register(Product)
 class MakeAdmin(admin.ModelAdmin):
     list_display = ["car_model", "part", "price", "is_sold", "in_a_cart"]
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ["name", "friendly_name"]
