@@ -1,3 +1,34 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from .models import Wishlist
+from .forms import WishlistForm
 
-# Create your views here.
+
+def add_to_wishlist(request):
+    if request.method == "POST":
+        wishlist_form = WishlistForm(request.POST)
+        if wishlist_form.is_valid():
+            print("On sale here: ", request.POST["on_sale"], "On add here: ")
+            wishlist_part = Wishlist(
+                make_id=request.POST["make"],
+                car_model_id=request.POST["model"],
+                part_id=request.POST["part"],
+                model_year=request.POST["year"],
+                on_add="on_add" in request.POST or False,
+                on_sale="on_sale" in request.POST or False
+            )
+            # request.POST.hasOwnProperty("on_add"),
+            wishlist_part.save()
+            print("wishlist form is saved")
+            return redirect(reverse('homepage'))
+        else:
+            print(wishlist_form.errors)
+            print("WISHLISTFORM not valid!!!!!!!!")
+            return redirect(reverse('homepage'))
+            # print(product_form)
+            # return redirect(reverse('add_product'))
+    # else:
+    # product_form = Product_form()
+    # context = {
+    #     "product_form": product_form,
+    # }
+    # return render(request, "products/add-product.html", context)
