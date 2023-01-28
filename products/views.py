@@ -33,7 +33,7 @@ def delete_product(request, product_id):
 def edit_product(request, product_id):
     product = Product.objects.get(pk=product_id)
     make = product.car_model.make
-    product_form = Product_form(request.POST, instance=product)
+    product_form = Product_form(request.POST, request.FILES, instance=product,)
     if request.method == "POST":
         if product_form.is_valid():
             product_form.save()
