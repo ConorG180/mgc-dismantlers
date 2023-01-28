@@ -116,4 +116,4 @@ class Product(models.Model):
         return f"{self.part}"
     
     def create_card_title(self):
-        return f"{self.car_model.make} {self.car_model} {self.car_model.model_year} {self.part}"
+        return f"{self.car_model.make} {self.car_model} {self.model_year} {self.part}"
