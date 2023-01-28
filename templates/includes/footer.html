@@ -10,51 +10,31 @@
         <h3 class="heading-section">Wishlist</h3>
       </div>
 
-    <form method="POST" class="d-flex flex-column align-items-center" data-car_models-url="{% url 'ajax_load_car_models' %}" action="#">
+    <form method="POST" id="wishlist-form" class="d-flex flex-column align-items-center" data-car_models-url="{% url 'ajax_load_car_models' %}" action="{% url 'add_to_wishlist' %}">
+      {% csrf_token %}
       <div class="row wishlist-choices mx-3 d-flex justify-content-around">
       <div class="col-md-6 col-4 mb-3 form-group px-3">
-        <select class="form-control" id="wishlist_id_make">
-          <option value="0" selected>Make</option>
-          {% for make in makes %}
-          <option name="make" value="{{make.id}}">{{make.name}}</option>
-          {% endfor %}
-        </select>
+        {{wishlist_form.make}}
       </div>
       <div class="col-md-6 col-4 mb-3 form-group px-3">
-        <select name="car_model" class="form-control" id="wishlist_id_car_model">
-          <option value="0" selected>Model</option>
-          {% for car_model in car_models %}
-          <option value="{{car_model.id}}">{{car_model.car_model}}</option>
-          {% endfor %}
-        </select>
+        {{wishlist_form.model}}
       </div>
       <div class="col-md-6 col-4 mb-3 form-group px-3">
-        <select name="part" class="form-control" id="wishlist_id_year">
-          <option value="0" selected>Part</option>
-          {% for part in parts %}
-          <option value="{{part.id}}">{{part.name}}</option>
-          {% endfor %}
-        </select>
+        {{wishlist_form.part}}
       </div>
       <div class="col-md-6 col-12 mb-3 form-group">
-        <select name="model_year" class="form-control" id="wishlist_id_year">
-          <option value="0" selected>Year</option>
-          {% for year in years %}
-          <option value="{{year}}">{{year}}</option>
-          {% endfor %}
-        </select>
+        {{wishlist_form.year}}
       </div>
       <div class="col-12 mb-0 form-group mb-0">
         <p class="text-white text-center h5">I want to be notified:</p>
       </div>
       <div class="col-md-6 col-12 form-group mb-0">
-        <input type="checkbox" id="wishlist_id_on_add" name="on_add">  
-        <label for="wishlist_id_on_add"> When part is added </label>
-
+        {{wishlist_form.on_add}}
+        {{wishlist_form.on_add.label_tag}}
       </div>
       <div class="col-md-6 col-12 form-group mb-0">
-        <input type="checkbox" id="wishlist_id_on_sale" name="on_sale">  
-        <label for="wishlist_id_on_sale"> When part is on sale </label>
+        {{wishlist_form.on_sale}}
+        {{wishlist_form.on_sale.label_tag}}
       </div>
     </div>
       
@@ -91,3 +71,41 @@
       
     </footer>
 </div>
+
+<script>
+  carMakes = $("#wishlist_id_make").children()
+  carModels = $("#wishlist_id_car_model").children()
+
+  carMakes.each(function(index, make) {
+      // make.attr("value", make.html())
+      // console.log(index)
+      // console.log(make)
+      console.log(make.value)
+      // console.log(make.textContent)
+      make.value = make.index
+      // console.log(make)
+  });
+  console.log(carModels)
+  carModels.sort()
+  // carMakes.sort()
+  // carModels.sort()
+
+// $.each(listitems, function(idx, itm) { mylist.append(itm); });
+  $("#wishlist_id_make").change(function () {
+      const url = $("#wishlist-form").attr("data-car_models-url");  // get the url of the `load_models` view
+      // const makeId = $(this).val();
+      const make = $(this).find('option:selected').text();
+      console.log("WATCH OUT BELOW HERE FOR MAKE")
+      console.log(make)  // get the selected Make ID from the HTML input
+      $.ajax({                       // initialize an AJAX request
+          url: url,                    // set the url of the request
+          data: {
+              'make': make       // add the make id to the GET parameters
+          },
+          success: function (data) {  // `data` is the return of the `load_models` view function
+              $("#wishlist_id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
+          }
+      });
+
+  });
+</script>
