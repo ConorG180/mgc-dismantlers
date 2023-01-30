@@ -73,20 +73,24 @@
 </div>
 
 <script>
+
+  // Check at least on sale or on add is ticked in form:
+  $("#wishlist-form").submit(function(){
+    var checked = $("#wishlist-form input:checked").length > 0;
+    if (!checked){
+        alert("Please tick at least one checkbox.");
+        return false;
+    }
+});
+
+
+// Automatically update car models when make is selected
   carMakes = $("#wishlist_id_make").children()
   carModels = $("#wishlist_id_car_model").children()
 
-  carMakes.each(function(index, make) {
-      // make.attr("value", make.html())
-      // console.log(index)
-      // console.log(make)
-      console.log(make.value)
-      // console.log(make.textContent)
-      make.value = make.index
-      // console.log(make)
-  });
-  console.log(carModels)
-  carModels.sort()
+  // carMakes.each(function(index, make) {
+  //     make.value = make.index
+  // });
   // carMakes.sort()
   // carModels.sort()
 
