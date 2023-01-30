@@ -7,7 +7,6 @@ def add_to_wishlist(request):
     if request.method == "POST":
         wishlist_form = WishlistForm(request.POST)
         if wishlist_form.is_valid():
-            print("On sale here: ", request.POST["on_sale"], "On add here: ")
             wishlist_part = Wishlist(
                 make_id=request.POST["make"],
                 car_model_id=request.POST["model"],
@@ -18,11 +17,9 @@ def add_to_wishlist(request):
             )
             # request.POST.hasOwnProperty("on_add"),
             wishlist_part.save()
-            print("wishlist form is saved")
+            wishlist_part.user.add(request.user),
             return redirect(reverse('homepage'))
         else:
-            print(wishlist_form.errors)
-            print("WISHLISTFORM not valid!!!!!!!!")
             return redirect(reverse('homepage'))
             # print(product_form)
             # return redirect(reverse('add_product'))
