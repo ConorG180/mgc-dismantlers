@@ -1,0 +1,1 @@
+{{product.make.name}} {{product.car_model.car_model}} {{ product.part.name }} from your wishlist is now in stock!

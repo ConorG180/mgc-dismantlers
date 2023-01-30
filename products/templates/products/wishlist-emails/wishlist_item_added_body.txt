@@ -1,0 +1,9 @@
+Hello!
+
+It's your day! An item from your wishlist has been added to our stock:
+{{product.make.name}} {{product.car_model.car_model}} {{ product.part.name }}.
+Please call us on 044-12-34567 to reserve this product now, or checkout online by visiting our site here: INSERT LINK
+
+Thank you!
+
+MGC Dismantlers
