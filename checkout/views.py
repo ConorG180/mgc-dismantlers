@@ -5,6 +5,7 @@ from django.conf import settings
 from cart.context_processors import cart_context_processor
 from .models import Order, OrderLineItem
 from products.models import Product
+from profiles.models import UserProfile
 
 import stripe
 
@@ -17,7 +18,7 @@ import stripe
 def render_checkout(request):
     if request.method == "POST":
         cart = request.session.get("cart", {})
-        print(request.POST)
+        user_profile = UserProfile.objects.get(user=request.user)
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -35,6 +36,7 @@ def render_checkout(request):
             print("ORDER FORM IS VALID")
             order = order_form.save(commit=False)
             order.save()
+            order.user_profile = user_profile
             for item_id, quantity in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
