@@ -1,0 +1,15 @@
+Hello!
+
+You are receiving this email to confirm your purchase (Order no: {{order.order_number}}).
+
+Your order consisted of the following products: 
+{% for lineitem in lineitems.all %}
+Make: {{ lineitem.product.make.name }}
+Model: {{ lineitem.product.car_model.car_model }}
+Year: {{ lineitem.product.model_year }}
+Part: {{ lineitem.product.part.name }}
+
+{% endfor %}
+
+Thank you!
+MGC Dismantlers

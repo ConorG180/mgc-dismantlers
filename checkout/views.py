@@ -6,6 +6,8 @@ from cart.context_processors import cart_context_processor
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
 
 import stripe
 
@@ -62,6 +64,27 @@ def render_checkout(request):
                 "order": order,
                 "lineitems": lineitems
             }
+
+        # Create email subject
+            subject = render_to_string(
+                'checkout/confirmation-emails/order_confirmation_email_subject.txt',
+                context
+            )
+            # Create email body
+            body = render_to_string(
+                'checkout/confirmation-emails/order_confirmation_email_body.txt',
+                context
+            )
+            # Send emails to emails on wishlist.
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [request.user.email]
+            )
+            print("EMAIL(S) SHOULD BE SENT")
+            print("Wishlist empty, no emails sent")
+
             return render(request, "checkout/checkout-success.html", context)
         else:
             print("SOMETHING WRONG WITH FORM. NOT VALID")
