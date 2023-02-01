@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Grid layout -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <div class="row profile-buttons-wrapper">
+          <div class="col-lg-2 col-md-3 col-6 px-0 d-flex justify-content-center">
+            <button class="btn btn-dark text-white" type="button"  data-target="#profileCollapse" aria-expanded="false" aria-controls="profileCollapse" id="profileCollapseButton">Profile details</button>
+          </div>
+          <div class="col-lg-2 col-md-3 col-6 px-0 d-flex justify-content-center">
+            <button class="btn btn-dark text-white" href="#orderCollapse" role="button" aria-expanded="false" aria-controls="orderCollapse" id="orderCollapseButton">Order history</button>
+          </div>
+        </div>
+
+          <div class="row collapse" id="orderCollapse">
+            <div class="col-12">
+              <div class="order-history-wrapper d-flex flex-column">
+                <h4 class="align-self-md-start align-self-center mt-3 mb-1"><span class="primary-color-text">{{user_profile}}</span> Order History</h4>
+                    {% for user_order in user_orders %}
+                    <div class="div row order-wrapper my-2">
+                    <div class="col-12 bg-dark text-white border border-primary pt-2 pb-3">
+                    <div class="order-details">
+                    <div class="d-block order-information">
+                      <h6>
+                        Order number:
+                        <small>
+                          {{user_order.order_number}}</>
+                        </small>
+                      </h6>
+                      <h6>
+                        Order date:
+                        <small>
+                          {{user_order.order_date}}</>
+                        </small>
+                      </h6>
+                      <h6> Order address:
+                        <small>
+                       
+                          {{user_order.street_address1}}, {{user_order.street_address2}}, {{user_order.town}}, {{user_order.city}},{{user_order.county}}, {{user_order.country}}, {{user_order.postcode}}
+                        </small>
+                      </h6>
+                      
+                    </div>
+                    </div>
+                  </div>
+                    <div class="col-12 order-lineitems-details">
+                      <div class="table-responsive">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="order-preview-image">Image</th>
+                              <th scope="col">Make</th>
+                              <th scope="col">Model</th>
+                              <th scope="col">Product</th>
+                              <th scope="col">price</th>
+                              <th scope="col">quantity</th>
+                              <th scope="col">total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for lineitem in user_order.lineitems.all %}
+                            <tr>
+                              <td>
+                                {% if lineitem.product.image %}
+                                  <img src="{{lineitem.product.image.url}}" alt="" class="img-fluid">
+                                {% else %}
+                                No image
+                                {% endif %}
+                              </td>
+                              <td>{{lineitem.product.car_model.make.name}}</td>
+                              <td>{{lineitem.product.car_model.car_model}}</td>
+                              <td>{{lineitem.product.part.name}}</td>
+                              <td>{{lineitem.product.price}}</td>
+                              <td>1</td>
+                              <td>{{lineitem.lineitem_total}}</td>
+                            </tr>
+                            {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- ONE COMPLETE ORDER -->
+                    {% endfor %}
+              </div>
+            </div>
+        </div>
+            <div class="row collapse show" id="profileCollapse">
+            <div class="col-12">
+                <div class="profile-information-wrapper d-flex flex-column mb-5 mt-3">
+                        <h4 class="align-self-md-start align-self-center"><span class="primary-color-text">{{user_profile}}</span> Profile Information</h4>
+                        <form method="POST" class="d-flex flex-column align-items-center w-100 profile-form" action="{% url 'profile' %}">
+                          {% csrf_token %}
+                          {{user_profile_form}}
+                          <button type="submit" class="btn btn-lg text-white primary-color-bg submit-button">
+                            Save changes
+                        </button>
+                        </form>
+                  </div>
+            </div>
+            </div>
+
+</div>
+  </div>
+
+  <!-- End of container div -->
+</div>
+<script>
+$(document).ready(function(){
+// Custom js so that collapsle elements from bootstrap
+// Can never all be collapsed at same time. Toggle function
+// From bootstrap removed. Once one is hidden, the other one
+// Will show at the same time, allowing for no empty space
+// Ever on screen.
+  $("#orderCollapseButton").click(function(){
+    if ($("#profileCollapse").hasClass("show")){
+      $("#profileCollapse").collapse('hide');
+      $("#orderCollapse").collapse('show');
+    }
+  });
+
+  $("#profileCollapseButton").click(function(){
+    if ($("#orderCollapse").hasClass("show")){
+      $("#orderCollapse").collapse('hide');
+      $("#profileCollapse").collapse('show')
+    }
+  });
+
+})
+</script>
+{% endblock content %}

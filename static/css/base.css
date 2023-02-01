@@ -5,6 +5,10 @@
 .primary-color-text{
   color: #Cc8c27;
 }
+
+.primary-color-border{
+  border: 2px solid #Cc8c27;
+}
 .border-bottom{
   border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
 }
@@ -303,7 +307,23 @@ height: auto;
 padding: 0;
 }
 
+.profile-buttons-wrapper{
+  margin-top: 150px;
+}
 
+.profile-form > *{
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px 5px;
+  border-radius: 15px;
+  border: 2px solid grey;
+}
+.profile-form .submit-button{
+  min-width: 175px;
+  max-width: 30%;
+  font-size: 23px;
+}
   /* Media queries */
   @media (max-width: 768px) {
     .card {
