@@ -48,9 +48,11 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <button class=" w-100 btn btn-lg text-white bg-primary">
-                                    Checkout
-                                </button>
+                                <a href="{% url 'checkout' %}">
+                                    <button class=" w-100 btn btn-lg text-white bg-primary">
+                                        Checkout
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -59,7 +61,7 @@
 
                 {% for product in cart %}
                 <div class="row bg-dark d-flex justify-content-start border-bottom">
-<!-- hre -->      <div class="col-xl-2 col-md-2 col-12 pl-0">
+<!-- hre -->      <div class="col-xl-2 col-md-2 col-12 p-0">
     {% if product.product.image %}
     <a href="#">
     <img src="{{product.product.image.url}}" class="card-img-top cart-image img-responsive h-100" alt="...">
