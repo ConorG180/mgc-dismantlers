@@ -9,7 +9,18 @@
   border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
 }
 
-
+.min-vh-100{
+  min-height: 100vh;
+}
+.min-vh-75{
+  min-height: 75vh;
+}
+.min-vh-50{
+  min-height: 50vh;
+}
+.min-vh-25{
+  min-height: 25vh;
+}
 nav .img-fluid{ /*Company logo navbar */
     height: 75px;
     object-fit: cover;
