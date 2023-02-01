@@ -3,65 +3,13 @@
 
 {% block content %}
 <!-- Grid layout -->
-<div class="container-fluid">
+<div class="container">
 
 <div class="row mt-5">
-    <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-1 col-12">
-        <div class="row mt-3">
-            <div class="col-xl-9 col-12">
-                <div class="row text-primary">
-                    <div class="col-xl-2 col-md-6 col-12">
-                        <p class="h6"></p>
-                    </div>
-                    <div class="col-xl-6 col-md-6 col-12 d-md-flex flex-column">
-                        <p class="h6">Item</p>
-                    </div>
-                    <div class="col-xl-1 d-flex flex-column justify-content-center">
-                        <p class="h6">Price</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-12 d-md-none">
-                        <div class="border mb-4">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <h5>Order Summary</h5>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-8">
-                                <div class="d-flex flex-column align-items-start ml-2">
-                                    <p>products ({{product_count}}):</p>
-                                    <p>Delivery:</p>
-                                    <p>Total:</p>
-                                </div>
-                                </div>
-        
-                            <div class="col-4">
-                                <div class="d-flex mr-2 flex-column align-items-end">
-                                    <p>{{total}}</p>
-                                    <p>{{delivery}}</p>
-                                    <p>{{ grand_total }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <form class="form" action="POST" id="stripe-payment-form">
-                                    {{order_form}}
-                                    <button type="submit" class=" w-100 btn btn-lg text-white bg-primary">
-                                        Confirm order
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
+    <div class="col-12">
                 {% for product in cart %}
                 <div class="row bg-dark d-flex justify-content-start border-bottom">
-<!-- hre -->      <div class="col-xl-2 col-md-2 col-12 pl-0">
+                    <div class="col-xl-2 col-md-2 col-12 pl-0">
     {% if product.product.image %}
     <a href="#">
     <img src="{{product.product.image.url}}" class="card-img-top cart-image img-responsive h-100" alt="...">
@@ -86,95 +34,90 @@
         </ul>
 </div>
 
-<!-- This row only shows on small to large devices -->
-<!-- Edit/delete/add to cart buttons for small to large devices -->
             </div>
             <div class="col-xl-1 col-md-1 col-6 mr-xl-4 d-flex flex-column justify-content-start">
-                <!-- <div class="h-25 d-flex flex-column"> -->
                         <p class=" pt-xl-2 text-white">€{{product.product.price}}</p>
-                <!-- </div> -->
             </div>
             <div class="col-xl-2 col-md-3 col-6 d-flex flex-column justify-content-xl-center justify-content-md-end justify-content-start align-items-md-end">
-                <!-- <div class="h-25 d-flex flex-column"> -->
                     <a href="{% url 'remove_from_cart' product.product.id %}" class="btnfont-weight-bold text-danger cart-btn text-right"><i class="mr-3 fa-solid fa-square-minus"></i>Remove</a>
-                <!-- </div> -->
             </div>
     </div>
     {% endfor %}
-            </div>
-            <!-- Checkout details and link. This section only shows for medium size devices and up -->
-            <div class="col-xl-3 col-12 d-none d-md-block">
-                <div class="border">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h5>Order Summary</h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <div class="d-flex flex-column align-items-start ml-2">
-                            <p>products ({{product_count}}):</p>
-                            <p>Delivery:</p>
-                            <p>Total:</p>
-                        </div>
-                        </div>
-
-                    <div class="col-4">
-                        <div class="d-flex mr-2 flex-column align-items-end">
-                            <p>{{total}}</p>
-                            <p>{{delivery}}</p>
-                            <p>{{ grand_total }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                    {% csrf_token %}
-                    <fieldset class="rounded mb-5 w-100">
-                        {{ order_form.full_name }}
-                        {{ order_form.email }}
-                        <!-- <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend> -->
-                        {{ order_form.phone_number }}
-                        {{ order_form.street_address1 }}
-                        {{ order_form.street_address2 }}
-                        {{ order_form.town }}
-                        {{ order_form.city }}
-                        {{ order_form.county }}
-                        {{ order_form.postcode }}
-                        {{ order_form.country }}
-                    </fieldset>
-                    <fieldset>
-                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                        <!-- A Stripe card element will go here -->
-                        <div class="mb-3" id="card-element"></div>
-                        <!-- Used to display form errors -->
-                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                        <!-- Pass the client secret to the view so we can get the payment intent id -->
-                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
-                    </fieldset>
-
-                    <div class="submit-button text-right mt-5 mb-2">                    
-						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
-							<span class="icon">
-								<i class="fas fa-lock"></i>
-							</span>
-						</button>
-						<p class="small text-danger my-0">
-							<span class="icon">
-								<i class="fas fa-exclamation-circle"></i>
-							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-						</p>
-					</div>
-                </form>
-                    </div>
-                </div>
-            </div> <!--  border -->
-            </div>
           </div>
-  <!-- End of container div -->
+          <div class="col-12 border">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Order Summary</h5>
+                </div>
+            </div>
+            <div class="border-top row">
+                <div class="col-12 order-information d-block">
+                    <h6>
+                        products: ({{product_count}})
+                        <small>
+                            €{{total}}
+                        </small>
+                    </h6>
+                    <h6>
+                        Delivery:
+                        <small>
+                            €{{delivery}}
+                        </small>
+                    </h6>
+                    <h6> Total:
+                        <small>
+                            €{{ grand_total }}
+                        </small>
+                    </h6>
+                </div>
+                <div class="border-top col-12">
+                    <h5>Checkout</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <form class="w-75 mb-4" action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <fieldset class="rounded mb-5 w-100">
+                    {{ order_form.full_name }}
+                    {{ order_form.email }}
+                    {{ order_form.phone_number }}
+                    {{ order_form.street_address1 }}
+                    {{ order_form.street_address2 }}
+                    {{ order_form.town }}
+                    {{ order_form.city }}
+                    {{ order_form.county }}
+                    {{ order_form.postcode }}
+                    {{ order_form.country }}
+                </fieldset>
+                <fieldset>
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- A Stripe card element will go here -->
+                    <div class="mb-3" id="card-element"></div>
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <!-- Pass the client secret to the view so we can get the payment intent id -->
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                </fieldset>
+
+                <div class="submit-button text-right mt-5 mb-2">                    
+                    <button id="submit-button" class="btn btn-black rounded-0">
+                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
+                    <p class="small text-danger my-0">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
+                </div>
+            </div>
+        </div>
 </div>
 </div>
 </div>
