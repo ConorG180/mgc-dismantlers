@@ -15,17 +15,14 @@ def add_to_wishlist(request):
                 on_add="on_add" in request.POST or False,
                 on_sale="on_sale" in request.POST or False
             )
-            # request.POST.hasOwnProperty("on_add"),
             wishlist_part.save()
             wishlist_part.user.add(request.user),
             return redirect(reverse('homepage'))
         else:
             return redirect(reverse('homepage'))
-            # print(product_form)
-            # return redirect(reverse('add_product'))
-    # else:
-    # product_form = Product_form()
-    # context = {
-    #     "product_form": product_form,
-    # }
-    # return render(request, "products/add-product.html", context)
+
+
+def remove_from_wishlist(request, wishlist_id):
+    wishlist_item = Wishlist.objects.get(pk=wishlist_id)
+    wishlist_item.delete()
+    return redirect(reverse('profile'))
