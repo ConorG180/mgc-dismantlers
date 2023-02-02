@@ -1,1 +1,1 @@
-web: gunicorn mgc-dismantlers.wsgi
+web: gunicorn mcg-dismantlers.wsgi
