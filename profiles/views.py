@@ -3,12 +3,41 @@ from django.contrib.auth.models import User
 from .models import UserProfile
 from checkout.models import Order
 from .forms import UserProfileForm
+from wishlist.models import Wishlist
+from products.models import Make, Model, Year, Part
 
 
 def profile(request):
     user_profile = UserProfile.objects.get(user=request.user)
     user_orders = Order.objects.filter(user_profile=user_profile)
+    user_wishlist = Wishlist.objects.filter(user=request.user)
     user_profile_form = UserProfileForm(request.POST, instance=user_profile)
+    wishlist = []
+    for wishlist_item in user_wishlist:
+        wishlist_id = wishlist_item.id
+        make = Make.objects.get(id=wishlist_item.make_id)
+        model = Model.objects.get(id=wishlist_item.car_model_id)
+        on_add = wishlist_item.on_add
+        on_sale = wishlist_item.on_sale
+        try:
+            year = Year.objects.get(id=wishlist_item.model_year)
+        except Year.DoesNotExist:
+            year = "All years"
+        try:
+            part = Part.objects.get(id=wishlist_item.part_id)
+        except Part.DoesNotExist:
+            part = "All parts"
+
+        wishlist_product = {
+            "wishlist_id": wishlist_id,
+            "make": make,
+            "model": model,
+            "year": year,
+            "part": part,
+            "on_add": on_add,
+            "on_sale": on_sale
+        }
+        wishlist.append(wishlist_product)
 
     if request.method == "POST":
         if user_profile_form.is_valid():
@@ -35,5 +64,6 @@ def profile(request):
             "user_profile": user_profile,
             "user_orders": user_orders,
             "user_profile_form": user_profile_form,
+            "wishlist": wishlist
         }
         return render(request, 'profiles/profile.html', context)
