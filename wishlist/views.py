@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, reverse
 from .models import Wishlist
 from .forms import WishlistForm
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def add_to_wishlist(request):
     if request.method == "POST":
         wishlist_form = WishlistForm(request.POST)
@@ -21,7 +23,7 @@ def add_to_wishlist(request):
         else:
             return redirect(reverse('homepage'))
 
-
+@login_required
 def remove_from_wishlist(request, wishlist_id):
     wishlist_item = Wishlist.objects.get(pk=wishlist_id)
     wishlist_item.delete()
