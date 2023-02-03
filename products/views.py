@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from .models import Product, Category, Make, Model, Part
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from wishlist.models import Wishlist
 from .forms import Product_form
 from django.db.models import Q
@@ -19,6 +20,16 @@ def render_products(request):
         product_filter = ProductFilter(request.GET, queryset=products)
         # print(f"Here is the filter{dir(product_filter)}")
         products = product_filter.qs
+
+        # pagination
+        page = request.GET.get("page", 1)
+        paginator = Paginator(products, 10)  # number of products per paginated page
+        try:
+            products = paginator.page(page)
+        except PageNotAnInteger:
+            products = paginator.page(1)
+        except EmptyPage:
+            products = paginator.page(paginator.num_pages)
         context = {
             "products": products,
             "product_filter": product_filter

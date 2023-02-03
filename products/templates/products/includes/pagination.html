@@ -1,0 +1,36 @@
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        {% if products.has_previous %}
+        <!-- previous page -->
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.previous_page_number }}{{ get_args }}" aria-label="Previous">
+                    Prev
+                </a>
+            </li>
+        {% endif %}
+
+        {% for num in products.paginator.page_range %}
+            <!-- loop through pagination 'page' numbers -->
+            {% if products.number == num %}
+                <!-- set 'active' class but disable the 'current page -->
+                <li class="page-item active disabled" aria-current="page">
+                    <a class="page-link">{{ num }}</a>
+                </li>
+            {% elif num > products.number|add:'-3' and num < products.number|add:'3' %}
+                <!-- get the previous 2 and next 2 page numbers -->
+                <li>
+                    <a href="?page={{ num }}{{ get_args }}" class="page-link">{{ num }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if products.has_next %}
+            <!-- next page -->
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.next_page_number }}{{ get_args }}" aria-label="Next">
+                    Next
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
