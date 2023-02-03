@@ -1,6 +1,6 @@
  <!-- Start of Categories bar -->
  <div class="container-fluid px-0">
-    <div class="row px-0" id="category-nav-bar">
+    <div class="row px-0 mx-0" id="category-nav-bar">
         {% for category in categories %}
         <div class="col-lg-1 col-md-2 col-3 px-0">
           <a href="{% url 'categorize_products' category.friendly_name %}" class="list-group-item-action border-right border-bottom border-white d-flex align-items-center justify-content-center py-2 text-white">
