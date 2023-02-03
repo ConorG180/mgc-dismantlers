@@ -41,7 +41,7 @@
             <!-- Sorting functionality -->
             <div class="row">
                 <div class="col">
-                    <form method="GET" action="{% url 'products' %}" class="mt-5" id="filter-form">
+                    <form method="GET" action="{% url 'products' %}" class="mt-5" id="filter-form" data-car_models-url="{% url 'ajax_load_car_models' %}">
                         {{ product_filter.form.as_p }}
                                 <button class="form-control btn btn-black border border-black rounded-0" type="submit"> Filter
                                 </button>
@@ -82,17 +82,20 @@
                                 <a href="#">
                                 <h5 class="card-title primary-color-text">{{product.create_card_title}}</h5>
                                 </a>
-                                <p class="card-text">{{product.id}} With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With</p>
+                                <p class="card-text">{{product.description}}</p>
                                 <ul class="d-flex list-unstyled">
                                 {% if product.color %}
                                     <li><i class=" mr-2 fa-solid fa-palette"></i>{{product.color}}</li>
                                 {% endif %}
                                 {% if product.grade %}
-                                    <li><i class=" mx-2 ml-4 fa-solid fa-chart-simple"></i>{{product.grade}}</li>
+                                    <li><i class=" mx-2 ml-4 fa-solid fa-chart-simple"></i>{{product.get_grade_display}}</li>
                                 {% endif %}
                                 {% if product.fuel %}
-                                    <li><i class=" mx-2 ml-4 fa-solid fa-gas-pump"></i>{{product.fuel}}</li>
+                                    <li><i class=" mx-2 ml-4 fa-solid fa-gas-pump"></i>{{product.get_fuel_display}}</li>
                                 {% endif %}
+                                {% if product.side %}
+                                <li><i class="mx-2 ml-4 fa-solid fa-car-side"></i>{{product.get_side_display}}</li>
+                            {% endif %}
                                 </ul>
                                 <div class="h-25 d-flex flex-column">
                                     <p class="card-text h5 mt-5">€{{product.price}}</p>
@@ -185,6 +188,44 @@
         });
 
     }); -->
-</script>
+<!-- </script>
+</script> -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    // Remove empty option
+    const emptyOption = $("#id_make:contains(' --------- ')")
+    const firstmake = $("#id_make").find("[value=1]")
+    firstmake.attr("selected","selected")
+    emptyOption.removeAttr("selected")
+    console.log(emptyOption)
+    emptyOption.remove()
+
+    const url = $("#filter-form").attr("data-car_models-url");  // get the url of the `load_models` view
+        const make = firstmake.text();  // get the selected Make ID from the HTML input
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request
+            data: {
+                'make': make       // add the make id to the GET parameters
+            },
+            success: function (data) {  // `data` is the return of the `load_models` view function
+                $("#id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
+            }
+        });
+
+    $("#id_make").change(function () {
+        const url = $("#filter-form").attr("data-car_models-url");  // get the url of the `load_models` view
+        const make = $(this).find('option:selected').text();  // get the selected Make ID from the HTML input
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request
+            data: {
+                'make': make       // add the make id to the GET parameters
+            },
+            success: function (data) {  // `data` is the return of the `load_models` view function
+                $("#id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
+            }
+        });
+
+    });
 </script>
 {% endblock content %}
