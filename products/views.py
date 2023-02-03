@@ -36,10 +36,19 @@ def delete_product(request, product_id):
 def edit_product(request, product_id):
     product = Product.objects.get(pk=product_id)
     make = product.car_model.make
+    print(product)
+    print(product.grade)
     product_form = Product_form(request.POST, request.FILES, instance=product,)
     if request.method == "POST":
+        print(request.POST)
+        product_form = Product_form(request.POST, request.FILES, instance=product)
         if product_form.is_valid():
+            print("Are we getting here? Here is valid!!!")
             product_form.save()
+            product.save()
+            return redirect(reverse('products'))
+        else:
+            print(product_form.errors)
             return redirect(reverse('products'))
     else:
         product_form = Product_form(instance=product)
@@ -106,15 +115,15 @@ def search_product(request):
         if not user_search_query:
             messages.error(request, "You didn't enter any search criteria!")
             return redirect(reverse('products'))
-        queries = Q(color__icontains=user_search_query) | Q(car_model__car_model__icontains=user_search_query) | Q(car_model__make__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query)
+        queries = Q(color__color__icontains=user_search_query) | Q(car_model__car_model__icontains=user_search_query) | Q(car_model__make__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(model_year__year__icontains=user_search_query) | Q(description__icontains=user_search_query)
         products = products.filter(queries)
         context = {
             "user_search_query": user_search_query,
             "products": products,
             "products_count": products.count()
         }
-        return render(request, 'products/search.html', context)
-    return render(request, 'products/search.html', {})
+        return render(request, 'products/products.html', context)
+    return render(request, 'products/products.html', {})
 
 
 def categorize_products(request, cat):
