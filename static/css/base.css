@@ -283,6 +283,46 @@ footer .submit-button:hover {
   border-radius: 20px;
 }
 
+/* Product filtering */
+#filter-form{
+  border-radius: 20px;
+  padding: 10px 0;
+  /* margin-bottom: 30px; */
+  border: 2px solid #Cc8c27;
+  /* border: 2px solid blue; */
+  background-color: sandybrown;
+}
+.filter-product-btn {
+  box-shadow: 0px 5px 10px  #212121;
+  background: #5E5DF0;
+  border-radius: 999px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 150px;
+  max-width: 75%;
+  transition: 200ms;
+  margin: 20px auto 5px auto;
+  cursor: pointer;
+}
+
+.filter-product-btn:hover{
+  transform: scale(110%);
+}
+
+#filter-form > p{
+min-width: 150px;
+max-width: 75%;
+margin: 0 auto;
+font-weight: 500;
+font-size: 17px;
+}
+
+#filter-form > p > *{
+width: 100%;
+  }
+
+/* Checkout page*/
 #payment-form fieldset > input{
   width: 100%;
   padding: 10px 20px;
