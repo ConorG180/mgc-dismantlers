@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.apps import apps
-from .models import Make, Model, Product, Category, Part
+from .models import Make, Model, Product, Category, Part, Color, Year
 
 # products_models = apps.get_app_config('products').get_models()
 
@@ -32,3 +32,15 @@ class MakeAdmin(admin.ModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ["name", "friendly_name"]
+
+@admin.register(Color)
+class ColorAdmin(admin.ModelAdmin):
+    list_display = ["color"]
+
+@admin.register(Year)
+class YearAdmin(admin.ModelAdmin):
+    list_display = ["year"]
+
+@admin.register(Part)
+class PartAdmin(admin.ModelAdmin):
+    list_display = ["name"]
