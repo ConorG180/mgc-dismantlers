@@ -62,44 +62,44 @@ class Product(models.Model):
     # Choices to pick side of car that part came from
 
     SIDE_CHOICES = [
-        ('Driver side', 'DS'),
-        ('Passenger side', 'PS'),
-        ('Driver side rear', 'DSR'),
-        ('Driver side front', 'DSF'),
-        ('Passenger side rear', 'PSR'),
-        ('Passenger side front', 'PSF'),
+        ('DS', 'Driver side'),
+        ('PS', 'Passenger side'),
+        ('DSR', 'Driver side rear'),
+        ('DSF', 'Driver side front'),
+        ('PSR', 'Passenger side rear'),
+        ('PSF', 'Passenger side front'),
     ]
 
     FUEL_CHOICES = [
-        ('Petrol', 'PETROL'),
-        ('Diesel', 'DIESEL'),
-        ('Electric', 'ELECTRIC'),
-        ('Hybrid', 'HYBRID'),
+        ('PETROL', 'Petrol'),
+        ('DIESEL', 'Diesel'),
+        ('ELECTRIC', 'Electric'),
+        ('HYBRID', 'Hybrid'),
     ]
 
     GRADE_CHOICES = [
-        ('A (Perfect)', 'A'),
-        ('B (Great)', 'B'),
-        ('C (Good)', 'C'),
-        ('D (Fair)', 'D'),
+        ('A', 'A (Perfect)'),
+        ('B', 'B (Great)'),
+        ('C', 'C (Good)'),
+        ('D', 'D (Fair)'),
     ]
 
     VEHICLE_CATEGORY_CHOICES = [
-        ('Sedan', 'SEDAN'),
-        ('Hatchback', 'HATCHBACK'),
+        ('SEDAN', 'Sedan'),
+        ('HATCHBACK', 'Hatchback'),
         ('SUV', 'SUV'),
-        ('Coupe', 'COUPE'),
-        ('Pickup', 'PICKUP'),
-        ('Van/Minivan', 'VAN/MINIVAN'),
-        ('Convertible', 'CONVERTIBLE'),
-        ('Motorbike', 'MOTORBIKE'),
+        ('COUPE', 'Coupe'),
+        ('PICKUP', 'Pickup'),
+        ('MINIVAN', 'Van/Minivan'),
+        ('CONVERTIBLE', 'Convertible'),
+        ('MOTORBIKE', 'Motorbike'),
     ]
 
     make = models.ForeignKey('Make', on_delete=models.PROTECT)
     car_model = models.ForeignKey('Model', on_delete=models.PROTECT)
     part = models.ForeignKey('Part', on_delete=models.PROTECT)
     model_year = models.ForeignKey('Year', on_delete=models.PROTECT)
-    description = models.TextField(max_length=254, null=True, blank=True)
+    description = models.TextField(max_length=1024, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     grade = models.CharField(max_length=12, choices=GRADE_CHOICES)
     color = models.ForeignKey('Color', on_delete=models.PROTECT)
@@ -116,4 +116,5 @@ class Product(models.Model):
         return f"{self.part}"
     
     def create_card_title(self):
-        return f"{self.car_model.make} {self.car_model} {self.model_year} {self.part}"
+        return f"{self.make.name} {self.car_model.car_model} {self.model_year.year} {self.part.name}"
+

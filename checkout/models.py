@@ -79,7 +79,7 @@ class Order(models.Model):
 # order history. Maybe change this later. Can cause integrity issues.
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, editable=False)
 
