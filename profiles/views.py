@@ -5,8 +5,10 @@ from checkout.models import Order
 from .forms import UserProfileForm
 from wishlist.models import Wishlist
 from products.models import Make, Model, Year, Part
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def profile(request):
     user_profile = UserProfile.objects.get(user=request.user)
     user_orders = Order.objects.filter(user_profile=user_profile)
