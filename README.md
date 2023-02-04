@@ -38,7 +38,8 @@ The homepage of the website has two unique components (as well as 2 global compo
 <!-- ![Homepage](static/images/homepage.png "Homepage") -->
 
 ### Navigation
-The programme offers a very simple and easy to use navigation system to navigate around the website. This is not only in the form of moving to different pages, but also for features such as a contact modal and product-category buttons attached to the navbar to allow the user to easily navigate to their category of required car parts. It should be noted that the navbar will shrink to a dropdown menu on smaller devices whilst retaining all functionality. This was added to improve responsiveness of the navbar and add to the user experience.
+The programme offers a very simple and easy to use navigation system to navigate around the website. This is not only in the form of moving to different pages, but also for features such as a contact modal and product-category buttons attached to the navbar to allow the user to easily navigate to their category of required car parts. It should be noted that the navbar will shrink to a dropdown menu on smaller devices whilst retaining all functionality. This was added to improve responsiveness of the navbar and add to the user experience.  
+The user will also be able to return to the homepage by clicking on the company logo. This was included to provide an easy way for the user to return to the homepage.
 #### **Images**  
 <!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
 <!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
@@ -46,7 +47,8 @@ The programme offers a very simple and easy to use navigation system to navigate
 
 
 ### Footer
-An attractive footer is included in the programme to offer the user a simple way of easily navigating to the social media pages of the company. The wishlist feature is also included in the footer, to allow users to easily select a make and model and year of a car, and be notified when the product has come into stock.
+An attractive footer is included in the programme to offer the user a simple way of easily navigating to the social media pages of the company. The wishlist feature is also included in the footer, to allow users to easily select a make and model and year of a car, and be notified when the product has come into stock.  
+The user will also be able to return to the homepage by clicking on the company logo. This was included to provide an easy way for the user to return to the homepage.
 #### **Images**  
 <!-- ![footer](static/images/footer.png "footer") -->
 
