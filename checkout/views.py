@@ -8,15 +8,13 @@ from products.models import Product
 from profiles.models import UserProfile
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
+from django.contrib.auth.decorators import login_required
+
 
 import stripe
 
-# order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='lineitems')
-#     product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
-#     quantity = models.IntegerField(default=0)
-#     lineitem_total
 
-
+@login_required
 def render_checkout(request):
     if request.method == "POST":
         cart = request.session.get("cart", {})
@@ -75,16 +73,13 @@ def render_checkout(request):
                 'checkout/confirmation-emails/order_confirmation_email_body.txt',
                 context
             )
-            # Send emails to emails on wishlist.
+            # Send email
             send_mail(
                 subject,
                 body,
                 settings.DEFAULT_FROM_EMAIL,
                 [request.user.email]
             )
-            print("EMAIL(S) SHOULD BE SENT")
-            print("Wishlist empty, no emails sent")
-
             return render(request, "checkout/checkout-success.html", context)
         else:
             print("SOMETHING WRONG WITH FORM. NOT VALID")
