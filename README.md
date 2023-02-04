@@ -113,4 +113,10 @@ A user will also have access to their own profile page to store their personal a
 #### **Images**  
 <!-- ![Profile](static/images/profile.png "Profile") -->
 
+### Order history
+In the profile page, a user will also have access to an order history section. This section of the profile webpage will allow users to see all of their order history, including the total cost of each order, their items, the order number etc. This will help the user to keep track of what they have purchased from the company.
+#### **Images**  
+<!-- ![Order history](static/images/order-history.png "Order history") -->
+
+
 ## Future features
