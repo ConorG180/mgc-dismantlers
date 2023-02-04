@@ -63,13 +63,16 @@ Read functionality comes from the products page. This allows users (Authorised a
 <!-- ![Adding product form](static/images/crud-functionality-add-product-form.png "Adding product form") -->
 ##### **Editing product form**
 <!-- ![Editing product form](static/images/crud-functionality-edit-product-form.png "Editing product form") -->
-##### **Products page**
-<!-- ![Products page](static/images/products-page.png "Products page") -->
 
 ### Products page
 A user will be able to access a products page to access all products which the company is currently selling. This will allow the user to look at all products which the company currently has in stock, and also give the user access to a host of other options, such as adding products to their cart, searching for products, and filtering products by category.
 #### **Images**  
 <!-- ![Products page](static/images/products-page.png "Products page") -->
+
+### Products page pagination
+The products page will be paginated so as to only load 10 products at a time. This adds to the user experience in two ways. First off, it displays the products to the user in bite-size chunks as opposed to displaying all products at once and potentially overloading the user with information. Secondly, it cuts down on the products page loading time. Instead of querying the database for all products, the products page will now only query the first 10 products at a time, thereby making the page response faster.
+#### **Images**  
+<!-- ![Products page pagination](static/images/products-page-pagination.png "Products page pagination") -->
 
 ### Product searching
 A user will be able to search throught the company's array of products in order to try and find a product which they wish to purchase. This will be enabled through a search bar. The search bar is programmed to enable searches of colors, years, part names, makes and models of car parts.
