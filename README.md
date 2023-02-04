@@ -85,6 +85,16 @@ A user will be able to add and remove products from their cart as they wish to a
 <!-- ![Add product to cart](static/images/cart-add-product.png "Add product to cart") -->
 <!-- ![Remove product from cart](static/images/cart-remove-product.png "Remove product from cart") -->
 
+### Checkout
+A user will be able to checkout and purchase items that they have added to their cart. The checkout option will be available from the cart.html page, and when clicked, will reveal a form which the user can enter their information and purchase their chosen items. The user will also be able to see their sub-total, delivery, and grand-total costs for their chosen items from the page. 
+#### **Images**  
+<!-- ![Checkout](static/images/checkout.png "Checkout") -->
+
+### Checkout success
+A user will be redirected to a checkout success page once they complete their order of their chosen products. In the checkout success page, the user will be able to see their order confirmation number, a list of the products that they have just purchased, and also receive a notification that they have been sent an email to their registered email address containing all relevant order information.
+#### **Images**  
+<!-- ![Checkout success](static/images/checkout-success.png "Checkout success") -->
+
 ### Wishlist
 A user will be able to create their own wishlist provided they have an account and are logged in. The wishlist will allow them to receive automatic email notifications if a part is added to MCG-dismantler's stock. This helps the user to immediately know if a part is available, and will also increase revenue for the business as they are advertising parts to customers that they have expressed interest in, and letting them know that the part is now available.  
 The user must choose a make and model for the wishlist entry, however can choose to include all years/parts, or a specific year/part.  
