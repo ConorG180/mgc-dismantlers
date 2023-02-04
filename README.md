@@ -108,5 +108,9 @@ A user will also have the ability to add and remove parts from their wishlist as
 <!-- ![Remove product from wishlist](static/images/wishlist-remove-product.png "Remove product from wishlist") -->
 <!-- ![Add product to wishlist](static/images/wishlist-add-product.png "Add product to wishlist") -->
 
+### Profile
+A user will also have access to their own profile page to store their personal and delivery information. This page can be updated and saved as the user wishes. It is planned that in the future, this page will be used to pre-populate the checkout form when the user wishes to buy something. This will improve the user experience when a user wishes to purchase products from the website.
+#### **Images**  
+<!-- ![Profile](static/images/profile.png "Profile") -->
 
 ## Future features
