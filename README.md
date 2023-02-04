@@ -32,11 +32,17 @@ Before starting development on MyRosterManagement, diagrams.net/draw.io was used
 # Features
 ## Existing features
 
-### Navigation
-The programme offers a very simple and easy to use navigation system to navigate around the website. This is not only in the form of moving to different pages, but also for features such as a contact modal and product-category buttons attached to the navbar to allow the user to easily navigate to their category of required car parts. It should be noted that the navbar will 
+### Homepage
+The homepage of the website has two unique components (as well as 2 global components, a navbar and footer). These two unique components are the carousel, which slides through images and offers links to various parts of the website, and the cards, which also showcase the company's services and also offer links to various parts of the website.
 #### **Images**  
-##### **Navbar**
+<!-- ![Homepage](static/images/homepage.png "Homepage") -->
+
+### Navigation
+The programme offers a very simple and easy to use navigation system to navigate around the website. This is not only in the form of moving to different pages, but also for features such as a contact modal and product-category buttons attached to the navbar to allow the user to easily navigate to their category of required car parts. It should be noted that the navbar will shrink to a dropdown menu on smaller devices whilst retaining all functionality. This was added to improve responsiveness of the navbar and add to the user experience.
+#### **Images**  
 <!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
+<!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
+<!-- ![navigation bar dropdown](static/images/navigation-bar-logged-in-as-admin-dropdown.png "navigation bar dropdown") -->
 
 
 ### Footer
