@@ -25,8 +25,8 @@ class ModelAdmin(admin.ModelAdmin):
 
 
 @admin.register(Product)
-class MakeAdmin(admin.ModelAdmin):
-    list_display = ["car_model", "part", "price", "is_sold", "in_a_cart"]
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ["car_model", "part", "image", "price", "is_sold", "in_a_cart"]
 
 
 @admin.register(Category)
