@@ -15,10 +15,8 @@ from django.contrib.auth.models import User
 
 def render_products(request):
     products = Product.objects.all()
-    # print(f"FIRST RENDERING {products}")
     if request.method == "GET":
         product_filter = ProductFilter(request.GET, queryset=products)
-        # print(f"Here is the filter{dir(product_filter)}")
         products = product_filter.qs
 
         # pagination
@@ -34,7 +32,6 @@ def render_products(request):
             "products": products,
             "product_filter": product_filter
         }
-    # print(f"SECOND RENDERING {products} ")
     return render(request, 'products/products.html', context)
 
 
@@ -47,19 +44,14 @@ def delete_product(request, product_id):
 def edit_product(request, product_id):
     product = Product.objects.get(pk=product_id)
     make = product.car_model.make
-    print(product)
-    print(product.grade)
     product_form = Product_form(request.POST, request.FILES, instance=product,)
     if request.method == "POST":
-        print(request.POST)
         product_form = Product_form(request.POST, request.FILES, instance=product)
         if product_form.is_valid():
-            print("Are we getting here? Here is valid!!!")
             product_form.save()
             product.save()
             return redirect(reverse('products'))
         else:
-            print(product_form.errors)
             return redirect(reverse('products'))
     else:
         product_form = Product_form(instance=product)
@@ -107,12 +99,8 @@ def add_product(request):
                     settings.DEFAULT_FROM_EMAIL,
                     emails
                 )
-                print("EMAIL(S) SHOULD BE SENT")
-            print("Wishlist empty, no emails sent")
             return redirect(reverse('products'))
         else:
-            print(product_form.errors)
-            print("form not valid!!!!!!!!")
     context = {
         "product_form": product_form,
     }
@@ -147,7 +135,6 @@ def categorize_products(request, cat):
 
 
 def load_models(request):
-    # make = request.GET.get('make')
     make = get_object_or_404(Make, name=request.GET.get("make"))
     models = Model.objects.filter(make=make).order_by("car_model")
     return render(request, 'products/model_dropdown_list_options.html', {'models': models})
