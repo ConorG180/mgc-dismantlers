@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, reverse
 from products.models import Product
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
+@login_required
 def render_cart(request):
     return render(request, 'cart/cart.html')
 
-
+@login_required
 def add_to_cart(request, product_id):
     added_product = Product.objects.get(id=product_id)
     added_product.in_a_cart = True
@@ -17,7 +19,7 @@ def add_to_cart(request, product_id):
     request.session["cart"] = cart
     return redirect(reverse('products'))
 
-
+@login_required
 def remove_from_cart(request, product_id):
     removed_product = Product.objects.get(id=product_id)
     removed_product.in_a_cart = False
