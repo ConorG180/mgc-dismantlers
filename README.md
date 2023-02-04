@@ -85,4 +85,18 @@ A user will be able to add and remove products from their cart as they wish to a
 <!-- ![Add product to cart](static/images/cart-add-product.png "Add product to cart") -->
 <!-- ![Remove product from cart](static/images/cart-remove-product.png "Remove product from cart") -->
 
+### Wishlist
+A user will be able to create their own wishlist provided they have an account and are logged in. The wishlist will allow them to receive automatic email notifications if a part is added to MCG-dismantler's stock. This helps the user to immediately know if a part is available, and will also increase revenue for the business as they are advertising parts to customers that they have expressed interest in, and letting them know that the part is now available.  
+The user must choose a make and model for the wishlist entry, however can choose to include all years/parts, or a specific year/part.  
+The wishlist also allows user to keep track of what they need and can be accessed from the wishlist section of the profile page. 
+#### **Images**  
+<!-- ![Wishlist](static/images/wishlist.png "Wishlist") -->
+
+### Add and remove items from wishlist
+A user will also have the ability to add and remove parts from their wishlist as they see fit. A user can remove items from their wishlist through accessing all their wishlist parts in the profile page. A user may add parts to their wishlist through the form available on the footer.
+#### **Images**  
+<!-- ![Remove product from wishlist](static/images/wishlist-remove-product.png "Remove product from wishlist") -->
+<!-- ![Add product to wishlist](static/images/wishlist-add-product.png "Add product to wishlist") -->
+
+
 ## Future features
