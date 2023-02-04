@@ -64,6 +64,9 @@ def edit_product(request, product_id):
 
 def add_product(request):
     product_form = Product_form(request.POST or None, request.FILES)
+    context = {
+    "product_form": product_form,
+    }
     if request.method == "POST":
         if product_form.is_valid():
             product = product_form.instance
@@ -100,10 +103,6 @@ def add_product(request):
                     emails
                 )
             return redirect(reverse('products'))
-        else:
-    context = {
-        "product_form": product_form,
-    }
     return render(request, "products/add-product.html", context)
 
 
