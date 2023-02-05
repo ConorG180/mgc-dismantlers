@@ -163,71 +163,12 @@
 
     </div>
 </div>
-
-
-<!-- </div> -->
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-<!-- <script>
-    // Reorder form so make is on top
-    let carMakeSection = $("#id_car_model__make").parent()
-    let filterForm = $("#filter-form")
-    carMakeSection.prependTo(filterForm)
-    // Change id of car make select option to work with ajax
-    carMakes = $("#id_car_model__make").children()
-    console.log("CARMAKES ", carMakes)
-    console.log("SEPARATOR")
-    carMakes.each(function(index, make) {
-        // make.attr("value", make.html())
-        // console.log(index)
-        // console.log(make)
-        // console.log(make.value)
-        // console.log(make.textContent)
-        // make.value = make.textContent
-        // console.log(make)
-    });
-    if($(".errorlist")){
-            $(".errorlist").remove()
-        }
-    // $("#id_car_model__make").attr("name", "make")
-//     $("#id_car_model__make").each(function(index, value) {
-// });
-    // .attr("value", carMake.val()))
-</script> -->
-
-<!-- <script>
-        $("#id_car_model__make").change(function () {
-        const url = $("#filter-form").attr("data-car_models-url");  // get the url of the `load_models` view
-        const makeId = $(this).val();
-        console.log("Change function working")  // get the selected Make ID from the HTML input
-        $.ajax({                       // initialize an AJAX request
-            url: url,                    // set the url of the request
-            data: {
-                'makeId': makeId       // add the make id to the GET parameters
-            },
-            success: function (data) {
-                  // `data` is the return of the `load_models` view function
-                  console.log("data from ajax")
-                  console.log(data)
-                $("#id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
-            }
-        });
-
-    }); -->
-<!-- </script>
-</script> -->
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    // Remove empty option
-    const emptyOption = $("#id_make:contains(' --------- ')")
-    const firstmake = $("#id_make").find("[value=1]")
-    firstmake.attr("selected", "selected")
-    emptyOption.removeAttr("selected")
-    console.log(emptyOption)
-    emptyOption.remove()
 
+    $("#id_car_model").attr("disabled", "disabled")
     const url = $("#filter-form").attr("data-car_models-url"); // get the url of the `load_models` view
-    const make = firstmake.text(); // get the selected Make ID from the HTML input
+    const make = $("#id_make").text(); // get the selected Make ID from the HTML input
     $.ajax({ // initialize an AJAX request
         url: url, // set the url of the request
         data: {
@@ -240,6 +181,7 @@
     });
 
     $("#id_make").change(function () {
+        
         const url = $("#filter-form").attr("data-car_models-url"); // get the url of the `load_models` view
         const make = $(this).find('option:selected').text(); // get the selected Make ID from the HTML input
         $.ajax({ // initialize an AJAX request
@@ -250,6 +192,8 @@
             success: function (data) { // `data` is the return of the `load_models` view function
                 $("#id_car_model").html(
                 data); // replace the contents of the model input with the data that came from the server
+                $("#id_car_model").removeAttr("disabled")
+                $("#id_car_model option:first").removeAttr("disabled");
             }
         });
 
