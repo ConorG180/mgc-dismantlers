@@ -4,12 +4,12 @@
 {% block content %}
 <!-- Grid layout -->
 <div class="container-fluid">
-<h1>Cart!!!!!</h1>
 
+    {% if product_count != 0 %}
 <div class="row mt-5">
     <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-1 col-12">
         <div class="row mt-3">
-            <div class="col-xl-9 col-12">
+            <div class="col-xl-9 mb-5 col-12">
                 <div class="row text-primary">
                     <div class="col-xl-2 col-md-6 col-12">
                         <p class="h6"></p>
@@ -58,7 +58,7 @@
                     </div>
                     </div>
                 </div>
-
+                {% endif %}
                 {% for product in cart %}
                 <div class="row bg-dark d-flex justify-content-start border-bottom">
 <!-- hre -->      <div class="col-xl-2 col-md-2 col-12 p-0">
@@ -100,9 +100,13 @@
                 <!-- </div> -->
             </div>
     </div>
+    {% empty %}
+    <h6 class="text-center mt-4">You have no products added yet. return to the <a href="{% url 'products' %}">products page</a> to add products</h6>
     {% endfor %}
             </div>
             <!-- Checkout details and link. This section only shows for medium size devices and up -->
+        {% if product_count != 0 %}
+
             <div class="col-xl-3 col-12 d-none d-md-block">
                 <div class="border">
                 <div class="row">
@@ -138,6 +142,8 @@
                 </div>
             </div>
             </div>
+        {% endif %}
+
           </div>
 
 </div>
