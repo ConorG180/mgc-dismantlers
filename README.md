@@ -6,7 +6,7 @@ MCG Dismantlers are a company which specialise in the sale of second-hand discou
 # UX design
 ## Color scheme
 The color scheme chosen for this programme is based on a simple color scheme of Orange and black/navy, with accompany light (usually white) text. The company's logo is also made from a gold/brown gradient, which aims to capture the user's attention and draw focus to the company. This color scheme was chose as it appears to blend aesthetically well with the company's industry of Automobile and stand out enough to draw user attention, whilst at the same time not be overbearing.
-Bootstrap is used in the programme so as to easily and efficiently style the various template HTML files. There is also a custom styles.css file to allow for custom styling amongst bootstrap's default files, such as the the brand color of orange used in the logo and hover effects on some buttons. 
+Bootstrap is used in the programme so as to easily and efficiently style the various template HTML files. There is also a custom ```styles.css``` file to allow for custom styling amongst bootstrap's default files, such as the the brand color of orange used in the logo and hover effects on some buttons. 
 
 ## Layout
 The grid feature in bootstrap was used to easily and efficiently provide a responsive layout for the website. Bootstraps grid system is based and built from the CSS flexbox feature. This layout was chosen for a number of reasons. Using the grid feature within Bootstrap, elements within the project can very easily be manipulated, hidden, unhidden, swapped, replaced or repositioned in the future if needed. This is especially handy when working on a layout for smaller devices, as certain elements which are not deemed necessary can be hidden if needed, and be prevented from taking up excess space on smaller screens. Furthermore, the very nature of Bootstraps grid is based on a mobile-first design, which easily allows the project to be built responsively and work on devices of all sizes.
@@ -74,7 +74,7 @@ The products page will be paginated so as to only load 10 products at a time. Th
 #### **Images**  
 <!-- ![Products page pagination](static/images/products-page-pagination.png "Products page pagination") -->
 
-### Product searching
+### Product searching 
 A user will be able to search throught the company's array of products in order to try and find a product which they wish to purchase. This will be enabled through a search bar. The search bar is programmed to enable searches of colors, years, part names, makes and models of car parts.
 #### **Images**  
 <!-- ![Product searching](static/images/product-search.png "Product searching") -->
@@ -102,7 +102,7 @@ A user will be able to add and remove products from their cart as they wish to a
 <!-- ![Remove product from cart](static/images/cart-remove-product.png "Remove product from cart") -->
 
 ### Checkout
-A user will be able to checkout and purchase items that they have added to their cart. The checkout option will be available from the cart.html page, and when clicked, will reveal a form which the user can enter their information and purchase their chosen items. The user will also be able to see their sub-total, delivery, and grand-total costs for their chosen items from the page. 
+A user will be able to checkout and purchase items that they have added to their cart. The checkout option will be available from the ```cart.html``` page, and when clicked, will reveal a form which the user can enter their information and purchase their chosen items. The user will also be able to see their sub-total, delivery, and grand-total costs for their chosen items from the page. 
 #### **Images**  
 <!-- ![Checkout](static/images/checkout.png "Checkout") -->
 
@@ -110,6 +110,10 @@ A user will be able to checkout and purchase items that they have added to their
 A user will be redirected to a checkout success page once they complete their order of their chosen products. In the checkout success page, the user will be able to see their order confirmation number, a list of the products that they have just purchased, and also receive a notification that they have been sent an email to their registered email address containing all relevant order information.
 #### **Images**  
 <!-- ![Checkout success](static/images/checkout-success.png "Checkout success") -->
+
+### Stock management
+MCG dismantlers deals with second-hand car parts which are recovered from the dismantling of cars. As a result, products must be individually photographed and recorded and uploaded to the website, as each product is unique. This is opposed to most other e-commerce businesses which may order 20 of a particular product and record its stock accordingly. If a user were to buy one of the 20 items, the website would reduce the stock from 20 to 19. However, in the case of MGC dismantlers, each product is unique and therefore the quantity of each product is 1.  
+To prevent products from showing up again after a user adds them to a cart or purchases the products, each product is given a ```in_a_cart``` and ```is_sold``` value in their record. Once a product is added to a cart or sold, the product becomes unavailable for others to purchase. Of course, once a product is removed from the card, the product will become available once again. In a future feature, a timer may be set on how long users can keep products in their cart so as to prevent a user from holding on to an item for too long when they have no intention of purchasing the item.
 
 ### Wishlist
 A user will be able to create their own wishlist provided they have an account and are logged in. The wishlist will allow them to receive automatic email notifications if a part is added to MCG-dismantler's stock. This helps the user to immediately know if a part is available, and will also increase revenue for the business as they are advertising parts to customers that they have expressed interest in, and letting them know that the part is now available.  
