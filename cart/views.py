@@ -26,7 +26,11 @@ def remove_from_cart(request, product_id):
     removed_product.in_a_cart = False
     removed_product.save()
     cart = request.session.get('cart', {})
-    del cart[product_id]
+    try:
+        del cart[product_id]
+    except Product.DoesNotExist():
+        messages.error(request, f"Oops! An error occured while removing {removed_product.create_card_title()} from cart")
+        return redirect(reverse('cart'))
     request.session["cart"] = cart
     messages.success(request, f"Deleted {removed_product.create_card_title()} from cart")
     return redirect(reverse('cart'))
