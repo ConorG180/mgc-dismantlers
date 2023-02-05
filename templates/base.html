@@ -54,7 +54,12 @@
     <!-- Footer -->
     {% include 'includes/footer.html' %}
     {% block postloadjs %}
-
+    <script> 
+        setTimeout(function() { 
+          $('.message-container').hide()
+    }, 7000);
+      
+    </script>
   {% endblock %}
 
   </body>

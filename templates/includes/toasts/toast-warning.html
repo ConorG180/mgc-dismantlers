@@ -1,14 +1,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 d-sm-flex px-0 justify-content-sm-end">
-            <div class="message-container">
-                <div class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="arrow-up arrow-warning"></div>
+            <div class="message-container m-2">
+                <div class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="7500">
                     <div class="toast-header border-warning pl-2 pb-1 bg-dark text-warning">
                       <strong class="mr-auto">Warning!</strong>
-                      <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
                     </div>
                     <div class="toast-body px-2 pb-5 bg-dark text-white">
                       <span class="mr-auto">{{message}}</span>
