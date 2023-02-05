@@ -78,11 +78,12 @@ def edit_product(request, product_id):
 
 
 def add_product(request):
-    product_form = Product_form(request.POST or None, request.FILES)
+    product_form = Product_form()
     context = {
     "product_form": product_form,
     }
     if request.method == "POST":
+        product_form = Product_form(request.POST or None, request.FILES)
         if product_form.is_valid():
             product = product_form.instance
             product_form.save()

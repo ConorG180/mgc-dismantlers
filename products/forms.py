@@ -11,6 +11,7 @@ class Product_form(forms.ModelForm):
         make = forms.ModelChoiceField(Make.objects.all())
         model = Product
         fields = '__all__'
+        exclude = ('in_a_cart', 'is_sold')
 
     forms.forms.BaseForm.field_order = ['make', 'car_model']
 
