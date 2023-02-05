@@ -40,8 +40,12 @@ def render_products(request):
 
 
 def delete_product(request, product_id):
-    product = Product.objects.get(pk=product_id)
-    product.delete()
+    try:
+        product = Product.objects.get(pk=product_id)
+        product.delete()
+    except Product.DoesNotExist:
+        messages.error(request, f"Oops! An error occured while deleting {product.create_card_title()} from stock")
+        return redirect(reverse('products'))
     messages.success(request, f"Successfully Removed {product.create_card_title()} from stock.")
     return redirect(reverse('products'))
 
