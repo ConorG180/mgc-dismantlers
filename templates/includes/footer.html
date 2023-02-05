@@ -83,22 +83,14 @@
 
 
 // Automatically update car models when make is selected
-  carMakes = $("#wishlist_id_make").children()
-  carModels = $("#wishlist_id_car_model").children()
+$("#wishlist_id_car_model").attr("disabled", "disabled")
 
-  // carMakes.each(function(index, make) {
-  //     make.value = make.index
-  // });
-  // carMakes.sort()
-  // carModels.sort()
 
-// $.each(listitems, function(idx, itm) { mylist.append(itm); });
   $("#wishlist_id_make").change(function () {
+    $("#wishlist_id_car_model").removeAttr("disabled")
       const url = $("#wishlist-form").attr("data-car_models-url");  // get the url of the `load_models` view
       // const makeId = $(this).val();
-      const make = $(this).find('option:selected').text();
-      console.log("WATCH OUT BELOW HERE FOR MAKE")
-      console.log(make)  // get the selected Make ID from the HTML input
+      const make = $(this).find('option:selected').text();  // get the selected Make ID from the HTML input
       $.ajax({                       // initialize an AJAX request
           url: url,                    // set the url of the request
           data: {

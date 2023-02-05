@@ -6,7 +6,9 @@ makes = Make.objects.all()
 make_choices = [(make.id, make.name) for make in makes]
 # Car Models 
 models = Model.objects.all()
+empty_model_choice = (0, "----------")
 model_choices = [(model.id, model.car_model) for model in models]
+model_choices.insert(0, empty_model_choice)
 # Parts
 parts = Part.objects.all()
 empty_part_choice = (0, "All parts")
