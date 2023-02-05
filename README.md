@@ -64,6 +64,12 @@ Read functionality comes from the products page. This allows users (Authorised a
 ##### **Editing product form**
 <!-- ![Editing product form](static/images/crud-functionality-edit-product-form.png "Editing product form") -->
 
+### Toast notifications
+Toast notifications were added to the website to display helpful messages to the user, for example when a checkout was successful or if it failed. This is also enabled for when a user adds/removes items from wishlist, logging in and out, and when an administrator adds/edits or deletes products.
+#### **Images**  
+<!-- ![Toast success](static/images/products-page.png "Toast success") -->
+<!-- ![Toast error](static/images/products-page.png "Toast error") -->
+
 ### Products page
 A user will be able to access a products page to access all products which the company is currently selling. This will allow the user to look at all products which the company currently has in stock, and also give the user access to a host of other options, such as adding products to their cart, searching for products, and filtering products by category.
 #### **Images**  
