@@ -70,7 +70,6 @@
                 {% include "products/includes/pagination.html" %}
             {% endif %}
             {% for product in products %}
-                {% if product.in_a_cart == False and product.is_sold == False %}
                     <div class="row product-cards">
                         <div class="col-12">
                             <div class="card rounded bg-dark mb-4">
@@ -144,7 +143,6 @@
                             </div>
                         </div>
                     </div>
-                {% endif %}
             {% empty %}
                 <strong>
                     No Products Found

@@ -16,7 +16,7 @@ import html
 
 
 def render_products(request):
-    products = Product.objects.all()
+    products = Product.objects.filter(in_a_cart=False, is_sold=False)
     if request.method == "GET":
         product_filter = ProductFilter(request.GET, queryset=products)
         products = product_filter.qs
@@ -123,7 +123,7 @@ def add_product(request):
 
 
 def search_product(request):
-    products = Product.objects.all()
+    products = Product.objects.filter(in_a_cart=False, is_sold=False)
     if request.method == "GET":
         user_search_query = request.GET["user_search_query"]
         if not user_search_query:
@@ -141,7 +141,7 @@ def search_product(request):
 
 
 def categorize_products(request, cat):
-    categorized_products = Product.objects.filter(part__category__friendly_name=cat)
+    categorized_products = Product.objects.filter(part__category__friendly_name=cat, in_a_cart=False, is_sold=False)
     context = {
         "category": cat,
         "products": categorized_products
