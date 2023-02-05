@@ -111,6 +111,12 @@ A user will be redirected to a checkout success page once they complete their or
 #### **Images**  
 <!-- ![Checkout success](static/images/checkout-success.png "Checkout success") -->
 
+### Automated emails
+A user will receive automated emails upon completing certain actions on the website. First of all, a user will receive an order confirmation email whenever they successfully make an order on the website and purchase products. This email will show the user the products they have purchased and provide them with a record of the order number. Secondly, if a user has added an item to their wishlist, and has ticked the ```when_added``` checkbox, they will receive an email when their chosen product has been added to MCG dismantler's stock.
+#### **Images**  
+<!-- ![Order confirmation email](static/images/order-confirmation-email.png "Order confirmation email") -->
+<!-- ![Wishlist confirmation email](static/images/wishlist-confirmation-email.png "Wishlist confirmation email") -->
+
 ### Stock management
 MCG dismantlers deals with second-hand car parts which are recovered from the dismantling of cars. As a result, products must be individually photographed and recorded and uploaded to the website, as each product is unique. This is opposed to most other e-commerce businesses which may order 20 of a particular product and record its stock accordingly. If a user were to buy one of the 20 items, the website would reduce the stock from 20 to 19. However, in the case of MGC dismantlers, each product is unique and therefore the quantity of each product is 1.  
 To prevent products from showing up again after a user adds them to a cart or purchases the products, each product is given a ```in_a_cart``` and ```is_sold``` value in their record. Once a product is added to a cart or sold, the product becomes unavailable for others to purchase. Of course, once a product is removed from the card, the product will become available once again. In a future feature, a timer may be set on how long users can keep products in their cart so as to prevent a user from holding on to an item for too long when they have no intention of purchasing the item.
