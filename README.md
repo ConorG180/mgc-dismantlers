@@ -161,3 +161,30 @@ A feature is hoped to be added in the future which will allow the user to order 
 
 # Testing and bugs
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Technologies, frameworks, packages and libraries used
+The following technologies were used in the development of this project:  
+  - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - HTML5 was used to apply the structure and to create the elements within the programme.
+  - [Bootstrap](https://getbootstrap.com/) - Bootstrap was used for the majority of the styling and layout in the programme. Within bootstrap, there are also elements of JavaScript used, such as in the toast messages. This JavaScript is included within the Bootstrap framework.
+  - [Jquery](https://jquery.com/) - Custom Jquery was used throughout the project, and this is mainly seen through the automated dropdown boxes when a user attempt to add/edit a product. Once the user selects a make, an Ajax request is called through jquery to auto-update the relevant car models.
+  - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Custom CSS was used to add some custom styling to the programme, such as the distinctive orange styling used throughout the website and to position and resize certain elements through media queries.
+  - [Balsamiq](https://balsamiq.com/) - Balsamiq was used to create wireframes at the beginning of the project and aided in visualising ideas and features of the MCG Dismantlers website.
+  - [Git](https://git-scm.com/) - Git was used for version control throughout this project.
+  - [Gitpod](https://www.gitpod.io/) - Gitpod was used as the integrated developement environment for the project.
+  - [Github](https://github.com/) - Github was used store the project repository.
+  - [Heroku](https://www.heroku.com) - This project was deployed using Heroku, a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+  - [Python](https://www.python.org/) - was used throughout this programme in conjunction with other python-based packages and libraries to create the core functionality behind the programme. 
+  - [Django](https://www.djangoproject.com/) - The Django framework for python was used to build many of the web development aspects of the programme, including user authentication and content administration, and also allowed the use of ORM to manipulate the database.
+  - [PostgreSQL](https://www.postgresql.org/) - PostgreSQL was used as an Object-relational database system in the project, and through ORM (Object-relational mapping) records were able to be Created, Read, Updated and Deleted (CRUD) from the PostgreSQL database.
+  - [Amazon Web Services (AWS)](https://aws.amazon.com/) - AWS was used as a means to allow the project to serve its own static files, as this is not possible with Django.
+  - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) - The django-allauth package was used to create the authentication, account registration and account management within the programme.
+  - [Psycopg2](https://pypi.org/project/psycopg2/) - Psycopg2 was used as an adaptor for PostgreSQL, to ensure that it will work and integrate with Python and Django.
+  - [Gunicorn](https://gunicorn.org/) - Gunicorn was used for the WSGI HTTP server for the project.
+  - [Stripe](https://stripe.com/en-ie) - Stripe’s software and APIs were used accept payments from customers and to enable customers to purchase products within the site.
+  - [Django-filter](https://django-filter.readthedocs.io/en/stable/#) -  The Django-filter package was used to allow users to filter down a product queryset based on a the model’s fields (Such as car make, car model, year etc) and also in displaying a form to let them achieve this.
+  - [Pillow](https://pypi.org/project/Pillow/) - Pillow was used to add image processing capabilities to Python.
+
+#### **Images**  
+<!-- ![Requirements.txt](static/images/requirements.png "Requirements.txt") -->
+
+
