@@ -30,15 +30,32 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
     {% include 'includes/navbar.html' %}
+    <!-- Category Navbar -->
     {% include 'includes/categories-navbar.html' %}
- 
+    <!-- Messages/Toasts -->
+    {% for message in messages %}
+      {% with message.level as level %}
+      {% if level == 40 %}
+          {% include 'includes/toasts/toast-error.html' %}
+      {% elif level == 30 %}
+          {% include 'includes/toasts/toast-warning.html' %}
+      {% elif level == 25 %}
+          {% include 'includes/toasts/toast-success.html' %}
+      {% else %}
+          {% include 'includes/toasts/toast-info.html' %}
+      {% endif %}
+    {% endwith %}
+  {% endfor %}
 
     {% block content %}
     {% endblock %}
+    <!-- Footer -->
     {% include 'includes/footer.html' %}
     {% block postloadjs %}
 
   {% endblock %}
+
   </body>
 </html>
