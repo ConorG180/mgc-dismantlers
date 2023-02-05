@@ -25,9 +25,9 @@ Before starting development on MGC Dismantlers, Balsamiq was used to form wirefr
 ![profile.html wireframe](wireframes/profile.png "profile.html (Profile view)")
 
 # Entity Relationship Diagram
-Before starting development on MyRosterManagement, diagrams.net/draw.io was used to form an Entity Relationship Diagram (ERD) for the programme. As the programme relies heavily on models and databases, an ERD helped immensely in determining how to structure the database, including aiding in aspects such as relationships between tables, primary and foreign keys, and selecting fields for various tables. The ERD can be seen below:  
+Before starting development on MCG Dismantlers, diagrams.net/draw.io was used to form an Entity Relationship Diagram (ERD) for the programme. As the programme relies heavily on models and databases, an ERD helped immensely in determining how to structure the database, including aiding in aspects such as relationships between tables, primary and foreign keys, and selecting fields for various tables. The ERD can be seen below:  
 
-![MGC Dismantlers ERD](erd-diagrams/mgc-dismantlers-erd.jpg "MyRosterManagement ERD")
+![MGC Dismantlers ERD](erd-diagrams/mgc-dismantlers-erd.jpg "MCG Dismantlers ERD")
 
 # Features
 ## Existing features
