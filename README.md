@@ -158,3 +158,6 @@ A lot of the backend work to enable this sale feature are already in place, and 
 
 ### Ordering
 A feature is hoped to be added in the future which will allow the user to order the products by certain characteristics when browsing, such as price, year, alphabetical and date added. These characteristics will also be able to be ordered in both ascending and descending order.
+
+# Testing and bugs
+For all testing, please refer to the [TESTING.md](TESTING.md) file.
