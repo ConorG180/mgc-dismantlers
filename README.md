@@ -146,3 +146,12 @@ In the profile page, a user will also have access to an order history section. T
 
 
 ## Future features
+
+### Sales
+In the future, a product-sales feature will be added to the website which will provide multiple benefits to users. Firstly, user will be able to easily identify products which are on sale as they will be marked with an "On Sale" tag which will slightly change their color and make them identifiable. Furthermore, website administrators and superusers will be able to set an product's ```on_sale``` property to ```True``` when adding or editing a product, which will trigger this change. They will also be able to set a ```sale_percentage``` property which will reduce the price by a certain percentage, and then display this to the user. For example, if a product costs €100, and an administrator marks the product's ```on_sale``` property to ```True```  and give the ```sale_percentage``` a value of ```20```, then the product will be marked as on sale, be displayed differently in ```products.html``` and will be shown to be reduced from €100 to €80.  
+Furthermore, to access on_sale products, the user will be able click the on_sale category button to access all products which are marked as being on sale.  
+Finally, the items on the wishlist are currently able to be added with a ```on_sale``` property set to true. This was intended to send the user an email if a product went on sale, however this is currently not added.  
+A lot of the backend work to enable this sale feature are already in place, and it is hoped that it will be implemented soon.  
+#### **Images**  
+<!-- ![Product on_sale](static/images/product-on-sale.png "Product on_sale property") -->
+<!-- ![Wishlist on_sale](static/images/wishlist-on-sale.png "Wishlist on_sale") -->
