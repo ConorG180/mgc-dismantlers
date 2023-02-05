@@ -373,6 +373,31 @@ padding: 0;
   max-width: 30%;
   font-size: 23px;
 }
+
+/* Toasts and messages/notification */
+.message-container {
+  z-index: 99999999999;
+  max-width: 250px;
+}
+
+.toast-header{
+  font-size: 22px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+.toast-body {
+font-weight: bold;
+font-size: 14px;
+opacity: 0.8;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 2px;
+}
   
   /* Media Queries */
   @media (min-width: 350px) {
@@ -388,11 +413,17 @@ padding: 0;
   .carousel-item img{
     height: 20vh; 
 }
+.message-container {
+  max-width: 100%;
+}
 }
 
 @media (min-width: 576px) {
   .carousel-item img{
     height: 35vh; 
+}
+.message-container {
+  max-width: 250px;
 }
 }
 
@@ -403,6 +434,7 @@ padding: 0;
 .carousel-item img{
   height: 50vh; 
 }
+
   }
   @media (min-width: 992px) {
     .img-card{
@@ -414,6 +446,7 @@ padding: 0;
   .carousel-item img{
     height: 75vh; 
   }
+
   } 
 
   @media (min-width: 1200px) {
@@ -422,7 +455,8 @@ padding: 0;
     }
     .img-card img{
       height: 325px
-  } 
+  }
+
   }
   @media (min-width: 1400px) {
     .img-card{
