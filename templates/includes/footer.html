@@ -12,13 +12,13 @@
     <form method="POST" id="wishlist-form" class="d-flex flex-column align-items-center" data-car_models-url="{% url 'ajax_load_car_models' %}" action="{% url 'add_to_wishlist' %}">
       {% csrf_token %}
       <div class="row wishlist-choices mx-3 d-flex justify-content-around">
-      <div class="col-md-6 col-4 mb-3 form-group px-3">
+      <div class="col-md-6 col-12 mb-3 form-group px-3">
         {{wishlist_form.make}}
       </div>
-      <div class="col-md-6 col-4 mb-3 form-group px-3">
+      <div class="col-md-6 col-12 mb-3 form-group px-3">
         {{wishlist_form.model}}
       </div>
-      <div class="col-md-6 col-4 mb-3 form-group px-3">
+      <div class="col-md-6 col-12 mb-3 form-group px-3">
         {{wishlist_form.part}}
       </div>
       <div class="col-md-6 col-12 mb-3 form-group">
