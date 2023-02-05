@@ -131,6 +131,7 @@ def add_product(request):
 def search_product(request):
     products = Product.objects.filter(in_a_cart=False, is_sold=False)
     user_search_query = request.GET["user_search_query"]
+    product_filter = ProductFilter(request.GET, queryset=products)
     if not user_search_query:
         messages.error(request, "You didn't enter any search criteria!")
         return redirect(reverse('products'))
@@ -150,13 +151,15 @@ def search_product(request):
     context = {
         "user_search_query": user_search_query,
         "products": products,
-        "product_count": product_count
+        "product_count": product_count,
+        "product_filter": product_filter
     }
     return render(request, 'products/products.html', context)
 
 
 def categorize_products(request, cat):
     products = Product.objects.filter(part__category__friendly_name=cat, in_a_cart=False, is_sold=False)
+    product_filter = ProductFilter(request.GET, queryset=products)
     product_count = len(products)
     # pagination
     page = request.GET.get("page", 1)
@@ -171,7 +174,8 @@ def categorize_products(request, cat):
     context = {
         "category": cat,
         "products": products,
-        "product_count": product_count
+        "product_count": product_count,
+        "product_filter": product_filter
     }
     return render(request, "products/products.html", context)
 
