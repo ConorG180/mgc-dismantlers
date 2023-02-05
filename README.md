@@ -155,3 +155,6 @@ A lot of the backend work to enable this sale feature are already in place, and 
 #### **Images**  
 <!-- ![Product on_sale](static/images/product-on-sale.png "Product on_sale property") -->
 <!-- ![Wishlist on_sale](static/images/wishlist-on-sale.png "Wishlist on_sale") -->
+
+### Ordering
+A feature is hoped to be added in the future which will allow the user to order the products by certain characteristics when browsing, such as price, year, alphabetical and date added. These characteristics will also be able to be ordered in both ascending and descending order.
