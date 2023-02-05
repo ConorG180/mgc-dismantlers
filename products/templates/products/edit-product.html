@@ -33,20 +33,32 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    $("#id_make").change(function () {
+    // Update dropbox with relevant models
+    let updateModels = function(){
         const url = $("#product-form").attr("data-car_models-url");  // get the url of the `load_models` view
-        const make = $(this).find('option:selected').text();  // get the selected Make ID from the HTML input
+        const make = $("#id_make").find('option:selected').text();  // get the selected Make ID from the HTML input
         $.ajax({                       // initialize an AJAX request
             url: url,                    // set the url of the request
             data: {
                 'make': make       // add the make id to the GET parameters
             },
             success: function (data) {  // `data` is the return of the `load_models` view function
+                const selectedModel = $("#id_car_model").find('option:selected').text()
+                console.log(selectedModel)
                 $("#id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
+                $("#id_car_model").children().each(function(){
+                    if ($(this).text() == selectedModel)
+                        $(this).attr("selected","selected");
+                })
+                console.log(selectedModel)
+
             }
         });
-
-    });
+    }
+    // Update models with relevant car models when accessing edit-product.html page
+    updateModels()
+    // Update models with relevant car models when changing car make on  edit-product.html page
+    $("#id_make").change(updateModels);
 </script>
 
 {% endblock content %}
