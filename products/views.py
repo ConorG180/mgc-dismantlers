@@ -11,6 +11,8 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+import html
 
 
 def render_products(request):
@@ -38,28 +40,35 @@ def render_products(request):
 def delete_product(request, product_id):
     product = Product.objects.get(pk=product_id)
     product.delete()
+    messages.success(request, f"Successfully Removed {product.create_card_title()} from stock.")
     return redirect(reverse('products'))
 
 
 def edit_product(request, product_id):
     product = Product.objects.get(pk=product_id)
     make = product.car_model.make
-    product_form = Product_form(request.POST, request.FILES, instance=product,)
+    product_form = Product_form(request.POST, request.FILES, instance=product)
     if request.method == "POST":
         product_form = Product_form(request.POST, request.FILES, instance=product)
         if product_form.is_valid():
             product_form.save()
             product.save()
+            messages.success(request, f"Successfully Edited {product.create_card_title()}.")
             return redirect(reverse('products'))
         else:
-            return redirect(reverse('products'))
+            for error, errorvalue in product_form.errors.items():
+                for erroritem in errorvalue:
+                    erroritem = erroritem.replace("&", "&amp;")
+                messages.error(request, f"Failed to edit product. Problem with {error} field: {erroritem}")
+            return render(request, "products/edit-product.html", context)
     else:
         product_form = Product_form(instance=product)
         context = {
             "product_form": product_form,
             "product": product
         }
-        return render(request, "products/edit-product.html", context)
+        
+    return render(request, "products/edit-product.html", context)
 
 
 def add_product(request):
@@ -102,7 +111,14 @@ def add_product(request):
                     settings.DEFAULT_FROM_EMAIL,
                     emails
                 )
+            messages.success(request, f"Added {product.create_card_title()} to stock.")
             return redirect(reverse('products'))
+        else:
+            for error, errorvalue in product_form.errors.items():
+                for erroritem in errorvalue:
+                    erroritem = erroritem.replace("&", "&amp;")
+                messages.error(request, f"Failed to add product. Problem with {error} field: {erroritem}")
+            return render(request, "products/add-product.html", context)
     return render(request, "products/add-product.html", context)
 
 
