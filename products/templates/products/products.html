@@ -65,6 +65,11 @@
             {% endif %}
         </div>
         <div class="col-xl-8 col-sm-12 product-card-column">
+            {% if product_count is not 0 %}
+            <h6 class="product_count mb-3">
+                (<span class="primary-color-text ml-auto">{{product_count}}</span> results found)
+            </h6>
+            {% endif %}
             {% if products.has_other_pages %}
                 <!-- pagination -->
                 {% include "products/includes/pagination.html" %}

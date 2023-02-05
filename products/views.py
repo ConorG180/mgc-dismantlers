@@ -11,7 +11,6 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
 import html
 
 
@@ -20,6 +19,7 @@ def render_products(request):
     if request.method == "GET":
         product_filter = ProductFilter(request.GET, queryset=products)
         products = product_filter.qs
+        product_count = len(products)
 
         # pagination
         page = request.GET.get("page", 1)
@@ -30,9 +30,11 @@ def render_products(request):
             products = paginator.page(1)
         except EmptyPage:
             products = paginator.page(paginator.num_pages)
+
         context = {
             "products": products,
-            "product_filter": product_filter
+            "product_filter": product_filter,
+            "product_count": product_count
         }
     return render(request, 'products/products.html', context)
 
@@ -124,27 +126,48 @@ def add_product(request):
 
 def search_product(request):
     products = Product.objects.filter(in_a_cart=False, is_sold=False)
-    if request.method == "GET":
-        user_search_query = request.GET["user_search_query"]
-        if not user_search_query:
-            messages.error(request, "You didn't enter any search criteria!")
-            return redirect(reverse('products'))
-        queries = Q(color__color__icontains=user_search_query) | Q(car_model__car_model__icontains=user_search_query) | Q(car_model__make__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(model_year__year__icontains=user_search_query) | Q(description__icontains=user_search_query)
-        products = products.filter(queries)
-        context = {
-            "user_search_query": user_search_query,
-            "products": products,
-            "products_count": products.count()
-        }
-        return render(request, 'products/products.html', context)
-    return render(request, 'products/products.html', {})
+    user_search_query = request.GET["user_search_query"]
+    if not user_search_query:
+        messages.error(request, "You didn't enter any search criteria!")
+        return redirect(reverse('products'))
+    queries = Q(color__color__icontains=user_search_query) | Q(car_model__car_model__icontains=user_search_query) | Q(car_model__make__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(model_year__year__icontains=user_search_query) | Q(description__icontains=user_search_query)
+    products = products.filter(queries)
+    product_count = len(products)
+    # pagination
+    page = request.GET.get("page", 1)
+    paginator = Paginator(products, 10)  # number of products per paginated page
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+
+    context = {
+        "user_search_query": user_search_query,
+        "products": products,
+        "product_count": product_count
+    }
+    return render(request, 'products/products.html', context)
 
 
 def categorize_products(request, cat):
-    categorized_products = Product.objects.filter(part__category__friendly_name=cat, in_a_cart=False, is_sold=False)
+    products = Product.objects.filter(part__category__friendly_name=cat, in_a_cart=False, is_sold=False)
+    product_count = len(products)
+    # pagination
+    page = request.GET.get("page", 1)
+    paginator = Paginator(products, 10)  # number of products per paginated page
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+
     context = {
         "category": cat,
-        "products": categorized_products
+        "products": products,
+        "product_count": product_count
     }
     return render(request, "products/products.html", context)
 
