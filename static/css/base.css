@@ -377,7 +377,7 @@ padding: 0;
 /* Toasts and messages/notification */
 .message-container {
   z-index: 99999999999;
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .toast-header{
@@ -423,7 +423,7 @@ opacity: 0.8;
     height: 35vh; 
 }
 .message-container {
-  max-width: 250px;
+  max-width: 300px;
 }
 }
 
