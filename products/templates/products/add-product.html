@@ -39,9 +39,9 @@ Add product
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
     // Disable car model select box when loading add-product.html
-    $("#id_car_model").attr("disabled", "disabled")
+    $("#id_car_model").attr("disabled", "disabled");
     $("#id_make").change(function () {
-        $("#id_car_model").removeAttr("disabled") // Remove disable on car model select when picking make
+        $("#id_car_model").removeAttr("disabled"); // Remove disable on car model select when picking make
         const url = $("#product-form").attr("data-car_models-url"); // get the url of the `load_models` view
         const make = $(this).find('option:selected').text(); // get the selected Make ID from the HTML input
         $.ajax({ // initialize an AJAX request

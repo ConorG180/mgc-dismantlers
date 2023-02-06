@@ -48,21 +48,19 @@ Edit product
                 'make': make // add the make id to the GET parameters
             },
             success: function (data) { // `data` is the return of the `load_models` view function
-                const selectedModel = $("#id_car_model").find('option:selected').text()
-                console.log(selectedModel)
+                const selectedModel = $("#id_car_model").find('option:selected').text();
                 $("#id_car_model").html(
                 data); // replace the contents of the model input with the data that came from the server
                 $("#id_car_model").children().each(function () {
                     if ($(this).text() == selectedModel)
                         $(this).attr("selected", "selected");
-                })
-                console.log(selectedModel)
+                });
 
             }
         });
-    }
+    };
     // Update models with relevant car models when accessing edit-product.html page
-    updateModels()
+    updateModels();
     // Update models with relevant car models when changing car make on  edit-product.html page
     $("#id_make").change(updateModels);
 </script>

@@ -148,6 +148,46 @@ All python files contained PEP 8 errors of some kind, the most common of which i
 
 Whilst these errors were not causing fatal errors within the project or preventing the software from functioning as expected, it can still be considered bad practise to leave these errors within the project. This is mainly from a "code readability" perspective. In correcting these errors, the code will be easier to maintain in the future should updates/changes need to be implemented. Furthermore, future debugging will also be made much easier.
 
+## **Jshint Javascript validator**
+The Jshint Javascript validator was used to test the project's Jquery scripts. It should be noted that in the configure options of Jshint, in the **"Assume"** tab, the **"New JavaScript features (ES6)"** and **"Jquery"** were selected, as the Js in the project uses ES6 features such as ```const``` and ```let```, and the majority is written with the Jquery framework.  
+All of the errors that Jshint validator flagged were due to missing semi-colons.  
+Images of the before and after testing for each html document containing Javascript can be seen below:  
+
+### **products.html javascript**
+the Javascript in the products.html page is used to control the filter form and the automated dropdown boxes which update automatically.  
+
+#### **images**
+![products.html Javascript testing before](static/static-images/products.html-js-testing-before.PNG "products.html Javascript testing before")
+![products.html Javascript testing after](static/static-images/products.html-js-testing-after.PNG "products.html Javascript testing after")
+
+### **add-product.html javascript**
+the Javascript in the add-product.html page is used to control the automated dropdown boxes which update automatically in the form.  
+
+#### **images**
+![add-product.html Javascript testing before](static/static-images/add-product.html-js-testing-before.PNG "add-product.html Javascript testing before")
+![add-product.html Javascript testing after](static/static-images/add-product.html-js-testing-after.PNG "add-product.html Javascript testing after")
+
+### **edit-product.html javascript**
+the Javascript in the edit-product.html page is used to control the automated dropdown boxes which update automatically in the form.  
+
+#### **images**
+![edit-product.html Javascript testing before](static/static-images/edit-product.html-js-testing-before.PNG "edit-product.html Javascript testing before")
+![edit-product.html Javascript testing after](static/static-images/edit-product.html-js-testing-after.PNG "edit-product.html Javascript testing after")
+
+### **footer.html javascript**
+the Javascript in the footer.html page is used to control the automated dropdown boxes in the embedded wishlist form in the footer.  
+
+#### **images**
+![footer.html Javascript testing before](static/static-images/footer.html-js-testing-before.PNG "footer.html Javascript testing before")
+![footer.html Javascript testing after](static/static-images/footer.html-js-testing-after.PNG "footer.html Javascript testing after")
+
+### **base.html javascript**
+the Javascript in the base.html page is used to control the toast messages/notifications, specifically to remove the notifications after 7.5 seconds.  
+
+#### **images**
+![base.html Javascript testing before](static/static-images/base.html-js-testing-before.PNG "base.html Javascript testing before")
+![base.html Javascript testing after](static/static-images/base.html-js-testing-after.PNG "base.html Javascript testing after")
+
 # Unfixed Bugs
 One bug was discovered that is yet to be fixed.
   - If a user is logged out and attempts to add an item to their wishlist, they will be prompted to login before adding the item (This is thanks to the ```@login_required``` decorator in the wishlist ```views.py``` file) and once they log in, a server 500 error will be shown. However, this can easily be fixed by refreshing the page, where the user will now be logged in.

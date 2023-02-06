@@ -170,7 +170,7 @@ Products
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    $("#id_car_model").attr("disabled", "disabled")
+    $("#id_car_model").attr("disabled", "disabled");
     const url = $("#filter-form").attr("data-car_models-url"); // get the url of the `load_models` view
     const make = $("#id_make").text(); // get the selected Make ID from the HTML input
     $.ajax({ // initialize an AJAX request
@@ -196,7 +196,7 @@ Products
                 $("#id_car_model").html(
                     data
                 ); // replace the contents of the model input with the data that came from the server
-                $("#id_car_model").removeAttr("disabled")
+                $("#id_car_model").removeAttr("disabled");
                 $("#id_car_model option:first").removeAttr("disabled");
                 $("#id_car_model option:first").attr("selected", "selected");
             }

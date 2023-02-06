@@ -86,11 +86,11 @@
 
 
   // Automatically update car models when make is selected
-  $("#wishlist_id_car_model").attr("disabled", "disabled")
+  $("#wishlist_id_car_model").attr("disabled", "disabled");
 
 
   $("#wishlist_id_make").change(function () {
-    $("#wishlist_id_car_model").removeAttr("disabled")
+    $("#wishlist_id_car_model").removeAttr("disabled");
     const url = $("#wishlist-form").attr("data-car_models-url"); // get the url of the `load_models` view
     // const makeId = $(this).val();
     const make = $(this).find('option:selected').text(); // get the selected Make ID from the HTML input
