@@ -122,3 +122,16 @@ no bugs found.
 
 ### **footer.html**
 no bugs found.
+
+
+## **W3C CSS validator**
+Whilst bootstrap was used for the majority of styling throughout this project, a custom css style sheet (```base.css```) was used to provide customer styling throughout the project. This can be seen in the orange coloring used throughout the website and in resizing certain elements media queries to make the website more responsive.
+
+To test this custom-written CSS, the W3C CSS validator was used. Upon testing, five minor errors were discovered. These errors were easily fixed and were the result of using invalid units of measurement within css. 
+
+Seven warnings were also found within the css, however these were not deemed to be problematic and in some cases were even needed to ensure cross-browser compatability of the project. Therefore, these were untouched.
+
+The testing images of before and after can be seen below:  
+
+![base.css testing before](static/static-images/base.css-testing-before.PNG "base.css testing before")
+![base.css testing after](static/static-images/base.css-testing-after.PNG "base.css testing after")
