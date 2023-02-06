@@ -48,8 +48,9 @@ def render_checkout(request):
                     order_line_item.save()
                 except Product.DoesNotExist():
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database."
-                        "Please call us on 0441234567 for assistance.")
+                        "One of the products in your cart wasn't found in our database."  # noqa
+                        "Please call us on 0441234567 for assistance."
+                        )
                     )
                     order.delete()
                     return redirect(reverse('cart'))
@@ -65,12 +66,12 @@ def render_checkout(request):
 
         # Create email subject
             subject = render_to_string(
-                'checkout/confirmation-emails/order_confirmation_email_subject.txt',
+                'checkout/confirmation-emails/order_confirmation_email_subject.txt',  # noqa
                 context
             )
             # Create email body
             body = render_to_string(
-                'checkout/confirmation-emails/order_confirmation_email_body.txt',
+                'checkout/confirmation-emails/order_confirmation_email_body.txt',  # noqa
                 context
             )
             # Send email
@@ -80,13 +81,19 @@ def render_checkout(request):
                 settings.DEFAULT_FROM_EMAIL,
                 [request.user.email]
             )
-            messages.success(request, f"Checkout Successful! Order number: {order.order_number}" )
+            messages.success(
+                request,
+                f"Checkout Successful! Order number: {order.order_number}"
+            )
             return render(request, "checkout/checkout-success.html", context)
         else:
             for error, errorvalue in order_form.errors.items():
                 for erroritem in errorvalue:
                     erroritem = erroritem.replace("&", "&amp;")
-                    messages.error(request, f"Order failed. Problem with {error} field: {erroritem}")
+                    messages.error(
+                        request,
+                        f"Order failed. Problem with {error} field: {erroritem}"  # noqa
+                    )
             return redirect(reverse('cart'))
     else:
         cart = request.session.get("cart", {})
@@ -108,5 +115,8 @@ def render_checkout(request):
             }
             return render(request, 'checkout/checkout.html', context)
         else:
-            messages.error(request, "Add something to your cart to access the checkout page")
+            messages.error(
+                request,
+                "Add something to your cart to access the checkout page"
+            )
             return redirect(reverse("cart"))

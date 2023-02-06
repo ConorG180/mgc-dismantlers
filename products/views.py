@@ -23,7 +23,8 @@ def render_products(request):
 
         # pagination
         page = request.GET.get("page", 1)
-        paginator = Paginator(products, 10)  # number of products per paginated page
+        # number of products per paginated page
+        paginator = Paginator(products, 10)
         try:
             products = paginator.page(page)
         except PageNotAnInteger:
@@ -44,9 +45,15 @@ def delete_product(request, product_id):
         product = Product.objects.get(pk=product_id)
         product.delete()
     except Product.DoesNotExist:
-        messages.error(request, f"Oops! An error occured while deleting {product.create_card_title()} from stock")
+        messages.error(
+            request,
+            f"Oops! An error occured while deleting {product.create_card_title()} from stock"  # noqa
+        )
         return redirect(reverse('products'))
-    messages.success(request, f"Successfully Removed {product.create_card_title()} from stock.")
+    messages.success(
+        request,
+        f"Successfully Removed {product.create_card_title()} from stock."
+    )
     return redirect(reverse('products'))
 
 
@@ -55,17 +62,27 @@ def edit_product(request, product_id):
     make = product.car_model.make
     product_form = Product_form(request.POST, request.FILES, instance=product)
     if request.method == "POST":
-        product_form = Product_form(request.POST, request.FILES, instance=product)
+        product_form = Product_form(
+            request.POST,
+            request.FILES,
+            instance=product
+        )
         if product_form.is_valid():
             product_form.save()
             product.save()
-            messages.success(request, f"Successfully Edited {product.create_card_title()}.")
+            messages.success(
+                request,
+                f"Successfully Edited {product.create_card_title()}."
+            )
             return redirect(reverse('products'))
         else:
             for error, errorvalue in product_form.errors.items():
                 for erroritem in errorvalue:
                     erroritem = erroritem.replace("&", "&amp;")
-                messages.error(request, f"Failed to edit product. Problem with {error} field: {erroritem}")
+                messages.error(
+                    request,
+                    f"Failed to edit product. Problem with {error} field: {erroritem}"  # noqa
+                )
             return render(request, "products/edit-product.html", context)
     else:
         product_form = Product_form(instance=product)
@@ -73,14 +90,14 @@ def edit_product(request, product_id):
             "product_form": product_form,
             "product": product
         }
-        
+
     return render(request, "products/edit-product.html", context)
 
 
 def add_product(request):
     product_form = Product_form()
     context = {
-    "product_form": product_form,
+        "product_form": product_form,
     }
     if request.method == "POST":
         product_form = Product_form(request.POST or None, request.FILES)
@@ -90,10 +107,10 @@ def add_product(request):
             # Send email to users who have item added to wishlist
 
             # Get items on wishlist which only wish to be contacted
-            # When item is added, relevant make/model, and year == 
+            # When item is added, relevant make/model, and year ==
             # to chosen year or 0 (Which means all years) and part ==
             # to chosen year or 0 (Which means all parts).
-            wishlist_entries = Wishlist.objects.filter(Q(on_add=True) & Q(make_id=product.make_id) & Q(car_model_id=product.car_model_id) & (Q(model_year=product.model_year_id) | Q(model_year=0)) & (Q(part_id=product.part_id) | Q(part_id=0)))
+            wishlist_entries = Wishlist.objects.filter(Q(on_add=True) & Q(make_id=product.make_id) & Q(car_model_id=product.car_model_id) & (Q(model_year=product.model_year_id) | Q(model_year=0)) & (Q(part_id=product.part_id) | Q(part_id=0)))  # noqa
             # Only do something if wishlist isn't empty
             if wishlist_entries.count():
                 # Iterate over every wishlist entry
@@ -118,13 +135,19 @@ def add_product(request):
                     settings.DEFAULT_FROM_EMAIL,
                     emails
                 )
-            messages.success(request, f"Added {product.create_card_title()} to stock.")
+            messages.success(
+                request,
+                f"Added {product.create_card_title()} to stock."
+            )
             return redirect(reverse('products'))
         else:
             for error, errorvalue in product_form.errors.items():
                 for erroritem in errorvalue:
                     erroritem = erroritem.replace("&", "&amp;")
-                messages.error(request, f"Failed to add product. Problem with {error} field: {erroritem}")
+                messages.error(
+                    request,
+                    f"Failed to add product. Problem with {error} field: {erroritem}"  # noqa
+                )
             return render(request, "products/add-product.html", context)
     return render(request, "products/add-product.html", context)
 
@@ -136,12 +159,13 @@ def search_product(request):
     if not user_search_query:
         messages.error(request, "You didn't enter any search criteria!")
         return redirect(reverse('products'))
-    queries = Q(color__color__icontains=user_search_query) | Q(car_model__car_model__icontains=user_search_query) | Q(car_model__make__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(model_year__year__icontains=user_search_query) | Q(description__icontains=user_search_query)
+    queries = Q(color__color__icontains=user_search_query) | Q(car_model__car_model__icontains=user_search_query) | Q(car_model__make__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(part__name__icontains=user_search_query) | Q(model_year__year__icontains=user_search_query) | Q(description__icontains=user_search_query)  # noqa
     products = products.filter(queries)
     product_count = len(products)
     # pagination
     page = request.GET.get("page", 1)
-    paginator = Paginator(products, 10)  # number of products per paginated page
+    # number of products per paginated page
+    paginator = Paginator(products, 10)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
@@ -159,12 +183,17 @@ def search_product(request):
 
 
 def categorize_products(request, cat):
-    products = Product.objects.filter(part__category__friendly_name=cat, in_a_cart=False, is_sold=False)
+    products = Product.objects.filter(
+        part__category__friendly_name=cat,
+        in_a_cart=False,
+        is_sold=False
+    )
     product_filter = ProductFilter(request.GET, queryset=products)
     product_count = len(products)
     # pagination
     page = request.GET.get("page", 1)
-    paginator = Paginator(products, 10)  # number of products per paginated page
+    # number of products per paginated page
+    paginator = Paginator(products, 10)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
@@ -184,4 +213,8 @@ def categorize_products(request, cat):
 def load_models(request):
     make = get_object_or_404(Make, name=request.GET.get("make"))
     models = Model.objects.filter(make=make).order_by("car_model")
-    return render(request, 'products/model_dropdown_list_options.html', {'models': models})
+    return render(
+        request,
+        'products/model_dropdown_list_options.html',
+        {'models': models}
+    )

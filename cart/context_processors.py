@@ -17,7 +17,7 @@ def cart_context_processor(request):
         total += product.price * quantity
         product_count += quantity
         cart.append({"product": product, "quantity": quantity})
-    
+
     if total >= free_delivery_threshold:
         delivery = 0
 

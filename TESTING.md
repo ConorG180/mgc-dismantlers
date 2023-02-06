@@ -135,3 +135,15 @@ The testing images of before and after can be seen below:
 
 ![base.css testing before](static/static-images/base.css-testing-before.PNG "base.css testing before")
 ![base.css testing after](static/static-images/base.css-testing-after.PNG "base.css testing after")
+
+## **PEP 8**
+PEP 8 guidelines and practises were implemented when building this project. To test this, it was originally planned to use [pep8online.com](http://pep8online.com/). However, as of the time of creating this project, the website is currently not active and cannot be accessed. Therefore, it was decided to use the extention `pycodestyle` to test if the python code adhered to the PEP 8 guidelines and practises.
+
+All python files contained PEP 8 errors of some kind, the most common of which included:  
+
+* E2 - Whitespace errors
+* E3 - Blank line errors
+* E5 - Line length errors
+* W2 - Whitespace warnings
+
+Whilst these errors were not causing fatal errors within the project or preventing the software from functioning as expected, it can still be considered bad practise to leave these errors within the project. This is mainly from a "code readability" perspective. In correcting these errors, the code will be easier to maintain in the future should updates/changes need to be implemented. Furthermore, future debugging will also be made much easier.

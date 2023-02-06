@@ -12,7 +12,7 @@ urlpatterns = [
         "edit-product/<product_id>/",
         views.edit_product,
         name="edit_product"
-    ),   
+    ),
     path(
         "add-product/",
         views.add_product,

@@ -12,14 +12,13 @@ class OrderLineItemAdmin(admin.TabularInline):
 class OrderAdmin(admin.ModelAdmin):
     model = Order
     inlines = (OrderLineItemAdmin,)
-    readonly_fields = ('order_number', 'order_date',
-                        'delivery_cost', 'order_total',
-                        'grand_total', 'original_bag',
-                        'stripe_pid',)
+    readonly_fields = (
+        'order_number', 'order_date',
+        'delivery_cost', 'order_total',
+        'grand_total', 'original_bag',
+        'stripe_pid',
+    )
     ordering = ('grand_total',)
-
-    # list_display = [field.name for field in Order._meta.get_fields()]
 
 
 admin.site.register(Order, OrderAdmin)
-# admin.site.register(OrderLineItem, OrderLineItemAdmin)

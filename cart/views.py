@@ -9,6 +9,7 @@ from django.contrib import messages
 def render_cart(request):
     return render(request, 'cart/cart.html')
 
+
 @login_required
 def add_to_cart(request, product_id):
     added_product = Product.objects.get(id=product_id)
@@ -17,8 +18,12 @@ def add_to_cart(request, product_id):
     cart = request.session.get('cart', {})
     cart[product_id] = 1
     request.session["cart"] = cart
-    messages.success(request, f"Added {added_product.create_card_title()} to cart")
+    messages.success(
+        request,
+        f"Added {added_product.create_card_title()} to cart"
+    )
     return redirect(reverse('products'))
+
 
 @login_required
 def remove_from_cart(request, product_id):
@@ -29,8 +34,14 @@ def remove_from_cart(request, product_id):
     try:
         del cart[product_id]
     except Product.DoesNotExist():
-        messages.error(request, f"Oops! An error occured while removing {removed_product.create_card_title()} from cart")
+        messages.error(
+            request,
+            f"Oops! An error occured while removing {removed_product.create_card_title()} from cart"  # noqa
+        )
         return redirect(reverse('cart'))
     request.session["cart"] = cart
-    messages.success(request, f"Deleted {removed_product.create_card_title()} from cart")
+    messages.success(
+        request,
+        f"Deleted {removed_product.create_card_title()} from cart"
+    )
     return redirect(reverse('cart'))

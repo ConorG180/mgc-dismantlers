@@ -26,8 +26,12 @@ def add_to_wishlist(request):
             for error, errorvalue in wishlist_form.errors.items():
                 for erroritem in errorvalue:
                     erroritem = erroritem.replace("&", "&amp;")
-                messages.error(request, f"Failed to add entry to wishlist. Problem with {error} field: {erroritem}")
+                messages.error(
+                    request,
+                    f"Failed to add entry to wishlist. Problem with {error} field: {erroritem}"  # noqa
+                )
             return redirect(reverse('homepage'))
+
 
 @login_required
 def remove_from_wishlist(request, wishlist_id):
@@ -35,11 +39,10 @@ def remove_from_wishlist(request, wishlist_id):
         wishlist_item = Wishlist.objects.get(pk=wishlist_id)
         wishlist_item.delete()
     except Wishlist.DoesNotExist:
-        messages.error(request, f"Oops! An error occured while removing this entry from your wishlist!")
+        messages.error(
+            request,
+            f"Oops! An error occured while removing this entry from your wishlist!"  # noqa
+        )
         return redirect(reverse('profile'))
     messages.success(request, f"Successfully removed entry from wishlist!")
     return redirect(reverse('profile'))
-
-
-
-    
