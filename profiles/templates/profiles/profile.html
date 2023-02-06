@@ -145,6 +145,8 @@
                                 </td>
                                 <td class="text-center"><a class="text-danger" href="{% url 'remove_from_wishlist' wishlist_item.wishlist_id %}"><i class="ml-auto fa-lg fa-solid fa-trash"></i></a></td>
                               </tr>
+                              {% empty %}
+                              <h6 class="text-center">No items currently in your wishlist</h6>
                               {% endfor %}
                             </tbody>
                           </table>
