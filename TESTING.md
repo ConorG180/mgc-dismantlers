@@ -147,3 +147,7 @@ All python files contained PEP 8 errors of some kind, the most common of which i
 * W2 - Whitespace warnings
 
 Whilst these errors were not causing fatal errors within the project or preventing the software from functioning as expected, it can still be considered bad practise to leave these errors within the project. This is mainly from a "code readability" perspective. In correcting these errors, the code will be easier to maintain in the future should updates/changes need to be implemented. Furthermore, future debugging will also be made much easier.
+
+# Unfixed Bugs
+One bug was discovered that is yet to be fixed.
+  - If a user is logged out and attempts to add an item to their wishlist, they will be prompted to login before adding the item (This is thanks to the ```@login_required``` decorator in the wishlist ```views.py``` file) and once they log in, a server 500 error will be shown. However, this can easily be fixed by refreshing the page, where the user will now be logged in.
