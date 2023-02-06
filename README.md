@@ -16,18 +16,18 @@ The grid feature in bootstrap was used to easily and efficiently provide a respo
 Before starting development on MGC Dismantlers, Balsamiq was used to form wireframes for each separate page within the programme. Basamiq was chosen due to it's efficiency and it's ability to reproduce relatively simplistic, yet easy to understand wireframes. This helped me to visualise ideas for each of the programmes pages and features, and organise how certain features would be laid out and implemented within the programme. Each wireframe created prior to development can be seen below:
 
 ![index.html wireframe](wireframes/home.png "index.html (Home page)")
-![cart.html wireframe](wireframes/cart.png "cart.html (Cart page)")
-![checkout.html wireframe](wireframes/checkout.png "checkout.html (Checkout page)")
-![Contact modal wireframe](wireframes/contact-us-modal.png "Contact modal")
-![order-history.html wireframe](wireframes/order-history.png "order-history.html (Order history view)")
-![products.html wireframe](wireframes/products.png "products.html (Products view)")
-![product-info.html wireframe](wireframes/product-info.png "product-info.html (Product detail view)")
-![profile.html wireframe](wireframes/profile.png "profile.html (Profile view)")
+![cart.html wireframe](documentation/wireframes/cart.png "cart.html (Cart page)")
+![checkout.html wireframe](documentation/wireframes/checkout.png "checkout.html (Checkout page)")
+![Contact modal wireframe](documentation/wireframes/contact-us-modal.png "Contact modal")
+![order-history.html wireframe](documentation/wireframes/order-history.png "order-history.html (Order history view)")
+![products.html wireframe](documentation/wireframes/products.png "products.html (Products view)")
+![product-info.html wireframe](documentation/wireframes/product-info.png "product-info.html (Product detail view)")
+![profile.html wireframe](documentation/wireframes/profile.png "profile.html (Profile view)")
 
 # Entity Relationship Diagram
 Before starting development on MCG Dismantlers, diagrams.net/draw.io was used to form an Entity Relationship Diagram (ERD) for the programme. As the programme relies heavily on models and databases, an ERD helped immensely in determining how to structure the database, including aiding in aspects such as relationships between tables, primary and foreign keys, and selecting fields for various tables. The ERD can be seen below:  
 
-![MGC Dismantlers ERD](erd-diagrams/mgc-dismantlers-erd.jpg "MCG Dismantlers ERD")
+![MGC Dismantlers ERD](documentation/erd-diagrams/mgc-dismantlers-erd.jpg "MCG Dismantlers ERD")
 
 # Features
 ## Existing features
@@ -35,93 +35,97 @@ Before starting development on MCG Dismantlers, diagrams.net/draw.io was used to
 ### Homepage
 The homepage of the website has two unique components (as well as 2 global components, a navbar and footer). These two unique components are the carousel, which slides through images and offers links to various parts of the website, and the cards, which also showcase the company's services and also offer links to various parts of the website.
 #### **Images**  
-<!-- ![Homepage](static/images/homepage.png "Homepage") -->
+![Homepage](static/static-images/homepage.png "Homepage")
+![Homepage mobile](static/static-images/homepage-mobile.png "Homepage mobile")
 
 ### Navigation
 The programme offers a very simple and easy to use navigation system to navigate around the website. This is not only in the form of moving to different pages, but also for features such as a contact modal and product-category buttons attached to the navbar to allow the user to easily navigate to their category of required car parts. It should be noted that the navbar will shrink to a dropdown menu on smaller devices whilst retaining all functionality. This was added to improve responsiveness of the navbar and add to the user experience.  
 The user will also be able to return to the homepage by clicking on the company logo. This was included to provide an easy way for the user to return to the homepage.
 #### **Images**  
-<!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
-<!-- ![navigation bar](static/images/navigation-bar-logged-in-as-admin.png "navigation bar") -->
-<!-- ![navigation bar dropdown](static/images/navigation-bar-logged-in-as-admin-dropdown.png "navigation bar dropdown") -->
+![Navigation bar](static/static-images/navbar.PNG "Navigation bar")
+![Navigation bar dropdown](static/static-images/navbar-dropdown.PNG "Navigation bar dropdown")
+![Navigation bar dropdown extended](static/static-images/navbar-dropdown-extended.PNG "Navigation bar dropdown extended")
 
 
 ### Footer
 An attractive footer is included in the programme to offer the user a simple way of easily navigating to the social media pages of the company. The wishlist feature is also included in the footer, to allow users to easily select a make and model and year of a car, and be notified when the product has come into stock.  
 The user will also be able to return to the homepage by clicking on the company logo. This was included to provide an easy way for the user to return to the homepage.
 #### **Images**  
-<!-- ![footer](static/images/footer.png "footer") -->
+![Footer](static/static-images/footer.PNG "footer")
+![Footer dropdown](static/static-images/footer-dropdown.PNG "Footer dropdown")
 
 ### CRUD (Create, Read, Update, Delete) functionality
 An authorised user of the website (Such as the owner/manager etc.) Will have the ability to manipulate the products database. For example, an authorized user may add a new product, delete a product which they no longer have in stock, and edit any details about a product if they wish. The authorised user also has the ability to add different makes/models of a car to the database via the django admin page.  
 Read functionality comes from the products page. This allows users (Authorised and unauthorised) to access products via the website's front-end and view their details accordingly.
 
 #### **Images**  
-##### **Deleting product form**
-<!-- ![Deleting product form](static/images/crud-functionality-delete-product.png "Deleting product form") -->
+##### **Deleting product button**
+![Deleting product button](static/static-images/delete-product-button.PNG "Deleting product button")
 ##### **Adding product form**
-<!-- ![Adding product form](static/images/crud-functionality-add-product-form.png "Adding product form") -->
+![Adding product form](static/static-images/add-product-form.png "Adding product form")
 ##### **Editing product form**
-<!-- ![Editing product form](static/images/crud-functionality-edit-product-form.png "Editing product form") -->
+![Editing product form](static/static-images/edit-product-form.png "Editing product form")
 
 ### Toast notifications
 Toast notifications were added to the website to display helpful messages to the user, for example when a checkout was successful or if it failed. This is also enabled for when a user adds/removes items from wishlist, logging in and out, and when an administrator adds/edits or deletes products.
 #### **Images**  
-<!-- ![Toast success](static/images/products-page.png "Toast success") -->
-<!-- ![Toast error](static/images/products-page.png "Toast error") -->
+![Toast success](static/static-images/toast-success.PNG "Toast success")
+![Toast error](static/static-images/toast-error.PNG "Toast error")
 
 ### Products page
 A user will be able to access a products page to access all products which the company is currently selling. This will allow the user to look at all products which the company currently has in stock, and also give the user access to a host of other options, such as adding products to their cart, searching for products, and filtering products by category.
 #### **Images**  
-<!-- ![Products page](static/images/products-page.png "Products page") -->
+![Products page](static/static-images/products-page.png "Products page")
+![Products page mobile](static/static-images/products-page-mobile.png "Products page mobile")
 
 ### Products page pagination
 The products page will be paginated so as to only load 10 products at a time. This adds to the user experience in two ways. First off, it displays the products to the user in bite-size chunks as opposed to displaying all products at once and potentially overloading the user with information. Secondly, it cuts down on the products page loading time. Instead of querying the database for all products, the products page will now only query the first 10 products at a time, thereby making the page response faster.
 #### **Images**  
-<!-- ![Products page pagination](static/images/products-page-pagination.png "Products page pagination") -->
+![Products page pagination](static/static-images/products-page-pagination.PNG "Products page pagination")
 
 ### Product searching 
-A user will be able to search throught the company's array of products in order to try and find a product which they wish to purchase. This will be enabled through a search bar. The search bar is programmed to enable searches of colors, years, part names, makes and models of car parts.
+A user will be able to search throught the company's array of products in order to try and find a product which they wish to purchase. This will be enabled through a search bar. The search bar is programmed to enable searches of colors, years, part names, makes, models and descriptions of car parts.
 #### **Images**  
-<!-- ![Product searching](static/images/product-search.png "Product searching") -->
+![Product searching](static/static-images/product-search.PNG "Product searching")
 
 ### Product categorisation
 A user will also be able to categorize the company's array of products to try and find a product which they wish to purchase. To do this, a user can simply click on a category button in the products page or on a button in the category navbar, which will display a list of products to the user which are linked to that category. 
 #### **Images**  
-<!-- ![Product categorisation navbar](static/images/product-categorisation-navbar.png "Product categorisation navbar") -->
-<!-- ![Product categorisation](static/images/product-categorisation-products-page.png "Product categorisation") -->
+![Product categorisation navbar](static/static-images/categorisation-navbar.PNG "Product categorisation navbar")
+![Product categorisation buttons](static/static-images/categorisation-buttons.PNG "Product categorisation buttons")
+![Product categorisation tablet](static/static-images/product-categorisation-tablet.PNG "Product categorisation tablet")
+![Product categorisation mobile](static/static-images/product-categorisation-mobile.PNG "Product categorisation mobile")
 
 ### Product filtering
 A user will also be able to filter through the company's array of products to try and find a product which they wish to purchase. To achieve this, a user can simply pick the characteristics of a part which they want to search for e.g. the part, the year, the make/model and the color. This will automatically filter products for the user and return the user a list of products which match these characteristics.
 #### **Images**  
-<!-- ![Product filtering form](static/images/product-categorisation-navbar.png "Product filtering form") -->
+![Product filtering form](static/static-images/product-filtering.PNG "Product filtering form")
 
 ### Cart
 A user will have access to their own "cart" once signing up to the website, which will allow them to manage a potential order. This saves the user time as it allows them to buy multiple products in a single order, as opposed to buying and purchasing each item individually.
 #### **Images**  
-<!-- ![cart](static/images/cart.png "cart") -->
+![cart](static/static-images/cart.png "cart")
 
 ### Add/Remove products to/from cart
 A user will be able to add and remove products from their cart as they wish to allow them to manage a potential order.
 #### **Images**  
-<!-- ![Add product to cart](static/images/cart-add-product.png "Add product to cart") -->
-<!-- ![Remove product from cart](static/images/cart-remove-product.png "Remove product from cart") -->
+![Add product to cart](static/static-images/add-to-cart-button.PNG "Add product to cart")
+![Remove product from cart](static/static-images/remove-from-cart-button.PNG "Remove product from cart")
 
 ### Checkout
 A user will be able to checkout and purchase items that they have added to their cart. The checkout option will be available from the ```cart.html``` page, and when clicked, will reveal a form which the user can enter their information and purchase their chosen items. The user will also be able to see their sub-total, delivery, and grand-total costs for their chosen items from the page. 
 #### **Images**  
-<!-- ![Checkout](static/images/checkout.png "Checkout") -->
+![Checkout](static/static-images/checkout.png "Checkout")
 
 ### Checkout success
 A user will be redirected to a checkout success page once they complete their order of their chosen products. In the checkout success page, the user will be able to see their order confirmation number, a list of the products that they have just purchased, and also receive a notification that they have been sent an email to their registered email address containing all relevant order information.
 #### **Images**  
-<!-- ![Checkout success](static/images/checkout-success.png "Checkout success") -->
+![Checkout success](static/static-images/checkout-success.png "Checkout success")
 
 ### Automated emails
 A user will receive automated emails upon completing certain actions on the website. First of all, a user will receive an order confirmation email whenever they successfully make an order on the website and purchase products. This email will show the user the products they have purchased and provide them with a record of the order number. Secondly, if a user has added an item to their wishlist, and has ticked the ```when_added``` checkbox, they will receive an email when their chosen product has been added to MCG dismantler's stock.
 #### **Images**  
-<!-- ![Order confirmation email](static/images/order-confirmation-email.png "Order confirmation email") -->
-<!-- ![Wishlist confirmation email](static/images/wishlist-confirmation-email.png "Wishlist confirmation email") -->
+![Order confirmation email](static/static-images/order-confirmation-email.PNG "Order confirmation email")
 
 ### Stock management
 MCG dismantlers deals with second-hand car parts which are recovered from the dismantling of cars. As a result, products must be individually photographed and recorded and uploaded to the website, as each product is unique. This is opposed to most other e-commerce businesses which may order 20 of a particular product and record its stock accordingly. If a user were to buy one of the 20 items, the website would reduce the stock from 20 to 19. However, in the case of MGC dismantlers, each product is unique and therefore the quantity of each product is 1.  
@@ -132,23 +136,23 @@ A user will be able to create their own wishlist provided they have an account a
 The user must choose a make and model for the wishlist entry, however can choose to include all years/parts, or a specific year/part.  
 The wishlist also allows user to keep track of what they need and can be accessed from the wishlist section of the profile page. 
 #### **Images**  
-<!-- ![Wishlist](static/images/wishlist.png "Wishlist") -->
+![Wishlist](static/static-images/wishlist.PNG "Wishlist")
 
 ### Add and remove items from wishlist
 A user will also have the ability to add and remove parts from their wishlist as they see fit. A user can remove items from their wishlist through accessing all their wishlist parts in the profile page. A user may add parts to their wishlist through the form available on the footer.
 #### **Images**  
-<!-- ![Remove product from wishlist](static/images/wishlist-remove-product.png "Remove product from wishlist") -->
-<!-- ![Add product to wishlist](static/images/wishlist-add-product.png "Add product to wishlist") -->
+![Add product to wishlist](static/static-images/add-to-wishlist.PNG "Add product to wishlist")
+![Add product to wishlist mobile](static/static-images/add-to-wishlist-mobile.PNG "Add product to wishlist mobile")
 
 ### Profile
 A user will also have access to their own profile page to store their personal and delivery information. This page can be updated and saved as the user wishes. It is planned that in the future, this page will be used to pre-populate the checkout form when the user wishes to buy something. This will improve the user experience when a user wishes to purchase products from the website.
 #### **Images**  
-<!-- ![Profile](static/images/profile.png "Profile") -->
+![Profile](static/static-images/profile.PNG "Profile")
 
 ### Order history
 In the profile page, a user will also have access to an order history section. This section of the profile webpage will allow users to see all of their order history, including the total cost of each order, their items, the order number etc. This will help the user to keep track of what they have purchased from the company.
 #### **Images**  
-<!-- ![Order history](static/images/order-history.png "Order history") -->
+![Order history](static/static-images/order-history.png "Order history")
 
 
 ## Future features
@@ -159,8 +163,6 @@ Furthermore, to access on_sale products, the user will be able click the on_sale
 Finally, the items on the wishlist are currently able to be added with a ```on_sale``` property set to true. This was intended to send the user an email if a product went on sale, however this is currently not added.  
 A lot of the backend work to enable this sale feature are already in place, and it is hoped that it will be implemented soon.  
 #### **Images**  
-<!-- ![Product on_sale](static/images/product-on-sale.png "Product on_sale property") -->
-<!-- ![Wishlist on_sale](static/images/wishlist-on-sale.png "Wishlist on_sale") -->
 
 ### Ordering
 A feature is hoped to be added in the future which will allow the user to order the products by certain characteristics when browsing, such as price, year, alphabetical and date added. These characteristics will also be able to be ordered in both ascending and descending order.
@@ -191,7 +193,7 @@ The following technologies were used in the development of this project:
   - [Pillow](https://pypi.org/project/Pillow/) - Pillow was used to add image processing capabilities to Python.
 
 #### **Images**  
-<!-- ![Requirements.txt](static/images/requirements.png "Requirements.txt") -->
+![Requirements.txt](static/static-images/requirements.PNG "Requirements.txt")
 
 # Deployment
 The live deployed application can be found at [MCG Dismantlers](https://mcg-dismantlers.herokuapp.com/).
