@@ -1,207 +1,221 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}
+Profile
+{% endblock title %}
+
 {% block content %}
 <!-- Grid layout -->
 <div class="container">
   <div class="row">
     <div class="col">
-        <div class="row profile-buttons-wrapper">
-          <div class="col-lg-2 col-md-3 col-4 px-0 d-flex justify-content-center">
-            <button class="btn btn-dark text-white" type="button"  data-target="#profileCollapse" aria-expanded="false" aria-controls="profileCollapse" id="profileCollapseButton">Profile</button>
-          </div>
-          <div class="col-lg-2 col-md-3 col-4 px-0 d-flex justify-content-center">
-            <button class="btn btn-dark text-white" href="#orderCollapse" role="button" aria-expanded="false" aria-controls="orderCollapse" id="orderCollapseButton">Orders</button>
-          </div>
-          <div class="col-lg-2 col-md-3 col-4 px-0 d-flex justify-content-center">
-            <button class="btn btn-dark text-white" href="#wishlistCollapse" role="button" aria-expanded="false" aria-controls="wishlistCollapse" id="wishlistCollapseButton">Wishlist</button>
-          </div>
+      <div class="row profile-buttons-wrapper">
+        <div class="col-lg-2 col-md-3 col-4 px-0 d-flex justify-content-center">
+          <a class="btn btn-dark text-white" href="#profileCollapse" role="button" data-target="#profileCollapse" aria-expanded="false"
+            aria-controls="profileCollapse" id="profileCollapseButton">Profile</a>
         </div>
-          <!-- ORDER HISTORY -->
-          <div class="row collapse" id="orderCollapse">
-            <div class="col-12 mb-5">
-              <div class="order-history-wrapper d-flex flex-column">
-                <h4 class="align-self-md-start align-self-center mt-3 mb-1"><span class="primary-color-text">{{user_profile}}</span> Order History</h4>
-                    {% for user_order in user_orders %}
-                    <div class="div row order-wrapper my-2">
-                    <div class="col-12 bg-dark text-white border border-bottom-white pt-2 pb-4">
-                      <div class=" d-flex flex-column justify-content-between">
-                      <h6>
-                        Order number:
-                        <small class="ml-2 text-secondary">
-                          {{user_order.order_number}}</>
-                        </small>
-                      </h6>
-                      <h6>
-                        Date:
-                        <small class="ml-2 mb-2 text-secondary">
-                          {{user_order.order_date}}</>
-                        </small>
-                      </h6>
-                      <h6> Delivery address:
-                        <small class="ml-2 mb-2 text-secondary">
-                          {{user_order.street_address1}}, {{user_order.street_address2}}, {{user_order.town}}, {{user_order.city}},{{user_order.county}}, {{user_order.country}}, {{user_order.postcode}}
-                        </small>
-                      </h6>
-                      <h6>
-                        Order total:
-                        <small class="ml-2 mb-2 text-secondary">
-                          €{{user_order.grand_total}}
-                          {% if user_order.delivery_cost %}
-                          (Including delivery charge of €{{user_order.delivery_cost}})
-                          {% else %}
-                          (Free delivery on this order)
-                          {% endif %}
-                        </small>
-                      </h6>
-                      </div>
-                  </div>
-                    <div class="col-12 px-0 order-lineitems-details">
-                      <div class="table-responsive">
-                        <table class="table table-bordered mb-0 table-dark">
-                          <thead>
-                            <tr>
-                              <th scope="col" class="order-preview-image">Image</th>
-                              <th scope="col">Make</th>
-                              <th scope="col">Model</th>
-                              <th scope="col">Product</th>
-                              <th scope="col">price</th>
-                              <th scope="col">quantity</th>
-                              <th scope="col">total</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {% for lineitem in user_order.lineitems.all %}
-                            <tr>
-                              <td class="p-0">
-                                {% if lineitem.product.image %}
-                                  <img src="{{lineitem.product.image.url}}" alt="" class="img-fluid">
-                                {% else %}
-                                No image
-                                {% endif %}
-                              </td>
-                              <td>{{lineitem.product.car_model.make.name}}</td>
-                              <td>{{lineitem.product.car_model.car_model}}</td>
-                              <td>{{lineitem.product.part.name}}</td>
-                              <td>€{{lineitem.product.price}}</td>
-                              <td>1</td>
-                              <td>€{{lineitem.lineitem_total}}</td>
-                            </tr>
-                            {% endfor %}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  {% empty %}
-                  <h6 class="text-center">No orders yet!</h6>
-                    <!-- ONE COMPLETE ORDER -->
-                    {% endfor %}
-              </div>
-            </div>
+        <div class="col-lg-2 col-md-3 col-4 px-0 d-flex justify-content-center">
+          <a class="btn btn-dark text-white" href="#orderCollapse" role="button" aria-expanded="false"
+            aria-controls="orderCollapse" id="orderCollapseButton">Orders</a>
         </div>
-        <!-- PROFILE -->
-            <div class="row collapse" id="profileCollapse">
-            <div class="col-12">
-                <div class="profile-information-wrapper d-flex flex-column mb-5 mt-3">
-                        <h4 class="align-self-md-start align-self-center"><span class="primary-color-text">{{user_profile}}</span> Profile Information</h4>
-                        <form method="POST" class="d-flex flex-column align-items-center w-100 profile-form" action="{% url 'profile' %}">
-                          {% csrf_token %}
-                          {{user_profile_form}}
-                          <button type="submit" class="btn btn-lg text-white primary-color-bg submit-button">
-                            Save changes
-                        </button>
-                        </form>
-                  </div>
-            </div>
-            </div>
-
-            <!-- WISHLIST -->
-            <div class="row collapse show" id="wishlistCollapse">
-              <div class="col-12">
-                <div class="wishlist-wrapper d-flex flex-column">
-                  <h4 class="align-self-md-start align-self-center mt-3 mb-1"><span class="primary-color-text">{{user_profile}}</span> Wishlist</h4>
-                        <div class="table-responsive">
-                          <table class="table table-bordered table-dark">
-                            <thead class="bg-dark text-white">
-                              <tr>
-                                <th scope="col">Make</th>
-                                <th scope="col">Model</th>
-                                <th scope="col">Year</th>
-                                <th scope="col">Part</th>
-                                <th scope="col">Email on add</th>
-                                <th scope="col">Email on sale</th>
-                                <th scope="col">Remove</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {% for wishlist_item in wishlist %}
-                              <tr>
-                                <td>{{wishlist_item.make}}</td>
-                                <td>{{wishlist_item.model}}</td>
-                                <td>{{wishlist_item.year}}</td>
-                                <td>{{wishlist_item.part}}</td>
-                                <td>
-                                  {% if wishlist_item.on_add %}
-                                    <i class="text-success fa-solid fa-check"></i>
-                                  {% else %}
-                                    <i class="text-danger fa-solid fa-xmark"></i>
-                                  {% endif %}
-                                </td>
-                                <td>
-                                  {% if wishlist_item.on_sale %}
-                                    <i class="text-success fa-solid fa-check"></i>
-                                  {% else %}
-                                    <i class="text-danger fa-solid fa-xmark"></i>
-                                  {% endif %}
-                                </td>
-                                <td class="text-center"><a class="text-danger" href="{% url 'remove_from_wishlist' wishlist_item.wishlist_id %}"><i class="ml-auto fa-lg fa-solid fa-trash"></i></a></td>
-                              </tr>
-                              {% empty %}
-                              <h6 class="text-center">No items currently in your wishlist</h6>
-                              {% endfor %}
-                            </tbody>
-                          </table>
-                        </div>
+        <div class="col-lg-2 col-md-3 col-4 px-0 d-flex justify-content-center">
+          <a class="btn btn-dark text-white" href="#wishlistCollapse" role="button" aria-expanded="false"
+            aria-controls="wishlistCollapse" id="wishlistCollapseButton">Wishlist</a>
+        </div>
+      </div>
+      <!-- ORDER HISTORY -->
+      <div class="row collapse" id="orderCollapse">
+        <div class="col-12 mb-5">
+          <div class="order-history-wrapper d-flex flex-column">
+            <h4 class="align-self-md-start align-self-center mt-3 mb-1"><span
+                class="primary-color-text">{{user_profile}}</span> Order History</h4>
+            {% for user_order in user_orders %}
+            <div class="div row order-wrapper my-2">
+              <div class="col-12 bg-dark text-white border border-bottom-white pt-2 pb-4">
+                <div class=" d-flex flex-column justify-content-between">
+                  <h6>
+                    Order number:
+                    <small class="ml-2 text-secondary">
+                      {{user_order.order_number}}
+                    </small>
+                  </h6>
+                  <h6>
+                    Date:
+                    <small class="ml-2 mb-2 text-secondary">
+                      {{user_order.order_date}}
+                    </small>
+                  </h6>
+                  <h6> Delivery address:
+                    <small class="ml-2 mb-2 text-secondary">
+                      {{user_order.street_address1}}, {{user_order.street_address2}}, {{user_order.town}},
+                      {{user_order.city}},{{user_order.county}}, {{user_order.country}}, {{user_order.postcode}}
+                    </small>
+                  </h6>
+                  <h6>
+                    Order total:
+                    <small class="ml-2 mb-2 text-secondary">
+                      €{{user_order.grand_total}}
+                      {% if user_order.delivery_cost %}
+                      (Including delivery charge of €{{user_order.delivery_cost}})
+                      {% else %}
+                      (Free delivery on this order)
+                      {% endif %}
+                    </small>
+                  </h6>
                 </div>
               </div>
+              <div class="col-12 px-0 order-lineitems-details">
+                <div class="table-responsive">
+                  <table class="table table-bordered mb-0 table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="order-preview-image">Image</th>
+                        <th scope="col">Make</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">price</th>
+                        <th scope="col">quantity</th>
+                        <th scope="col">total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for lineitem in user_order.lineitems.all %}
+                      <tr>
+                        <td class="p-0">
+                          {% if lineitem.product.image %}
+                          <img src="{{lineitem.product.image.url}}" alt="" class="img-fluid">
+                          {% else %}
+                          No image
+                          {% endif %}
+                        </td>
+                        <td>{{lineitem.product.car_model.make.name}}</td>
+                        <td>{{lineitem.product.car_model.car_model}}</td>
+                        <td>{{lineitem.product.part.name}}</td>
+                        <td>€{{lineitem.product.price}}</td>
+                        <td>1</td>
+                        <td>€{{lineitem.lineitem_total}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            {% empty %}
+            <h6 class="text-center">No orders yet!</h6>
+            <!-- ONE COMPLETE ORDER -->
+            {% endfor %}
           </div>
-            <!-- END OF WISHLIST -->
-</div>
+        </div>
+      </div>
+      <!-- PROFILE -->
+      <div class="row collapse" id="profileCollapse">
+        <div class="col-12">
+          <div class="profile-information-wrapper d-flex flex-column mb-5 mt-3">
+            <h4 class="align-self-md-start align-self-center"><span class="primary-color-text">{{user_profile}}</span>
+              Profile Information</h4>
+            <form method="POST" class="d-flex flex-column align-items-center w-100 profile-form"
+              action="{% url 'profile' %}">
+              {% csrf_token %}
+              {{user_profile_form}}
+              <button type="submit" class="btn btn-lg text-white primary-color-bg submit-button">
+                Save changes
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- WISHLIST -->
+      <div class="row collapse show" id="wishlistCollapse">
+        <div class="col-12">
+          <div class="wishlist-wrapper d-flex flex-column">
+            <h4 class="align-self-md-start align-self-center mt-3 mb-1"><span
+                class="primary-color-text">{{user_profile}}</span> Wishlist</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered table-dark">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th scope="col">Make</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Part</th>
+                    <th scope="col">Email on add</th>
+                    <th scope="col">Email on sale</th>
+                    <th scope="col">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for wishlist_item in wishlist %}
+                  <tr>
+                    <td>{{wishlist_item.make}}</td>
+                    <td>{{wishlist_item.model}}</td>
+                    <td>{{wishlist_item.year}}</td>
+                    <td>{{wishlist_item.part}}</td>
+                    <td>
+                      {% if wishlist_item.on_add %}
+                      <i class="text-success fa-solid fa-check"></i>
+                      {% else %}
+                      <i class="text-danger fa-solid fa-xmark"></i>
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if wishlist_item.on_sale %}
+                      <i class="text-success fa-solid fa-check"></i>
+                      {% else %}
+                      <i class="text-danger fa-solid fa-xmark"></i>
+                      {% endif %}
+                    </td>
+                    <td class="text-center"><a class="text-danger"
+                        href="{% url 'remove_from_wishlist' wishlist_item.wishlist_id %}"><i
+                          class="ml-auto fa-lg fa-solid fa-trash"></i></a></td>
+                  </tr>
+                  {% empty %}
+                  <h6 class="text-center">No items currently in your wishlist</h6>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF WISHLIST -->
+    </div>
   </div>
 
   <!-- End of container div -->
 </div>
 <script>
-$(document).ready(function(){
-// Custom js so that collapsle elements from bootstrap
-// Can never all be collapsed at same time. Toggle function
-// From bootstrap removed. Once one is hidden, the other ones
-// Will show at the same time, allowing for no empty space
-// Ever on screen.
-  $("#orderCollapseButton").click(function(){
-    if ($("#profileCollapse").hasClass("show") | $("#wishlistCollapse").hasClass("show")){
-      $("#profileCollapse").collapse('hide');
-      $("#wishlistCollapse").collapse('hide');
-      $("#orderCollapse").collapse('show');
-    }
-  });
+  $(document).ready(function () {
+    // Custom js so that collapsle elements from bootstrap
+    // Can never all be collapsed at same time. Toggle function
+    // From bootstrap removed. Once one is hidden, the other ones
+    // Will show at the same time, allowing for no empty space
+    // Ever on screen.
+    $("#orderCollapseButton").click(function () {
+      if ($("#profileCollapse").hasClass("show") | $("#wishlistCollapse").hasClass("show")) {
+        $("#profileCollapse").collapse('hide');
+        $("#wishlistCollapse").collapse('hide');
+        $("#orderCollapse").collapse('show');
+      }
+    });
 
-  $("#profileCollapseButton").click(function(){
-    if ($("#orderCollapse").hasClass("show") | $("#wishlistCollapse").hasClass("show")){
-      $("#orderCollapse").collapse('hide');
-      $("#wishlistCollapse").collapse('hide');
-      $("#profileCollapse").collapse('show')
-    }
-  });
+    $("#profileCollapseButton").click(function () {
+      if ($("#orderCollapse").hasClass("show") | $("#wishlistCollapse").hasClass("show")) {
+        $("#orderCollapse").collapse('hide');
+        $("#wishlistCollapse").collapse('hide');
+        $("#profileCollapse").collapse('show')
+      }
+    });
 
-  $("#wishlistCollapseButton").click(function(){
-    if ($("#orderCollapse").hasClass("show") | $("#profileCollapse").hasClass("show")){
-      $("#orderCollapse").collapse('hide');
-      $("#profileCollapse").collapse('hide');
-      $("#wishlistCollapse").collapse('show')
-    }
-  });
-})
+    $("#wishlistCollapseButton").click(function () {
+      if ($("#orderCollapse").hasClass("show") | $("#profileCollapse").hasClass("show")) {
+        $("#orderCollapse").collapse('hide');
+        $("#profileCollapse").collapse('hide');
+        $("#wishlistCollapse").collapse('show')
+      }
+    });
+  })
 </script>
 {% endblock content %}

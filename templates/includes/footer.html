@@ -1,105 +1,109 @@
 {% load static %}
-      <!-- Start of footer -->
-  <footer class="footer bg-dark mt-auto">
-    <div class="row align-items-center align-items-stretch mb-1">
+<!-- Start of footer -->
+<footer class="footer bg-dark mt-auto">
+  <div class="row align-items-center align-items-stretch mb-1">
     <div class="col-lg-4 py-4 py-md-2 d-flex align-items-center bg-dark-compliment">
-    <div class="w-100">
-      <div class="d-flex flex-column align-items-center">
-        <span class="subheading">Add a part to your</span>
-        <h3 class="heading-section">Wishlist</h3>
-      </div>
+      <div class="w-100">
+        <div class="d-flex flex-column align-items-center">
+          <span class="subheading">Add a part to your</span>
+          <h3 class="heading-section">Wishlist</h3>
+        </div>
 
-    <form method="POST" id="wishlist-form" class="d-flex flex-column align-items-center" data-car_models-url="{% url 'ajax_load_car_models' %}" action="{% url 'add_to_wishlist' %}">
-      {% csrf_token %}
-      <div class="row wishlist-choices mx-3 d-flex justify-content-around">
-      <div class="col-md-6 col-12 mb-3 form-group px-3">
-        {{wishlist_form.make}}
+        <form method="POST" id="wishlist-form" class="d-flex flex-column align-items-center"
+          data-car_models-url="{% url 'ajax_load_car_models' %}" action="{% url 'add_to_wishlist' %}">
+          {% csrf_token %}
+          <div class="row wishlist-choices mx-3 d-flex justify-content-around">
+            <div class="col-md-6 col-12 mb-3 form-group px-3">
+              {{wishlist_form.make}}
+            </div>
+            <div class="col-md-6 col-12 mb-3 form-group px-3">
+              {{wishlist_form.model}}
+            </div>
+            <div class="col-md-6 col-12 mb-3 form-group px-3">
+              {{wishlist_form.part}}
+            </div>
+            <div class="col-md-6 col-12 mb-3 form-group">
+              {{wishlist_form.year}}
+            </div>
+            <div class="col-12 mb-0 form-group mb-0">
+              <p class="text-white text-center h5">I want to be notified:</p>
+            </div>
+            <div class="col-md-6 col-12 form-group mb-0">
+              {{wishlist_form.on_add}}
+              {{wishlist_form.on_add.label_tag}}
+            </div>
+            <div class="col-md-6 col-12 form-group mb-0">
+              {{wishlist_form.on_sale}}
+              {{wishlist_form.on_sale.label_tag}}
+            </div>
+          </div>
+
+          <button type="submit" class="btn-lg mt-2 submit-button">Add to Wishlist</button>
+        </form>
       </div>
-      <div class="col-md-6 col-12 mb-3 form-group px-3">
-        {{wishlist_form.model}}
-      </div>
-      <div class="col-md-6 col-12 mb-3 form-group px-3">
-        {{wishlist_form.part}}
-      </div>
-      <div class="col-md-6 col-12 mb-3 form-group">
-        {{wishlist_form.year}}
-      </div>
-      <div class="col-12 mb-0 form-group mb-0">
-        <p class="text-white text-center h5">I want to be notified:</p>
-      </div>
-      <div class="col-md-6 col-12 form-group mb-0">
-        {{wishlist_form.on_add}}
-        {{wishlist_form.on_add.label_tag}}
-      </div>
-      <div class="col-md-6 col-12 form-group mb-0">
-        {{wishlist_form.on_sale}}
-        {{wishlist_form.on_sale.label_tag}}
-      </div>
-    </div>
-      
-      <button type="submit" class="btn-lg mt-2 submit-button">Add to Wishlist</button>
-    </form>
-    </div>
     </div>
     <div class="col-lg-4 py-5 d-flex h-50 flex-column align-items-center justify-content-start">
       <div class="logo-wrapper d-flex flex-column align-items-center justify-content-center">
-        <a class="logo-link" href="{% url 'homepage' %}"><img src="{% static 'static-images/mgc-logo.png' %}" alt="mgc-dismantlers-footer-logo" class="footer-logo"></a>
-        <a class="logo-link" href="{% url 'homepage' %}"><h3 class="logo-header mb-0 mt-2 text-center">MCG Dismantlers</h3></a>
+        <a class="logo-link" href="{% url 'homepage' %}"><img src="{% static 'static-images/mgc-logo.png' %}"
+            alt="mgc-dismantlers-footer-logo" class="footer-logo"></a>
+        <a class="logo-link" href="{% url 'homepage' %}">
+          <h3 class="logo-header mb-0 mt-2 text-center">MCG Dismantlers</h3>
+        </a>
       </div>
-        <ul class="d-flex justify-content-around social-media-icons-wrapper w-75 mt-2 px-3">
-          <li><a href="https://www.facebook.com" target="_blank">
+      <ul class="d-flex justify-content-around social-media-icons-wrapper w-75 mt-2 px-3">
+        <li><a href="https://www.facebook.com" target="_blank">
             <i class="social-media-link fa-brands fa-2xl fa-facebook"></i>
-        </a></li>
+          </a></li>
         <li><a href="https://www.twitter.com" target="_blank">
             <i class="social-media-link fa-brands fa-2xl fa-twitter"></i>
-        </a></li>
+          </a></li>
         <li><a href="https://www.youtube.com" target="_blank">
             <i class="social-media-link fa-brands fa-2xl fa-youtube"></i>
-        </a></li>
+          </a></li>
         <li><a href="https://www.instagram.com" target="_blank">
-                <i class="fa-social-media-link fa-brands fa-2xl fa-instagram"></i>
-        </a></li>
+            <i class="fa-social-media-link fa-brands fa-2xl fa-instagram"></i>
+          </a></li>
         <li><a href="https://www.linkedin.com" target="_blank">
             <i class="social-media-link fa-brands fa-2xl fa-linkedin"></i>
-        </a></li>
-        </ul>
+          </a></li>
+      </ul>
 
-      
-  </div>
+
     </div>
-      
-    </footer>
+  </div>
+
+</footer>
 
 <script>
-
   // Check at least on sale or on add is ticked in form:
-  $("#wishlist-form").submit(function(){
+  $("#wishlist-form").submit(function () {
     var checked = $("#wishlist-form input:checked").length > 0;
-    if (!checked){
-        alert("Please tick at least one checkbox.");
-        return false;
+    if (!checked) {
+      alert("Please tick at least one checkbox.");
+      return false;
     }
-});
+  });
 
 
-// Automatically update car models when make is selected
-$("#wishlist_id_car_model").attr("disabled", "disabled")
+  // Automatically update car models when make is selected
+  $("#wishlist_id_car_model").attr("disabled", "disabled")
 
 
   $("#wishlist_id_make").change(function () {
     $("#wishlist_id_car_model").removeAttr("disabled")
-      const url = $("#wishlist-form").attr("data-car_models-url");  // get the url of the `load_models` view
-      // const makeId = $(this).val();
-      const make = $(this).find('option:selected').text();  // get the selected Make ID from the HTML input
-      $.ajax({                       // initialize an AJAX request
-          url: url,                    // set the url of the request
-          data: {
-              'make': make       // add the make id to the GET parameters
-          },
-          success: function (data) {  // `data` is the return of the `load_models` view function
-              $("#wishlist_id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
-          }
-      });
+    const url = $("#wishlist-form").attr("data-car_models-url"); // get the url of the `load_models` view
+    // const makeId = $(this).val();
+    const make = $(this).find('option:selected').text(); // get the selected Make ID from the HTML input
+    $.ajax({ // initialize an AJAX request
+      url: url, // set the url of the request
+      data: {
+        'make': make // add the make id to the GET parameters
+      },
+      success: function (data) { // `data` is the return of the `load_models` view function
+        $("#wishlist_id_car_model").html(
+          data); // replace the contents of the model input with the data that came from the server
+      }
+    });
 
   });
 </script>

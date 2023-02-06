@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}
+Products
+{% endblock title %}
+
 {% block content %}
 <div class="container-fluid">
     <div class="row mt-5">
@@ -28,7 +32,8 @@
                 </div>
                 {% for category in categories %}
                 <div class="col-md-2 col-sm-3 col-4 col-xl-6 pr-0 pl-1">
-                    <a class="btn btn-danger category-btn h6 w-100 mb-1 btn-secondary" href="{% url 'categorize_products' category.friendly_name %}">
+                    <a class="btn btn-danger category-btn h6 w-100 mb-1 btn-secondary"
+                        href="{% url 'categorize_products' category.friendly_name %}">
                         {{category.friendly_name}}
                     </a>
                 </div>
@@ -71,92 +76,92 @@
             </h6>
             {% endif %}
             {% if products.has_other_pages %}
-                <!-- pagination -->
-                {% include "products/includes/pagination.html" %}
+            <!-- pagination -->
+            {% include "products/includes/pagination.html" %}
             {% endif %}
             {% for product in products %}
-                    <div class="row product-cards">
-                        <div class="col-12">
-                            <div class="card rounded bg-dark mb-4">
+            <div class="row product-cards">
+                <div class="col-12">
+                    <div class="card rounded bg-dark mb-4">
 
-                                <div class="row">
-                                    <div class="col-xl-4 col-md-6 col-12">
-                                        {% if product.image %}
-                                            <img src="{{product.image.url}}"
-                                                class="card-img-top product-image img-responsive h-100" alt="...">
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6 col-12">
+                                {% if product.image %}
+                                <img src="{{product.image.url}}" class="card-img-top product-image img-responsive h-100"
+                                    alt="{{product.create_card_title}}">
+                                {% endif %}
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-12 d-md-flex flex-column">
+                                <div class="card-body">
+                                    <h5 class="card-title primary-color-text">{{product.create_card_title}}</h5>
+                                    <p class="card-text">{{product.description}}</p>
+                                    <ul class="d-flex list-unstyled">
+                                        {% if product.color %}
+                                        <li><i class=" mr-2 fa-solid fa-palette"></i>{{product.color}}</li>
                                         {% endif %}
+                                        {% if product.grade %}
+                                        <li><i
+                                                class=" mx-2 ml-4 fa-solid fa-chart-simple"></i>{{product.get_grade_display}}
+                                        </li>
+                                        {% endif %}
+                                        {% if product.fuel %}
+                                        <li><i class=" mx-2 ml-4 fa-solid fa-gas-pump"></i>{{product.get_fuel_display}}
+                                        </li>
+                                        {% endif %}
+                                        {% if product.side %}
+                                        <li><i class="mx-2 ml-4 fa-solid fa-car-side"></i>{{product.get_side_display}}
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                    <div class="h-25 d-flex flex-column">
+                                        <p class="card-text h5 mt-5">€{{product.price}}</p>
                                     </div>
-                                    <div class="col-xl-6 col-md-6 col-12 d-md-flex flex-column">
-                                        <div class="card-body">
-                                            <h5 class="card-title primary-color-text">{{product.create_card_title}}</h5>
-                                            <p class="card-text">{{product.description}}</p>
-                                            <ul class="d-flex list-unstyled">
-                                                {% if product.color %}
-                                                    <li><i class=" mr-2 fa-solid fa-palette"></i>{{product.color}}</li>
-                                                {% endif %}
-                                                {% if product.grade %}
-                                                    <li><i
-                                                            class=" mx-2 ml-4 fa-solid fa-chart-simple"></i>{{product.get_grade_display}}
-                                                    </li>
-                                                {% endif %}
-                                                {% if product.fuel %}
-                                                    <li><i class=" mx-2 ml-4 fa-solid fa-gas-pump"></i>{{product.get_fuel_display}}
-                                                    </li>
-                                                {% endif %}
-                                                {% if product.side %}
-                                                    <li><i class="mx-2 ml-4 fa-solid fa-car-side"></i>{{product.get_side_display}}
-                                                    </li>
-                                                {% endif %}
-                                            </ul>
-                                            <div class="h-25 d-flex flex-column">
-                                                <p class="card-text h5 mt-5">€{{product.price}}</p>
-                                            </div>
-                                        </div>
-                                        <!-- This row only shows on small to large devices -->
-                                        <!-- Edit/delete/add to cart buttons for small to large devices -->
-                                        <div class="row d-xl-none d-flex">
-                                            <div class="col d-flex flex-column pl-md-4 pr-md-5">
-                                                {% if request.user.is_superuser %}
-                                                    <small
-                                                        class="h6 mt-2 mr-3 mb-md-4 ml-md-2 w-75 d-flex align-items-end ml-5 mb-4">
-                                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                                        <a class="text-danger"
-                                                            href="{% url 'delete_product' product.id %}">Delete</a>
-                                                    </small>
-                                                {% endif %}
-                                                <a href="{% url 'add_to_cart' product.id %}" data-product-id={{product.id}}
-                                                    class="btn align-self-center font-weight-bold cart-btn mb-4 mr-xl-5 w-xl-100 w-75"><i
-                                                        class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
-                                            </div>
-                                        </div>
-
-                                        <!-- This column only shows on xl devices  -->
-                                        <!-- Edit/delete/add to cart buttons for xl devices -->
-                                    </div>
-                                    <div class="col-xl-2 d-none d-xl-flex flex-column justify-content-end align-items-center">
+                                </div>
+                                <!-- This row only shows on small to large devices -->
+                                <!-- Edit/delete/add to cart buttons for small to large devices -->
+                                <div class="row d-xl-none d-flex">
+                                    <div class="col d-flex flex-column pl-md-4 pr-md-5">
                                         {% if request.user.is_superuser %}
-                                            <small class="mb-auto h6 mt-2 mr-3 align-self-end">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
+                                        <small
+                                            class="h6 mt-2 mr-3 mb-md-4 ml-md-2 w-75 d-flex align-items-end ml-5 mb-4">
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                            <a class="text-danger"
+                                                href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
                                         {% endif %}
                                         <a href="{% url 'add_to_cart' product.id %}" data-product-id={{product.id}}
-                                            class="btn font-weight-bold cart-btn mb-4 mr-5 w-100"><i
+                                            class="btn align-self-center font-weight-bold cart-btn mb-4 mr-xl-5 w-xl-100 w-75"><i
                                                 class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
                                     </div>
                                 </div>
+
+                                <!-- This column only shows on xl devices  -->
+                                <!-- Edit/delete/add to cart buttons for xl devices -->
+                            </div>
+                            <div class="col-xl-2 d-none d-xl-flex flex-column justify-content-end align-items-center">
+                                {% if request.user.is_superuser %}
+                                <small class="mb-auto h6 mt-2 mr-3 align-self-end">
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                                {% endif %}
+                                <a href="{% url 'add_to_cart' product.id %}" data-product-id={{product.id}}
+                                    class="btn font-weight-bold cart-btn mb-4 mr-5 w-100"><i
+                                        class=" mr-2 fa-solid fa-cart-shopping"></i>Add to cart</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
             {% empty %}
-                <strong>
-                    No Products Found
-                </strong>
+            <strong>
+                No Products Found
+            </strong>
             {% endfor %}
 
             {% if products.has_other_pages %}
-                <!-- pagination -->
-                {% include "products/includes/pagination.html" %}
+            <!-- pagination -->
+            {% include "products/includes/pagination.html" %}
             {% endif %}
 
         </div>
@@ -165,7 +170,6 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-
     $("#id_car_model").attr("disabled", "disabled")
     const url = $("#filter-form").attr("data-car_models-url"); // get the url of the `load_models` view
     const make = $("#id_make").text(); // get the selected Make ID from the HTML input
@@ -176,7 +180,7 @@
         },
         success: function (data) { // `data` is the return of the `load_models` view function
             $("#id_car_model").html(
-            data); // replace the contents of the model input with the data that came from the server
+                data); // replace the contents of the model input with the data that came from the server
         }
     });
 
@@ -190,7 +194,8 @@
             },
             success: function (data) { // `data` is the return of the `load_models` view function
                 $("#id_car_model").html(
-                data); // replace the contents of the model input with the data that came from the server
+                    data
+                ); // replace the contents of the model input with the data that came from the server
                 $("#id_car_model").removeAttr("disabled")
                 $("#id_car_model option:first").removeAttr("disabled");
                 $("#id_car_model option:first").attr("selected", "selected");

@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}
+Add product
+{% endblock title %}
+
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
@@ -15,7 +19,8 @@
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" id="product-form" data-car_models-url="{% url 'ajax_load_car_models' %}" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" id="product-form" data-car_models-url="{% url 'ajax_load_car_models' %}"
+                action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{product_form.as_p}}
 
@@ -26,7 +31,7 @@
                     <button class="btn btn-black rounded-0" type="submit">Add Product</button>
                 </div>
             </form>
-        </div>            
+        </div>
     </div>
 </div>
 
@@ -37,15 +42,16 @@
     $("#id_car_model").attr("disabled", "disabled")
     $("#id_make").change(function () {
         $("#id_car_model").removeAttr("disabled") // Remove disable on car model select when picking make
-        const url = $("#product-form").attr("data-car_models-url");  // get the url of the `load_models` view
+        const url = $("#product-form").attr("data-car_models-url"); // get the url of the `load_models` view
         const make = $(this).find('option:selected').text(); // get the selected Make ID from the HTML input
-        $.ajax({                       // initialize an AJAX request
-            url: url,                    // set the url of the request
+        $.ajax({ // initialize an AJAX request
+            url: url, // set the url of the request
             data: {
-                'make': make       // add the make id to the GET parameters
+                'make': make // add the make id to the GET parameters
             },
-            success: function (data) {  // `data` is the return of the `load_models` view function
-                $("#id_car_model").html(data);  // replace the contents of the model input with the data that came from the server
+            success: function (data) { // `data` is the return of the `load_models` view function
+                $("#id_car_model").html(
+                data); // replace the contents of the model input with the data that came from the server
             }
         });
     });

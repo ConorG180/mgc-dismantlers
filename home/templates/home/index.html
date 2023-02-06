@@ -1,130 +1,146 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}
+Home
+{% endblock title %}
+
 {% block content %}
 <!-- Grid layout -->
 <div class="container-fluid px-0">
   <div class="row mx-0">
     <div class="col px-0">
       <!-- Carousel wrapper -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active" id="slide-holder-1">
-      <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-1.jpg' %}" alt="First slide">
-      <div class="carousel-caption d-none d-md-block w-25 mx-auto">
-        <h5>Welcome to <span>MGC Dismantler's webpage!</span></h5>
-        <p>Proud to be serving the <a href="{% url 'products' %}" class="primary-color-text font-weight-bold">second-hand car parts </a>market since 1996.</p>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="slide-holder-1">
+            <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-1.jpg' %}"
+              alt="Two mechanics working on car">
+            <div class="carousel-caption d-none d-md-block w-25 mx-auto">
+              <h5>Welcome to <span>MGC Dismantler's webpage!</span></h5>
+              <p>Proud to be serving the <a href="{% url 'products' %}"
+                  class="primary-color-text font-weight-bold">second-hand car parts </a>market since 1996.</p>
+            </div>
+          </div>
+          <div class="carousel-item" id="slide-holder-2">
+            <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-2.jpg' %}"
+              alt="Car on lift being repaired">
+            <div class="carousel-caption d-none d-md-block w-25 mx-auto">
+              <h5>Make an account!</h5>
+              <p>Do you have an <a href="{% url 'account_signup' %}" class="primary-color-text font-weight-bold">account
+                </a>with us? Gain access to features like a wishlist, online purchasing/e-commerce, order history, email
+                notifications and more!.</p>
+            </div>
+          </div>
+          <div class="carousel-item" id="slide-holder-3">
+            <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-3.jpg' %}"
+              alt="Mechanic working underneath a car">
+            <div class="carousel-caption d-none d-md-block w-25 mx-auto">
+              <h5>We offer a diverse range of products</h5>
+              <p>We are constantly updating our stock of <a href="{% url 'products' %}"
+                  class="primary-color-text font-weight-bold">car parts</a>. Be sure to check back often!</p>
+            </div>
+          </div>
+          <div class="carousel-item" id="slide-holder-4">
+            <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-4.jpg' %}"
+              alt="Two mechanics in the middle of repairing a car">
+            <div class="carousel-caption d-none d-md-block w-25 mx-auto">
+              <h5>Have a question?</h5>
+              <p>Feel free to call us, <span class="font-weight-bold">MCG Dismantlers</span>, on 01-1234567. You can
+                also find our contact information by visiting our <a href="#" data-toggle="modal"
+                  data-target="#contact-modal" class="primary-color-text font-weight-bold">contact </a>page.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev carousel-controls" href="#carouselExampleIndicators" role="button"
+          data-slide="prev">
+          <i class="fa-solid fa-circle-arrow-left fa-2xl"></i>
+        </a>
+        <a class="carousel-control-next carousel-controls" href="#carouselExampleIndicators" role="button"
+          data-slide="next">
+          <i class="fa-solid fa-circle-arrow-right fa-2xl"></i>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </div>
-    <div class="carousel-item" id="slide-holder-2">
-      <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-2.jpg' %}" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block w-25 mx-auto">
-        <h5>Make an account!</h5>
-        <p>Do you have an <a href="{% url 'account_signup' %}" class="primary-color-text font-weight-bold">account </a>with us? Gain access to features like a wishlist, online purchasing/e-commerce, order history, email notifications and more!.</p>
-      </div>
-    </div>
-    <div class="carousel-item" id="slide-holder-3">
-      <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-3.jpg' %}" alt="Third slide">
-      <div class="carousel-caption d-none d-md-block w-25 mx-auto">
-        <h5>We offer a diverse range of products</h5>
-        <p>We are constantly updating our stock of <a href="{% url 'products' %}" class="primary-color-text font-weight-bold">car parts</a>. Be sure to check back often!</p>
-      </div>
-    </div>
-    <div class="carousel-item" id="slide-holder-4">
-      <img class="d-block w-100 img-fluid rounded" src="{% static 'static-images/slide-4.jpg' %}" alt="Fourth slide">
-      <div class="carousel-caption d-none d-md-block w-25 mx-auto">
-        <h5>Have a question?</h5>
-        <p>Feel free to call us, <bold>MCG Dismantlers</bold>, on 01-1234567. You can also find our contact information by visiting our <a  href="#" data-toggle="modal" data-target="#contact-modal" class="primary-color-text font-weight-bold">contact </a>page.</p>
-      </div>
+      <!-- End of Carousel -->
     </div>
   </div>
-  <a class="carousel-control-prev carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <i class="fa-solid fa-circle-arrow-left fa-2xl"></i>
-  </a>
-  <a class="carousel-control-next carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <i class="fa-solid fa-circle-arrow-right fa-2xl"></i>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<!-- End of Carousel -->
-    </div>
-  </div>
-      <!-- Cards -->
+  <!-- Cards -->
 
-                <div class="row m-4 d-flex justify-content-around home-cards-container py-5">
-                    <div class="col-12 col-lg-3">
-                        <div class="card">
-                          <div class="img-card">
-                            <img src="{% static 'static-images/product-catalogue-card-image.jpg' %}" />
-                          </div>
-                            
-                            <div class="card-content">
-                                <h4 class="card-title">
-                                    <a href="{% url 'products' %}" class="primary-color-text"> Product Catalogue
-                                  </a>
-                                </h4>
-                                <p class="">
-                                  Take a look at our parts catalogue. New parts added every day!
-                                </p>
-                            </div>
-                            <div class="primary-color-bg card-read-more">
-                                <a href="{% url 'products' %}" class="btn text-white btn-link btn-block">
-                                    Browse now!
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="card">
-                            <div class="img-card">
-                            <img src="{% static 'static-images/car-repair-card-image.jpg' %}" />
-                          </div>
-                            <div class="card-content">
-                                <h4 class="card-title">
-                                  <a href="https://www.youtube.com/" class="primary-color-text">
-                                  Online tutorials
-                                  </a>
-                                </h4>
-                                <p class="">
-                                  Why not learn a few basics about car repair from some of our experts?
-                                </p>
-                            </div>
-                            <div class="primary-color-bg text-white card-read-more">
-                                <a href="https://www.youtube.com/" class="btn text-white btn-link btn-block">
-                                    Learn now!
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="card">
-                            <div class="img-card">
-                            <img src="{% static 'static-images/scrap-car-card-image.jpg' %}" />
-                          </div>
-                            <div class="card-content">
-                                <h4 class="card-title">
-                                  <a href="#" class="primary-color-text"> <!-- Put contact model here soon -->
-                                    We'll buy your car
-                                  </a>
-                                </h4>
-                                <p class="">
-                                  Have a vehicle collecting dust at home? Top prices offered for end of life vehicles.
-                                </p>
-                            </div>
-                            <div class=" primary-color-bg text-white card-read-more">
-                                <a href="#" data-toggle="modal" data-target="#contact-modal" class="btn text-white btn-link btn-block">
-                                  Get a quote!
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="row m-4 d-flex justify-content-around home-cards-container py-5">
+    <div class="col-12 col-lg-3">
+      <div class="card">
+        <div class="img-card">
+          <img src="{% static 'static-images/product-catalogue-card-image.jpg' %}" alt="Assortment of car parts">
+        </div>
+
+        <div class="card-content">
+          <h4 class="card-title">
+            <a href="{% url 'products' %}" class="primary-color-text"> Product Catalogue
+            </a>
+          </h4>
+          <p class="">
+            Take a look at our parts catalogue. New parts added every day!
+          </p>
+        </div>
+        <div class="primary-color-bg card-read-more">
+          <a href="{% url 'products' %}" class="btn text-white btn-link btn-block">
+            Browse now!
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3">
+      <div class="card">
+        <div class="img-card">
+          <img src="{% static 'static-images/car-repair-card-image.jpg' %}" alt="Non-mechanic working on his car">
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">
+            <a href="https://www.youtube.com/" class="primary-color-text">
+              Online tutorials
+            </a>
+          </h4>
+          <p class="">
+            Why not learn a few basics about car repair from some of our experts?
+          </p>
+        </div>
+        <div class="primary-color-bg text-white card-read-more">
+          <a href="https://www.youtube.com/" class="btn text-white btn-link btn-block">
+            Learn now!
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3">
+      <div class="card">
+        <div class="img-card">
+          <img src="{% static 'static-images/scrap-car-card-image.jpg' %}" alt="Scrap car for money">
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">
+            <a href="#" class="primary-color-text">
+              We'll buy your car
+            </a>
+          </h4>
+          <p class="">
+            Have a vehicle collecting dust at home? Top prices offered for end of life vehicles.
+          </p>
+        </div>
+        <div class=" primary-color-bg text-white card-read-more">
+          <a href="#" data-toggle="modal" data-target="#contact-modal" class="btn text-white btn-link btn-block">
+            Get a quote!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- End of container div -->
 </div>
 {% endblock content %}
