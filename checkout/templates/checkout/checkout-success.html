@@ -37,17 +37,17 @@
                 <td>{{lineitem.product.car_model.make.name}}</td>
                 <td>{{lineitem.product.car_model.car_model}}</td>
                 <td>{{lineitem.product.part.name}}</td>
-                <td>{{lineitem.product.price}}</td>
+                <td>€{{lineitem.product.price}}</td>
                 <td>1</td>
-                <td>{{lineitem.lineitem_total}}</td>
+                <td>€{{lineitem.lineitem_total}}</td>
               </tr>
               {% endfor %}
             </tbody>
           </table>
         </div>
-        <h5 class="text-left">Subtotal: <span>{{order.order_total | floatformat:2 }}</span></h5>
-        <h5 class="text-left">Delivery: <span>{{order.delivery_cost | floatformat:2 }}</span></h5>
-        <h5 class="text-left">total: <span>{{order.grand_total | floatformat:2 }}</span></h5>
+        <h5 class="text-left">Subtotal: <span>€{{order.order_total | floatformat:2 }}</span></h5>
+        <h5 class="text-left">Delivery: <span>€{{order.delivery_cost | floatformat:2 }}</span></h5>
+        <h5 class="text-left">total: <span>€{{order.grand_total | floatformat:2 }}</span></h5>
     </div>
 </div>
   <!-- <div class="row">
