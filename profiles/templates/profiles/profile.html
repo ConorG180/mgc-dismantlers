@@ -32,16 +32,26 @@
                           {{user_order.order_number}}</>
                         </small>
                       </h6>
-                      <h6 class="">
-                        Order date:
+                      <h6>
+                        Date:
                         <small class="ml-2 mb-2 text-secondary">
                           {{user_order.order_date}}</>
                         </small>
                       </h6>
-                      <h6 class=""> Order address:
+                      <h6> Delivery address:
                         <small class="ml-2 mb-2 text-secondary">
-                       
                           {{user_order.street_address1}}, {{user_order.street_address2}}, {{user_order.town}}, {{user_order.city}},{{user_order.county}}, {{user_order.country}}, {{user_order.postcode}}
+                        </small>
+                      </h6>
+                      <h6>
+                        Order total:
+                        <small class="ml-2 mb-2 text-secondary">
+                          €{{user_order.grand_total}}
+                          {% if user_order.delivery_cost %}
+                          (Including delivery charge of €{{user_order.delivery_cost}})
+                          {% else %}
+                          (Free delivery on this order)
+                          {% endif %}
                         </small>
                       </h6>
                       </div>
@@ -73,9 +83,9 @@
                               <td>{{lineitem.product.car_model.make.name}}</td>
                               <td>{{lineitem.product.car_model.car_model}}</td>
                               <td>{{lineitem.product.part.name}}</td>
-                              <td>{{lineitem.product.price}}</td>
+                              <td>€{{lineitem.product.price}}</td>
                               <td>1</td>
-                              <td>{{lineitem.lineitem_total}}</td>
+                              <td>€{{lineitem.lineitem_total}}</td>
                             </tr>
                             {% endfor %}
                           </tbody>
