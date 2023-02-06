@@ -51,10 +51,75 @@
 
     {% block content %}
     {% endblock %}
+
+ <!-- Modal -->
+ <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal"
+ aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+         <div class="modal-header bg-dark text-white">
+          <img src="{% static 'static-images/mgc-logo.png' %}" alt="MGC Dismantlers logo" class="img-fluid contact-modal-logo">
+             <h4 class="modal-title w-100 text-center">
+                 Need help?
+                 <br>
+                 Get in contact!
+             </h4>
+
+             <button type="button" class="close text-white-50 pt-2" data-dismiss="modal" aria-label="Close">
+                 <span class="h1" aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div class="modal-body">
+             <div class="container-lg ">
+                 <div class="row">
+                     <div class="col">
+                         <p>
+                             You can contact us on <span class="font-weight-bold brand-color-dark-text">01-1234567</span> or email us at <span
+                                 class="font-weight-bold brand-color-dark-text">support@mgcdismantlers.com</span>
+                             for any issues you may have, whether it's to do with bugs, how to use our website,
+                             or on any feedback you may have, we're here to support you!
+                         </p>
+
+                         <p>You can also reach out to us on any of the below social media platforms for advice, help, FAQ's or car-related issues:
+                         </p>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div
+                         class="col-lg-8 offset-lg-2 d-flex justify-content-around align-content-center pt-5 pb-5">
+                         <a href="https://www.facebook.com" target="_blank">
+                             <i class="social-media-link fa-brands fa-2xl fa-facebook"></i>
+                         </a>
+                         <a href="https://www.twitter.com" target="_blank">
+                             <i class="social-media-link fa-brands fa-2xl fa-twitter"></i>
+                         </a>
+                         <a href="https://www.youtube.com" target="_blank">
+                             <i class="social-media-link fa-brands fa-2xl fa-youtube"></i>
+                         </a>
+                         <a href="https://www.instagram.com" target="_blank">
+                             <div class="instagram">
+                                 <i class="fa-social-media-link fa-brands fa-2xl fa-instagram"></i>
+                             </div>
+                         </a>
+                         <a href="https://www.linkedin.com" target="_blank">
+                             <i class="social-media-link fa-brands fa-2xl fa-linkedin"></i>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="modal-footer bg-dark">
+             <button type="button" class="btn btn-danger font-weight-bold" data-dismiss="modal">Close</button>
+         </div>
+     </div>
+ </div>
+</div>
+
     <!-- Footer -->
     {% include 'includes/footer.html' %}
     {% block postloadjs %}
     <script> 
+    // Turns off toasts after 7 seconds.
         setTimeout(function() { 
           $('.message-container').hide()
     }, 7000);

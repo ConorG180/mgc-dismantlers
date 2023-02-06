@@ -398,6 +398,21 @@ opacity: 0.8;
 .toast-capper {
   height: 2px;
 }
+
+.contact-modal-logo{
+  width: 75px;
+  position: relative;
+  right: 10px;
+  top: 7px;
+}
+.modal a{
+  color: rgba(0, 0, 0, 0.3);
+  transition: 300ms;
+}
+.modal a:hover{
+  color: #Cc8c27;
+  transform: scale(1.1);
+}
   
   /* Media Queries */
   @media (min-width: 350px) {
