@@ -19,7 +19,7 @@
         </div>
           <!-- ORDER HISTORY -->
           <div class="row collapse" id="orderCollapse">
-            <div class="col-12">
+            <div class="col-12 mb-5">
               <div class="order-history-wrapper d-flex flex-column">
                 <h4 class="align-self-md-start align-self-center mt-3 mb-1"><span class="primary-color-text">{{user_profile}}</span> Order History</h4>
                     {% for user_order in user_orders %}
@@ -83,6 +83,8 @@
                       </div>
                     </div>
                   </div>
+                  {% empty %}
+                  <h6 class="text-center">No orders yet!</h6>
                     <!-- ONE COMPLETE ORDER -->
                     {% endfor %}
               </div>
