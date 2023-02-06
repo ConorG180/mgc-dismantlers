@@ -6,57 +6,52 @@
 <div class="container-fluid">
   <div class="container-fluid">
     <div class="container text-center">
-      <img src="{% static 'static-images/checkout-success-tick.jpg' %}" alt="" class="checkout-success-tick img-fluid">
-        <h1>Thank you {{order.full_name}}</h1>
-        <p class="lead w-lg-50 mx-auto">Your order has been placed successfully.</p>
-        <p class="w-lg-50 mx-auto">Your order number is <a href="#">{{order.order_number}}</a>. It is currently being processed and will be delivered in 3 - 5 business days.</p>
-        <p class="w-lg-50 mx-auto">We have sent an email to {{order.email}} with all order information</p>
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col" class="order-preview-image">Image</th>
-                <th scope="col">Make</th>
-                <th scope="col">Model</th>
-                <th scope="col">Product</th>
-                <th scope="col">price</th>
-                <th scope="col">quantity</th>
-                <th scope="col">total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for lineitem in lineitems %}
-              <tr>
-                <td>
-                  {% if lineitem.product.image %}
-                    <img src="{{lineitem.product.image.url}}" alt="" class="img-fluid">
-                  {% else %}
-                  No image
-                  {% endif %}
-                </td>
-                <td>{{lineitem.product.car_model.make.name}}</td>
-                <td>{{lineitem.product.car_model.car_model}}</td>
-                <td>{{lineitem.product.part.name}}</td>
-                <td>€{{lineitem.product.price}}</td>
-                <td>1</td>
-                <td>€{{lineitem.lineitem_total}}</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-        <h5 class="text-left">Subtotal: <span>€{{order.order_total | floatformat:2 }}</span></h5>
-        <h5 class="text-left">Delivery: <span>€{{order.delivery_cost | floatformat:2 }}</span></h5>
-        <h5 class="text-left">total: <span>€{{order.grand_total | floatformat:2 }}</span></h5>
+      <img src="{% static 'static-images/checkout-success-tick.jpg' %}" alt="Checkout tick confirmation"
+        class="checkout-success-tick img-fluid">
+      <h1>Thank you {{order.full_name}}</h1>
+      <p class="lead w-lg-50 mx-auto">Your order has been placed successfully.</p>
+      <p class="w-lg-50 mx-auto">Your order number is {{order.order_number}}. It is currently being processed and will
+        be delivered in 3 - 5 business days.</p>
+      <p class="w-lg-50 mx-auto">We have sent an email to {{order.email}} with all order information</p>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="order-preview-image">Image</th>
+              <th scope="col">Make</th>
+              <th scope="col">Model</th>
+              <th scope="col">Product</th>
+              <th scope="col">price</th>
+              <th scope="col">quantity</th>
+              <th scope="col">total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for lineitem in lineitems %}
+            <tr>
+              <td>
+                {% if lineitem.product.image %}
+                <img src="{{lineitem.product.image.url}}" alt="{{product.product.create_card_title}}" class="img-fluid">
+                {% else %}
+                No image
+                {% endif %}
+              </td>
+              <td>{{lineitem.product.car_model.make.name}}</td>
+              <td>{{lineitem.product.car_model.car_model}}</td>
+              <td>{{lineitem.product.part.name}}</td>
+              <td>€{{lineitem.product.price}}</td>
+              <td>1</td>
+              <td>€{{lineitem.lineitem_total}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <h5 class="text-left">Subtotal: <span>€{{order.order_total | floatformat:2 }}</span></h5>
+      <h5 class="text-left">Delivery: <span>€{{order.delivery_cost | floatformat:2 }}</span></h5>
+      <h5 class="text-left">total: <span>€{{order.grand_total | floatformat:2 }}</span></h5>
     </div>
-</div>
-  <!-- <div class="row">
-    <div class="col-12">
-      <img src="{% static 'static-images/checkout-success-tick.jpg' %}" alt="" class="checkout-success-tick">
-        <h1>Success! Thank you {{order.full_name}}, you have checked out successfully. Your order number is {{order.order_number}}</h1>
-        <h1>You will receive an email shortly to {{order.email}} to access your order information.</h1>
-</div>
-  </div> -->
+  </div>
 
   <!-- End of container div -->
 </div>
