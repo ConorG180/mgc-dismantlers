@@ -10,9 +10,9 @@ Checkout
 <div class="container">
 
     <div class="row mt-5">
-        <div class="col-12">
+        <section class="col-12">
             {% for product in cart %}
-            <div class="row bg-dark d-flex justify-content-start border-bottom">
+            <article class="row bg-dark d-flex justify-content-start border-bottom">
                 <div class="col-xl-2 col-md-2 col-12 pl-0">
                     {% if product.product.image %}
                     <img src="{{product.product.image.url}}" class="card-img-top cart-image img-responsive h-100"
@@ -45,16 +45,16 @@ Checkout
                         class="btnfont-weight-bold text-danger cart-btn text-right"><i
                             class="mr-3 fa-solid fa-square-minus"></i>Remove</a>
                 </div>
-            </div>
+            </article>
             {% endfor %}
-        </div>
+        </section>
         <div class="col-12 border">
             <div class="row">
                 <div class="col-12">
                     <h5>Order Summary</h5>
                 </div>
             </div>
-            <div class="border-top row">
+            <div class="border-top ml-2 row">
                 <div class="col-12 order-information d-block">
                     <h6>
                         products: ({{product_count}})
@@ -74,7 +74,7 @@ Checkout
                         </small>
                     </h6>
                 </div>
-                <div class="border-top col-12">
+                <div class="border-top text-center col-12">
                     <h5>Checkout</h5>
                 </div>
             </div>
