@@ -190,4 +190,4 @@ the Javascript in the base.html page is used to control the toast messages/notif
 
 # Unfixed Bugs
 One bug was discovered that is yet to be fixed.
-  - If a user is logged out and attempts to add an item to their wishlist, they will be prompted to login before adding the item (This is thanks to the ```@login_required``` decorator in the wishlist ```views.py``` file) and once they log in, a server 500 error will be shown. However, this can easily be fixed by refreshing the page, where the user will now be logged in.
+  - If a user is logged out and attempts to add an item to their wishlist/or to their cart etc, they will be prompted to login before adding the item (This is thanks to the ```@login_required``` decorator in the ```views.py``` files) and once they log in, an error will be shown. However, this can easily be fixed by pressing the back button on the page, where the user will now be logged in.
