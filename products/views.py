@@ -67,6 +67,10 @@ def edit_product(request, product_id):
     product = Product.objects.get(pk=product_id)
     make = product.car_model.make
     product_form = Product_form(request.POST, request.FILES, instance=product)
+    context = {
+        "product_form": product_form,
+        "product": product
+    }
     if request.method == "POST":
         product_form = Product_form(
             request.POST,
@@ -92,11 +96,6 @@ def edit_product(request, product_id):
             return render(request, "products/edit-product.html", context)
     else:
         product_form = Product_form(instance=product)
-        context = {
-            "product_form": product_form,
-            "product": product
-        }
-
     return render(request, "products/edit-product.html", context)
 
 
