@@ -8,7 +8,7 @@ Products
 {% block content %}
 <div class="container-fluid">
     <div class="row mt-5">
-        <div class="col-xl-2 col-12">
+        <aside class="col-xl-2 col-12">
             <div class="bg-primary form-container">
                 <form method="GET" action="{% url 'search_product' %}">
                     <div class="input-group w-100">
@@ -53,12 +53,6 @@ Products
                         <button class="form-control filter-product-btn" type="submit"> Filter
                         </button>
                     </form>
-                    <!-- <div class="form">
-
-                    </div> -->
-                    <!-- ADD another form here which is just a dropdown box and which has an icon appended to it for a button (Or some type of button) When clicked, calls product view. in products view, write: if request.GET["sortkey"]: products.order_by(sortkey)
-                    
-                    The dropdown will be a select element with options, specifically make, model, price and year. So, first 2 are alphabetical, next 2 are numeral. With the numberal ones, do (asc) and (desc) also. The select element should have a name of sortkey-->
                 </div>
             </div>
             {% if request.user.is_superuser %}
@@ -68,8 +62,8 @@ Products
                 </div>
             </div>
             {% endif %}
-        </div>
-        <div class="col-xl-8 col-sm-12 product-card-column">
+        </aside>
+        <section class="col-xl-8 col-sm-12 product-card-column">
             {% if product_count is not 0 %}
             <h6 class="product_count mb-3">
                 (<span class="primary-color-text ml-auto">{{product_count}}</span> results found)
@@ -80,7 +74,7 @@ Products
             {% include "products/includes/pagination.html" %}
             {% endif %}
             {% for product in products %}
-            <div class="row product-cards">
+            <article class="row product-cards">
                 <div class="col-12">
                     <div class="card rounded bg-dark mb-4">
 
@@ -152,7 +146,7 @@ Products
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             {% empty %}
             <strong>
                 No Products Found
@@ -164,7 +158,7 @@ Products
             {% include "products/includes/pagination.html" %}
             {% endif %}
 
-        </div>
+        </section>
 
     </div>
 </div>
