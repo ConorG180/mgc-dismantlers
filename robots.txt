@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /checkout/
+4 Sitemap: https://mcg-dismantlers.herokuapp.com//sitemap.xml
