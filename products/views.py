@@ -41,6 +41,9 @@ def render_products(request):
 
 
 def delete_product(request, product_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to delete products.')
+        return redirect(reverse('homepage'))
     try:
         product = Product.objects.get(pk=product_id)
         product.delete()
@@ -58,6 +61,9 @@ def delete_product(request, product_id):
 
 
 def edit_product(request, product_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to edit products.')
+        return redirect(reverse('homepage'))
     product = Product.objects.get(pk=product_id)
     make = product.car_model.make
     product_form = Product_form(request.POST, request.FILES, instance=product)
@@ -95,6 +101,9 @@ def edit_product(request, product_id):
 
 
 def add_product(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to add products.')
+        return redirect(reverse('homepage'))
     product_form = Product_form()
     context = {
         "product_form": product_form,
