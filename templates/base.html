@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="MCG Dismantlers are one of Ireland's leading car breakers companies, offering a wide range of second-hand car parts and car accessories.">
-    <meta name="keywords" content="car parts online Ireland, car parts Westmeath, Used car parts Ireland, Used car parts Westmeath, Second hand car parts, Second hand car parts online, Second hand car parts Ireland, car breakers, car dismantlers, MGC Dismantlers, car accessories, second hand car accessories, car accessories online">
+    <meta name="keywords" content="car parts, car parts online Ireland, car parts Westmeath, Used car parts Ireland, Used car parts Westmeath, Second hand car parts, Second hand car parts online, Second hand car parts Ireland, car breakers, car dismantlers, MGC Dismantlers, car accessories, second hand car accessories, car accessories online">
     {% endblock %}
 
     {% block corecss %}
@@ -39,7 +39,8 @@
     <title>MGC Dismantlers{% block title %}{% endblock %}</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body>
+    
     <!-- Navbar -->
     {% include 'includes/navbar.html' %}
     <!-- Category Navbar -->
@@ -58,10 +59,10 @@
     {% endif %}
     {% endwith %}
     {% endfor %}
-
-    {% block content %}
-    {% endblock %}
-
+    <main class="d-flex flex-column min-vh-100">
+        {% block content %}
+        {% endblock %}
+    </main>
     <!-- Modal -->
     <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal"
         aria-hidden="true">
@@ -101,21 +102,21 @@
                         <div class="row">
                             <div
                                 class="col-lg-8 offset-lg-2 d-flex justify-content-around align-content-center pt-5 pb-5">
-                                <a href="https://www.facebook.com" target="_blank">
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener">
                                     <i class="social-media-link fa-brands fa-2xl fa-facebook"></i>
                                 </a>
-                                <a href="https://www.twitter.com" target="_blank">
+                                <a href="https://www.twitter.com" target="_blank" rel="noopener">
                                     <i class="social-media-link fa-brands fa-2xl fa-twitter"></i>
                                 </a>
-                                <a href="https://www.youtube.com" target="_blank">
+                                <a href="https://www.youtube.com" target="_blank" rel="noopener">
                                     <i class="social-media-link fa-brands fa-2xl fa-youtube"></i>
                                 </a>
-                                <a href="https://www.instagram.com" target="_blank">
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener">
                                     <div class="instagram">
                                         <i class="fa-social-media-link fa-brands fa-2xl fa-instagram"></i>
                                     </div>
                                 </a>
-                                <a href="https://www.linkedin.com" target="_blank">
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener">
                                     <i class="social-media-link fa-brands fa-2xl fa-linkedin"></i>
                                 </a>
                             </div>
