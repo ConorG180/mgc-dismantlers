@@ -29,6 +29,42 @@ Before starting development on MCG Dismantlers, diagrams.net/draw.io was used to
 
 ![MGC Dismantlers ERD](documentation/erd-diagrams/mgc-dismantlers-erd.jpg "MCG Dismantlers ERD")
 
+# Marketing strategy
+## E-commerce business model and marketing strategies
+MCG Dismantlers is a small e-commerce business based in County Westmeath, Ireland, specializing in selling second-hand car parts. With just 15 employees, the company aims to provide customers with high-quality, affordable car parts through its online platform.
+To reach its target market, MCG Dismantlers will need to implement an effective marketing strategy that leverages the different digital channels available to them.
+
+### Search Engine Optimization (SEO): 
+This marketing strategy involves optimizing the company's website to rank higher in search engines such as Google. This can be done by using keywords in website content and meta-tags, creating high-quality content, and building backlinks. This is an effective strategy for MCG Dismantlers as it will allow the company's website to be easily found by potential customers looking for second-hand car parts. Meta-tags have been created in the ```base.html``` document in this project and an image can be seen below.  
+#### **images**
+![MCG Dismantlers meta tags and keywords](static/static-images/meta-tags.PNG "MCG Dismantlers meta tags and keywords")
+
+### Content Marketing
+This involves creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience. Content can come in the form of blog posts, videos, infographics, and more. This is a crucial strategy for MCG Dismantlers, as it will help to establish the company as an authority in the field and build trust with its customers.
+
+### Social Media Marketing
+Social media marketing is one channel that should not be overlooked, as it can be an incredibly effective way to promote the company's products and services. This involves promoting the company's products and services through social media platforms like Facebook, Instagram, and Twitter and Youtube. This can be done through regular updates, interacting with customers, and running targeted social media advertising campaigns. Social media is a powerful tool for businesses to reach and engage with their target audience, and MCG Dismantlers can use this channel to showcase their products, share industry news and insights, and build a strong relationship with their customers. A facebook business page mock up has already been created to showcase what the MCG business page will look like (Image below) and youtube will also be leveraged to include tutorials on basic car maintenance, how to change certain parts of cars, car repair and so on.  
+
+#### **images**
+![MCG Dismantlers Facebook page](static/static-images/facebook-business-page/mgc-dismantlers-facebook-business-page.png "MCG Dismantlers Facebook page")
+
+### Email Marketing
+This involves sending targeted and personalized emails to a list of subscribers to promote the company's products and services. This can be an effective strategy for MCG Dismantlers, as it will allow them to reach their customers directly and promote special deals and promotions.  
+It is also an effective way to reach existing customers and turn them into loyal customers. The company uses email marketing in the form of confirmation order emails and also when a customer has added an item to their wishlist, and that item has come into stock or has gone on sale. This will remind customers of the MGC Dismantlers business and aid in creating a loyal customer base.
+
+### Paid Advertising
+This involves paying for ad space on websites, social media platforms, and search engines to reach a wider audience. This can be a costly strategy, and MCG Dismantlers may not have the budget for it, but it can be a quick way to reach a large audience.
+
+### Influencer Marketing
+This involves partnering with influencers in the industry to promote the company's products and services. While this can be a powerful strategy, MCG Dismantlers may not need to focus on this as their target market may not follow influencers.
+
+### Affiliate Marketing
+This involves partnering with other companies or websites to promote the company's products and services in exchange for a commission. MCG Dismantlers may consider this strategy if they want to reach a wider audience and have a limited budget for paid advertising.
+
+### Marketing strategy conclusion
+In conclusion, MCG Dismantlers will need to implement a well-rounded marketing strategy that includes search engine optimization, content marketing, email marketing, social media marketing and potentially affiliate marketing. Paid advertising or influencer marketing may not be necessary. The company's focus will be on building trust with its customers and establishing itself as an authority in the industry.
+
+
 # Features
 ## Existing features
 
