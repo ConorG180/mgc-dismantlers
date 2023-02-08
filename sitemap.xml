@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/profile/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Engine/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Transmission/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Braking/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Steering/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Cooling/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Electrical/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Lighting/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Interior/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Exterior/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Security/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Misc/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/?page=2</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/?page=3</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/8</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/7</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/47</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/46</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/43</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/42</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/37</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/55</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/53</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/45</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fprofile%2F</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2F</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Engine/?page=2</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Engine/?page=3</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/76</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/68</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/36</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/26</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/77</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/121</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/114</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/115</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/90</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/31</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Transmission/?page=2</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/40</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/14</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/122</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/69</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/123</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/30</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/112</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/61</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/38</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/39</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/74</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/35</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/128</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/129</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/57</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/107</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/32</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/94</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/34</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/85</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/63</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/83</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/124</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Lighting/?page=2</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/119</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/84</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/89</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/64</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/12</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/110</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/82</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/79</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/75</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/54</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Interior/?page=2</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/62</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/66</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/118</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/113</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/108</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/106</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/81</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/80</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/101</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Exterior/?page=2</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/19</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/41</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/86</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/93</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/60</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/70</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/98</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/59</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/72</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/126</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/65</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/?page=1</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/?page=4</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/56</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/51</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/52</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/49</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/?page=5</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/67</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/78</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/58</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/109</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F8</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F7</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F47</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F46</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F43</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F42</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F37</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F55</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F53</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F45</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fprofile%2F</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2F</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Engine/?page=1</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/18</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/17</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/91</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/27</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/99</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/96</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/87</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/15</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/73</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/104</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F76</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F68</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F36</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F26</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F77</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F121</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F114</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F115</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F90</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F31</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Transmission/?page=1</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/28</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/29</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/23</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/22</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/21</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/105</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/103</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/88</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/97</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F40</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F14</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F122</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F69</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F123</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F30</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F112</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F61</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F38</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F39</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F74</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F35</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F128</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F129</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F57</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F107</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F32</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F94</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F34</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F85</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F63</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F83</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F124</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Lighting/?page=1</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/116</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/25</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/120</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/117</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/100</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F119</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F84</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F89</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F64</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F12</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F110</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F82</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F79</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F75</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F54</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Interior/?page=1</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/102</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/71</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/95</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F62</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F66</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F118</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F113</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F108</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F106</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F81</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F80</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F101</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/categorize-products/Exterior/?page=1</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/92</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/16</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=/cart/add-to-cart/125</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F19</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F41</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F86</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F93</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F60</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F70</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F98</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F59</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F72</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F126</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F65</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/?page=6</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F56</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F51</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F52</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F49</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/products/?page=7</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F67</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F78</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F58</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F109</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F8</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F7</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F47</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F46</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F43</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F42</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F37</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F55</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F53</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F45</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F18</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F17</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F91</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F27</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F99</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F96</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F87</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F15</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F73</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F104</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F76</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F68</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F36</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F26</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F77</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F121</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F114</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F115</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F90</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F31</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F28</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F29</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F23</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F22</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F21</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F105</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F103</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F88</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F97</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F40</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F14</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F122</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F69</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F123</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F30</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F112</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F61</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F38</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F39</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F74</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F35</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F128</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F129</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F57</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F107</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F32</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F94</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F34</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F85</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F63</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F83</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F124</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F116</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F25</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F120</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F117</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F100</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F119</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F84</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F89</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F64</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F12</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F110</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F82</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F79</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F75</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F54</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F102</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F71</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F95</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F62</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F66</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F118</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F113</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F108</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F106</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F81</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F80</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F101</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F92</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/signup/?next=%2Fcart%2Fadd-to-cart%2F16</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F19</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F86</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F70</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F59</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F56</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F49</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F67</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F17</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F99</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F87</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F73</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F22</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F97</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F120</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F100</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F71</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mcg-dismantlers.herokuapp.com/accounts/login/?next=%2Fcart%2Fadd-to-cart%2F16</loc>
+  <lastmod>2023-02-08T15:10:46+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
