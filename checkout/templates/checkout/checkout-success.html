@@ -7,9 +7,7 @@ Checkout success
 
 {% block content %}
 <!-- Grid layout -->
-<div class="container-fluid">
-  <div class="container-fluid">
-    <div class="container text-center">
+    <section class="container text-center">
       <img src="{% static 'static-images/checkout-success-tick.jpg' %}" alt="Checkout tick confirmation"
         class="checkout-success-tick img-fluid">
       <h1>Thank you {{order.full_name}}</h1>
@@ -54,9 +52,6 @@ Checkout success
       <h5 class="text-left">Subtotal: <span>€{{order.order_total | floatformat:2 }}</span></h5>
       <h5 class="text-left">Delivery: <span>€{{order.delivery_cost | floatformat:2 }}</span></h5>
       <h5 class="text-left">total: <span>€{{order.grand_total | floatformat:2 }}</span></h5>
-    </div>
-  </div>
-
   <!-- End of container div -->
-</div>
+</section>
 {% endblock content %}
