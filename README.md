@@ -170,7 +170,7 @@ A feature is hoped to be added in the future which will allow the user to order 
 # Testing and bugs
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
-## Technologies, frameworks, packages and libraries used
+# Technologies, frameworks, packages and libraries used
 The following technologies were used in the development of this project:  
   - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - HTML5 was used to apply the structure and to create the elements within the programme.
   - [Bootstrap](https://getbootstrap.com/) - Bootstrap was used for the majority of the styling and layout in the programme. Within bootstrap, there are also elements of JavaScript used, such as in the toast messages. This JavaScript is included within the Bootstrap framework.
