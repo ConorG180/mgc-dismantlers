@@ -13,7 +13,7 @@ Cart
     <div class="row mt-5">
         <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-1 col-12">
             <div class="row mt-3">
-                <div class="col-xl-9 mb-5 col-12">
+                <section class="col-xl-9 mb-5 col-12">
                     <div class="row d-xl-flex d-none text-primary">
                         <div class="col-xl-2 col-md-6 col-12">
                             <p class="h6"></p>
@@ -62,7 +62,7 @@ Cart
                     </div>
                     {% endif %}
                     {% for product in cart %}
-                    <div class="row bg-dark d-flex justify-content-start border-bottom">
+                    <article class="row bg-dark d-flex justify-content-start border-bottom">
                         <!-- hre -->
                         <div class="col-xl-2 col-md-2 col-12 p-0">
                             {% if product.product.image %}
@@ -103,17 +103,17 @@ Cart
                                     class="mr-3 fa-solid fa-square-minus"></i>Remove</a>
                             <!-- </div> -->
                         </div>
-                    </div>
+                    </article>
                     {% empty %}
                     <h6 class="text-center mt-4">You have no products added yet. return to the <a
                             href="{% url 'products' %}">products page</a> to add products</h6>
                     {% endfor %}
-                </div>
+                </section>
                 <!-- Checkout details and link. This section only shows for medium size devices and up -->
                 {% if product_count != 0 %}
 
                 <div class="col-xl-3 col-12 d-none d-md-block">
-                    <div class="border">
+                    <aside>
                         <div class="row">
                             <div class="col-12 text-center">
                                 <h5>Order Summary</h5>
@@ -143,7 +143,7 @@ Cart
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </aside>
                 </div>
                 {% endif %}
 
